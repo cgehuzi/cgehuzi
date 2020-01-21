@@ -1,14 +1,17 @@
 << [На главную](./README.md)
 
-# Git (контроль версий)
+# Git : Основные команды
 
 ## Навигация
 
 - [Git : Конфигурация](#git--конфигурация)
-- [Git : Начало работы](#git--начало-работы)
-- [Git : Работа с файлами](#git--работа-с-файлами)
-- [Git : История коммитов](#git--история-коммитов)
-- [Git : Работа с ветками](#git--работа-с-ветками)
+- [Git : Создание репозитория](./git.md#git--создание-репозитория)
+- [Git : Подготовка коммитов](./git.md#git--подготовка-коммитов)
+- [Git : Создание коммитов](./git.md#git--создание-коммитов)
+- [Git : Отправка коммитов](./git.md#git--отправка-коммитов)
+- [Git : Получение коммитов](./git.md#git--получение-коммитов)
+- [Git : История коммитов](./git.md#git--история-коммитов)
+- [Git : Метки у коммитов](./git.md#git--метки-у-коммитов)
 
 ---
 
@@ -32,7 +35,7 @@ git config --global user.email "____" # email пользователя (буде
 
 </details><br>
 
-## Git : Начало работы
+## Git : Создание репозитория
 
 <a id="init"></a>
 
@@ -58,7 +61,77 @@ git clone <repo> <dir>    # в указанную директорию
 
 </details><br>
 
-## Git : Работа с файлами
+## Git : Подготовка коммитов
+
+- [Состояния файлов](#состояния-файлов)
+- [Игнорирование файлов](#игнорирование-файлов)
+
+---
+
+<a id="status"></a>
+
+```bash
+git status  # определение состояния файлов (подробно)
+```
+
+<details>
+<summary>Формат вывода</summary>
+
+```bash
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file_1
+        new file:   file_2
+        new file:   file_3
+        modified:   file_4
+        deleted:    file_5
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file_1
+        deleted:    file_4
+        modified:   file_5
+        deleted:    file_6
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file_7
+```
+
+</details><br>
+
+```bash
+git status --short  # определение состояния файлов (коротко)
+git status -s       # | краткая запись
+```
+
+<details>
+<summary>Формат вывода</summary>
+
+```bash
+AM file_1
+A  file_2
+AD file_3
+D  file_4
+MM file_5
+ D file_6
+?? file_7
+```
+
+- **Первая колонка (A,A,A,D,M)** - `Changes to be committed`  
+  состояния файлов в момент подготовки их к коммиту
+
+- **Вторая колонка (M,D,M,D)** - `Changes not staged for commit`  
+  состояния файлов, не подготовленных к коммиту
+
+- **??** - `Untracked files`  
+  не отслеживаемые (новые) файлы
+
+</details><br>
 
 ### Состояния файлов
 
@@ -75,7 +148,21 @@ git clone <repo> <dir>    # в указанную директорию
 - `modified (M)` - изменённый файл
 - `deleted (D)` - удалённый файл
 
-### Подготовка к коммиту
+<br><a id="diff"></a>
+
+```bash
+git diff    # просмотреть список изменений в файлах
+```
+
+<details>
+<summary>Примеры</summary>
+
+```bash
+git diff            # не подготовленные к коммиту (not staged)
+git diff --staged   # подготовленные к коммиту (staged)
+```
+
+</details><br>
 
 <a id="add"></a>
 
@@ -151,88 +238,48 @@ git reset <dir>     # все файлы в директории (включая 
 
 </details><br>
 
-<a id="status"></a>
+<a id="rm"></a>
 
 ```bash
-git status  # определение состояния файлов (подробно)
-```
-
-<details>
-<summary>Формат вывода</summary>
-
-```bash
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   file_1
-        new file:   file_2
-        new file:   file_3
-        modified:   file_4
-        deleted:    file_5
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   file_1
-        deleted:    file_4
-        modified:   file_5
-        deleted:    file_6
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        file_7
-```
-
-</details><br>
-
-```bash
-git status --short  # определение состояния файлов (коротко)
-git status -s       # | краткая запись
-```
-
-<details>
-<summary>Формат вывода</summary>
-
-```bash
-AM file_1
-A  file_2
-AD file_3
-D  file_4
-MM file_5
- D file_6
-?? file_7
-```
-
-- **Первая колонка (A,A,A,D,M)** - `Changes to be committed`  
-  состояния файлов в момент подготовки их к коммиту
-
-- **Вторая колонка (M,D,M,D)** - `Changes not staged for commit`  
-  состояния файлов, не подготовленных к коммиту
-
-- **??** - `Untracked files`  
-  не отслеживаемые (новые) файлы
-
-</details><br>
-
-<a id="diff"></a>
-
-```bash
-git diff    # просмотреть список изменений в файлах
+git rm      # подготовить к коммиту удаление файлов / директорий
 ```
 
 <details>
 <summary>Примеры</summary>
 
 ```bash
-git diff            # не подготовленные к коммиту (not staged)
-git diff --staged   # подготовленные к коммиту (staged)
+git rm <file>           # один файл (также удалить из рабочего каталога)
+git rm -r <dir>         # все файлы в директории (также удалить из рабочего каталога)
+git rm --cached <file>  # один файл (но оставить в рабочем каталоге)
+git rm --cached <dir>   # все файлы в директории (но оставить в рабочем каталоге)
+git rm \*.jpg           # все файлы .jpg
 ```
 
 </details><br>
 
-### Создание коммита
+### Игнорирование файлов
+
+<a id="gitignore"></a>
+
+Задаётся через файл `.gitignore`.  
+[Примеры файлов](https://github.com/github/gitignore) : для разных проектов и языков
+
+<details>
+<summary>Примеры</summary>
+
+```bash
+*.a           # исключить все файлы .a
+!lib.a        # но не исключать файлы lib.a
+/TODO         # исключить все файлы TODO в корневой директории
+build/        # исключить все файлы в директориях build
+doc/*.txt     # исключить doc/notes.txt
+              # | но не исключать doc/server/arch.txt
+lib/**/*.txt  # исключить все файлы .txt в директориях lib
+```
+
+</details><br>
+
+## Git : Создание коммитов
 
 <a id="commit"></a>
 
@@ -270,52 +317,15 @@ git commit --amend -m "____"    # с указанием подписи
 
 </details><br>
 
-### Исключение (игнорирование) файлов
+## Git : Отправка коммитов
 
-<a id="gitignore"></a>
-
-Задаётся через файл `.gitignore`.  
-[Примеры файлов](https://github.com/github/gitignore) : для разных проектов и языков
-
-<details>
-<summary>Примеры</summary>
-
-```bash
-*.a           # исключить все файлы .a
-!lib.a        # но не исключать файлы lib.a
-/TODO         # исключить все файлы TODO в корневой директории
-build/        # исключить все файлы в директориях build
-doc/*.txt     # исключить doc/notes.txt
-              # | но не исключать doc/server/arch.txt
-lib/**/*.txt  # исключить все файлы .txt в директориях lib
-```
-
-</details><br>
-
-<a id="rm"></a>
-
-```bash
-git rm      # подготовить к коммиту удаление файлов / директорий
-```
-
-<details>
-<summary>Примеры</summary>
-
-```bash
-git rm <file>           # один файл (также удалить из рабочего каталога)
-git rm -r <dir>         # все файлы в директории (также удалить из рабочего каталога)
-git rm --cached <file>  # один файл (но оставить в рабочем каталоге)
-git rm --cached <dir>   # все файлы в директории (но оставить в рабочем каталоге)
-git rm \*.jpg           # все файлы .jpg
-```
-
-</details><br>
+## Git : Получение коммитов
 
 ## Git : История коммитов
 
 - [Список коммитов](#список-коммитов)
 - [Поиск коммитов](#поиск-коммитов)
-- [Навигация по коммитам](#навигация-по-коммитам)
+- [Переключение между коммитами](#переключение-между-коммитами)
 
 ---
 
@@ -522,7 +532,7 @@ git log <file>              # изменялся <file> (указывается 
 git log <dir>               # изменялись файлы в <dir> (указывается последним параметром)
 ```
 
-### Навигация по коммитам
+### Переключение между коммитами
 
 ```bash
 git checkout <commit>   # вернуть рабочую область к состоянию указанного коммита
@@ -538,4 +548,4 @@ git checkout b23cc73                                    # с указанием 
 
 </details><br>
 
-## Git : Работа с ветками
+## Git : Метки у коммитов
