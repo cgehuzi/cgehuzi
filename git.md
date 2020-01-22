@@ -508,17 +508,45 @@ Date:   Fri Jan 17 15:12:25 2020 +0300              # дата создания 
 ```bash
 git log --pretty=oneline    # с указанием контрольной суммы (хеша) и подписи
 git log --oneline           # | краткая запись
+git log --oneline --graph   # со схемой ветвления
 ```
 
 <details>
 <summary>Формат вывода</summary>
 
 ```bash
-f9e5cdfed4ec21915790310c4b229843fa3f5bc1 [ bash ] - add patch
-b36cc24d92bff500f7cf800b648ae50e73c5f169 [ bash ] - add diff
-3364c727dda26505e895caa805186414d7164595 [ math ] - add fix
-1081a4954ba198cec2f18b7dbd3925c009963ff8 [ math ] - add sign
-138767ffb435351d49f1ccd47168faea388339a3 [ string ] - add trim
+# git log --pretty=oneline
+# -----------------------------------------
+68cc805d693af489769e9c226d0cef0cad64d674 (HEAD -> git, origin/master, origin/git, origin/HEAD, master) fix merge
+d0f2fe2ce4cf84ef60a38c47f37bf07b3a8072c2 add tag
+a88a6ee9c4e2ece045c553062c8150aaba963da7 add tag
+4e9abc1dfa5224dc2b267aab131828f9b3c457be add remote, fetch, pull and push commands
+af8d77ee2a8d525e00d5d9332c7e7020a776a591 merge git
+7f8d73a4841afc2b67e9d645d1fb4b766e20b7b5 add git-branch file
+# -----------------------------------------
+
+# git log --oneline
+# -----------------------------------------
+68cc805 (HEAD -> git, origin/master, origin/git, origin/HEAD, master) fix merge
+d0f2fe2 add tag
+a88a6ee add tag
+4e9abc1 add remote, fetch, pull and push commands
+af8d77e merge git
+7f8d73a add git-branch file
+# -----------------------------------------
+
+# git log --oneline --graph
+# -----------------------------------------
+*   68cc805 (HEAD -> git, origin/master, origin/git, origin/HEAD, master) fix merge
+|\  
+| * a88a6ee add tag
+* | d0f2fe2 add tag
+|/  
+* 4e9abc1 add remote, fetch, pull and push commands
+*   af8d77e merge git
+|\  
+| * 7f8d73a add git-branch file
+# -----------------------------------------
 ```
 
 </details><br>

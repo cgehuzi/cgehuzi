@@ -13,7 +13,30 @@
 
 ## Git : Создание веток
 
+<a id="branch"></a>
+
+```bash
+git branch      # работа с ветками
+```
+
+<details>
+<summary>Примеры</summary>
+
+```bash
+git branch                  # список отслеживаемых веток
+git branch <branch>         # создать новую ветку
+git checkout -b <branch>    # создать новую ветку и переключиться на неё
+```
+
+</details><br>
+
 ## Git : Переключение между ветками
+
+<a id="checkout"></a>
+
+```bash
+git checkout <branch>   # переключиться на ветку <branch>
+```
 
 ## Git : Слияние веток
 
