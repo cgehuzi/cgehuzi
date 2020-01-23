@@ -538,13 +538,13 @@ af8d77e merge git
 # git log --oneline --graph
 # -----------------------------------------
 *   68cc805 (HEAD -> git, origin/master, origin/git, origin/HEAD, master) fix merge
-|\  
+|\
 | * a88a6ee add tag
 * | d0f2fe2 add tag
-|/  
+|/
 * 4e9abc1 add remote, fetch, pull and push commands
 *   af8d77e merge git
-|\  
+|\
 | * 7f8d73a add git-branch file
 # -----------------------------------------
 ```
