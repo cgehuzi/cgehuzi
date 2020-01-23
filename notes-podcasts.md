@@ -1,6 +1,6 @@
 << [На главную](./README.md)
 
-# Подкасты
+# Notes : Подкасты
 
 - [Веб-стандарты](https://podcasts.google.com/?feed=aHR0cHM6Ly93ZWItc3RhbmRhcmRzLnJ1L3BvZGNhc3QvZmVlZC8)  
   Обзор новостей web-разработки и обмен мнениями.

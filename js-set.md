@@ -1,6 +1,6 @@
 << [На главную](./README.md)
 
-# Set : Множество
+# JS : Set - множество
 
 - [Спецификация](https://tc39.es/ecma262/#sec-set-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set)

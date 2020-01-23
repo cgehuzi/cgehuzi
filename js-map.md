@@ -1,6 +1,6 @@
 << [На главную](./README.md)
 
-# Map : Ассациативный массив
+# JS : Map - ассациативный массив
 
 - [Спецификация](https://tc39.es/ecma262/#sec-map-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)

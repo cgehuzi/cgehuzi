@@ -1,6 +1,6 @@
 << [На главную](./README.md)
 
-# Array : Массив
+# JS : Array - массив
 
 - [Спецификация](https://tc39.es/ecma262/#sec-array-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)

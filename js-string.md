@@ -1,6 +1,6 @@
 << [На главную](./README.md)
 
-# String : Строка
+# JS : String - строка
 
 - [Спецификация](https://tc39.es/ecma262/#sec-string-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String)

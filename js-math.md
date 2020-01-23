@@ -1,6 +1,6 @@
 << [На главную](./README.md)
 
-# Math : Математические выражения
+# JS : Math - математика
 
 - [Спецификация](https://tc39.es/ecma262/#sec-math-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math)
