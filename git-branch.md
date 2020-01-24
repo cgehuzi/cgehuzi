@@ -110,3 +110,24 @@ git merge <branch>          # слияние текущей ветки с вет
 </details><br>
 
 ## Git : Перебазирование веток
+
+<a id="rebase"></a>
+
+```bash
+git rebase      # перебазирование веток
+```
+
+<details>
+<summary>Примеры</summary>
+
+```bash
+# Простое перебазирование
+# ----------------------------------------
+git checkout <branch>   # переключиться на ветку <branch>
+git rebase master       # перебазировать ветку в master
+git checkout master     # переключиться на ветку master
+git merge <branch>      # объединить изменения
+# ----------------------------------------
+```
+
+</details>
