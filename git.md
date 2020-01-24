@@ -33,6 +33,8 @@ git config --l                            # | краткая запись
 git config --global user.name "____"      # имя пользователя (будет привязываться к коммитам)
 git config --global user.email "____"     # email пользователя (будет привязываться к коммитам)
 
+git config --global credential.helper cache           # запоминать на несколько минут введённый пароль
+
 git config --global alias.<co> <command>              # псевдоним (git <co> === git <command>)
 git config --global alias.<co> '<command> <option>'   # псевдоним (git <co> === git <command> <option>)
 ```
