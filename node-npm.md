@@ -245,7 +245,7 @@ npm update <package>    # обновление зависимостей паке
 <details>
 <summary>Схема работы</summary>
 
-![отслеживание зависимостей](https://github.com/cgehuzi/notes/raw/master/sources/images/package-lock.jpg)
+![отслеживание зависимостей](https://github.com/cgehuzi/notes/raw/master/images/npm-package-lock.jpg)
 
 </details><br>
 

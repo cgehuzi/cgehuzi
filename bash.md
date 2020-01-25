@@ -646,7 +646,7 @@ cat /etc/passwd     # информация о пользователях
 <details>
 <summary>Формат вывода</summary>
 
-![информация о пользователях](https://github.com/cgehuzi/notes/raw/master/sources/images/cat-passwd.jpg)
+![информация о пользователях](https://github.com/cgehuzi/notes/raw/master/images/bash-cat-passwd.jpg)
 
 </details><br>
 
@@ -679,7 +679,7 @@ ls -la  # + скрытые файлы / директории
 <details>
 <summary>Формат вывода</summary>
 
-![информация о правах доступа](https://github.com/cgehuzi/notes/raw/master/sources/images/permissions.jpg)
+![информация о правах доступа](https://github.com/cgehuzi/notes/raw/master/images/bash-permissions.jpg)
 
 **`r — read`** : право на чтение  
 **`w — write`** : право на запись (редактирование)  
