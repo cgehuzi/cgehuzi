@@ -21,6 +21,8 @@ node -v                 # текущая версия
 
 </details><br>
 
+[Утилита для поддержки source-map](https://github.com/evanw/node-source-map-support)
+
 ## NVM : менеджер версий
 
 [nvm : репозиторий](https://github.com/nvm-sh/nvm)

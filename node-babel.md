@@ -76,7 +76,10 @@ npx babel		# запуск трансляции исходного кода
 <summary>Примеры</summary>
 
 ```bash
-npx babel src --out-dir dist	# транслировать все файлы из директории src в директорию dist
+npx babel <dir> --out-dir <dir>			# транслировать все файлы из одной директории в другую
+npx babel <file> --out-file <file>		# транслировать код из одного файла в другой
+npx babel ____ --source-maps			# добавить source map (файлом)
+npx babel ____ --source-maps inline		# добавить source map (комментарияем)
 ```
 
 </details><br>
@@ -89,7 +92,7 @@ npx babel-node	# запуск исходного кода (с предварит
 <summary>Примеры</summary>
 
 ```bash
-npx babel-node <file>	# запуск кода из
+npx babel-node <file>	# запуск кода из файла
 ```
 
 </details><br>
