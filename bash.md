@@ -15,6 +15,7 @@
 - [BASH : Пользователи и группы](#bash--пользователи-и-группы)
 - [BASH : Права доступа](#bash--права-доступа)
 - [BASH : Управление утилитами](#bash--управление-утилитами)
+- [BASH : Makefile - шаблонизация команд](#bash--makefile---шаблонизация-команд)
 
 ---
 
@@ -792,3 +793,35 @@ brew update ____    # обновить пакетный менеджер
 ```
 
 [Полный список команд](https://docs.brew.sh/Manpage#commands)
+
+## BASH : Makefile - шаблонизация команд
+
+<a id="make"></a>
+
+```bash
+make <alias>    # запуск команд из Makefile
+```
+
+### Makefile
+
+```bash
+test:                               # alias для вызова
+    npm run test                    # вызываемая команда
+
+logs:                               # alias для вызова
+    sudo tail -n $(N) <log_file>    # вызываемая команда с параметром N
+
+build: test                         # alias для вызова : зависимость
+    npm run build                   # вызываемая команда
+
+.PHONY: test logs build             # сброс стандартных инструкций для указанных alias
+                                    # | указывается последней строчкой в Makefile
+                                    # | если в директории будет файл test,
+                                    # | то без .PHONY сработает его обработка
+```
+
+```bash
+make test       # === $ npm run test
+make logs N=13  # === $ sudo tail -n 13 <log_file>
+make build      # === $ npm run test; npm run build
+```
