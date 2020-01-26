@@ -820,6 +820,8 @@ build: test                         # alias для вызова : зависим
                                     # | то без .PHONY сработает его обработка
 ```
 
+Перед вызываемыми командами обязательно нужна табуляция.
+
 ```bash
 make test       # === $ npm run test
 make logs N=13  # === $ sudo tail -n 13 <log_file>
