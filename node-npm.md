@@ -114,7 +114,7 @@ npm info <package>      # найти информацию по <package> на np
 ```jsonc
 // package.json
 {
-	"main": "dist/index.js"
+  "main": "dist/index.js"
 }
 ```
 
@@ -128,7 +128,7 @@ npm info <package>      # найти информацию по <package> на np
 ```jsonc
 // package.json
 {
-	"files": ["dist"]
+  "files": ["dist"]
 }
 ```
 
@@ -139,12 +139,12 @@ npm info <package>      # найти информацию по <package> на np
 ```jsonc
 // package.json
 {
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "NODE_ENV=production babel src --out-dir dist", // сборка проекта
-		"prepublishOnly": "npm run build", // автозапуск сборки
-		"<command>": "npm version" // произвольная команда
-	}
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist", // сборка проекта
+    "prepublishOnly": "npm run build", // автозапуск сборки
+    "<command>": "npm version" // произвольная команда
+  }
 }
 ```
 
@@ -160,9 +160,9 @@ npm run <command>       # вызов <command> из секции "scripts"
 
 ```jsonc
 {
-	"bin": {
-		"<command>": "<file>"
-	}
+  "bin": {
+    "<command>": "<file>"
+  }
 }
 ```
 
