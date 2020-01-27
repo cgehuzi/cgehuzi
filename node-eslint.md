@@ -42,7 +42,7 @@ npm install --save-dev eslint eslint-config-airbnb-base eslint-plugin-import esl
 
 ```jsonc
 {
-  "extends": ["airbnb-base"],
+  "extends": ["eslint:recommended", "airbnb-base"],
   "plugins": ["import", "babel"],
   "env": {
     "es6": true,
