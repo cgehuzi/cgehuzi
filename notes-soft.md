@@ -70,6 +70,8 @@
   "prettier.printWidth": 1000,
   // замена двойных кавычек на одинарные
   "prettier.singleQuote": true,
+  // кавычки в функциях с одним аргументом
+  "prettier.arrowParens": "always",
   // табы вместо пробелов
   "prettier.useTabs": false,
   "[markdown]": {
