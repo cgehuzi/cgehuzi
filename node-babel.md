@@ -33,22 +33,22 @@ npm install @babel/polyfill
 <details>
 <summary>Пример файла</summary>
 
-```json
+```jsonc
 {
-	"presets": [
-		[
-			"@babel/env",
-			{
-				"targets": {
-					"node": "current",
-					"edge": "17",
-					"firefox": "60",
-					"chrome": "67",
-					"safari": "11.1"
-				}
-			}
-		]
-	]
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": "current",
+          "edge": "17",
+          "firefox": "60",
+          "chrome": "67",
+          "safari": "11.1"
+        }
+      }
+    ]
+  ]
 }
 ```
 
@@ -103,9 +103,9 @@ npx babel-node <file>	# запуск кода из файла
 
 ```jsonc
 {
-	"scripts": {
-		"build": "NODE_ENV=production babel src --out-dir dist", // сборка проекта
-		"prepublishOnly": "npm run build" // автозапуск сборки
-	}
+  "scripts": {
+    "build": "NODE_ENV=production babel src --out-dir dist", // сборка проекта
+    "prepublishOnly": "npm run build" // автозапуск сборки
+  }
 }
 ```

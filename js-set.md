@@ -80,8 +80,8 @@
   const numbers = new Set([1, 2, 3, 4]);
 
   numbers.forEach((value, key, set) => {
-  	console.log(`${key} = ${value} : ${key === value}`);
-  	console.log(set);
+    console.log(`${key} = ${value} : ${key === value}`);
+    console.log(set);
   });
   // "1 = 1 : true"
   // Set(4) {1, 2, 3, 4}
@@ -145,7 +145,7 @@
   // SetIterator {1, 2, 3, 4}
 
   for (const value of values) {
-  	console.log(value);
+    console.log(value);
   }
   // 1
   // 2
@@ -188,7 +188,7 @@
   // SetIterator {1 => 1, 2 => 2, 3 => 3, 4 => 4}
 
   for (const entry of entries) {
-  	console.log(entry);
+    console.log(entry);
   }
   // (2) [1, 1]
   // (2) [2, 2]

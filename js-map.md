@@ -81,8 +81,8 @@
   const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
 
   user.forEach((value, key, map) => {
-  	console.log(`${key} = ${value}`);
-  	console.log(map);
+    console.log(`${key} = ${value}`);
+    console.log(map);
   });
   // "name = Ihar"
   // Map(3) {"name" => "Ihar", "surname" => undefined, "birthday" => "26.03.1991"}
@@ -92,9 +92,9 @@
   // Map(3) {"name" => "Ihar", "surname" => undefined, "birthday" => "26.03.1991"}
 
   user.forEach((value, key, map) => {
-  	key = value;
-  	console.log(`${key} = ${value}`);
-  	console.log(map);
+    key = value;
+    console.log(`${key} = ${value}`);
+    console.log(map);
   });
   // "Ihar = Ihar"
   // Map(3) {"name" => "Ihar", "surname" => undefined, "birthday" => "26.03.1991"}
@@ -172,7 +172,7 @@
   // MapIterator {"name", "surname", "birthday"}
 
   for (const key of keys) {
-  	console.log(key);
+    console.log(key);
   }
   // "name"
   // "surname"
@@ -214,7 +214,7 @@
   // MapIterator {"Ihar", undefined, "26.03.1991"}
 
   for (const value of values) {
-  	console.log(value);
+    console.log(value);
   }
   // "Ihar"
   // undefined
@@ -256,7 +256,7 @@
   // MapIterator {"name" => "Ihar", "surname" => undefined, "birthday" => "26.03.1991"}
 
   for (const entry of entries) {
-  	console.log(entry);
+    console.log(entry);
   }
   // (2) ["name", "Ihar"]
   // (2) ["surname", undefined]
@@ -273,7 +273,7 @@
   // MapIterator {"name" => "Ihar", "surname" => undefined, "birthday" => "26.03.1991"}
 
   for (const [key, value] of entries) {
-  	console.log(`${key} = ${value}`);
+    console.log(`${key} = ${value}`);
   }
   // "name = Ihar"
   // "surname = undefined"

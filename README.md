@@ -18,12 +18,15 @@ _Ведутся с целью структурирования получаем�
 - [js : Math - математика](./js-math.md)
 - [js : Set - множество](./js-set.md)
 - [js : String - строка](./js-string.md)
+- [js : Modules - модули](./js-modules.md)
 - [bash : Командная строка](./bash.md)
 - [git : Основные команды](./git.md)
 - [git : Ветвление](./git-branch.md)
+- [git : GitHub Actions](./git-github-actions.md)
 - [node : Node.js](./node.md)
 - [node : NPM - менеджер пакетов](./node-npm.md)
 - [node : Babel - транспайлер кода](./node-babel.md)
+- [node : ESLint - линтер кода](./node-eslint.md)
 
 ## Английский язык
 
