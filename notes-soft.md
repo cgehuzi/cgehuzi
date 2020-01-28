@@ -28,7 +28,7 @@
 ```jsonc
 {
   "explorer.confirmDelete": false, // подтверждение удаления файлов
-  "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all", // идентификация пробелов (серыми точками)
   "editor.codeActionsOnSave": {
