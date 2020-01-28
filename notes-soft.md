@@ -31,6 +31,9 @@
   "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all", // идентификация пробелов (серыми точками)
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // автофикс линтинга при сохранении
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.printWidth": 1000, // длина строки до переноса
   "prettier.singleQuote": true, // замена двойных кавычек на одинарные
