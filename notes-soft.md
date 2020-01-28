@@ -15,10 +15,10 @@
 
 - Autoprefixer
 - Beautify
+- ESLint
 - Live Sass Compiler
 - Markdown Preview Github Styling
 - markdownlint
-- PHP Intelephense
 - Prettier - Code formatter
 
 ### Конфигурация
@@ -27,66 +27,36 @@
 
 ```jsonc
 {
-  // подтверждение удаления файлов
-  "explorer.confirmDelete": false,
+  "explorer.confirmDelete": false, // подтверждение удаления файлов
+  "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all", // идентификация пробелов (серыми точками)
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.printWidth": 1000, // длина строки до переноса
+  "prettier.singleQuote": true, // замена двойных кавычек на одинарные
+  "prettier.arrowParens": "always", // скобки в функциях с одним аргументом
+  "prettier.useTabs": false, // табы вместо пробелов
   "[html]": {
     "editor.defaultFormatter": "HookyQR.beautify",
     "editor.tabSize": 4
   },
   "beautify.config": {
-    "end_with_newline": false, // ALL : пустая строка в конце файла
-    "indent_char": " ", // ALL : символ отступа
-    "indent_with_tabs": false, // ALL : перевод отступов в табы
-    "preserve_newlines": true, // ALL : сохранять переносы строк
-    "extra_liners": ["head", "body", "/html"], // HTML : разрыв перед этими тегами
-    "indent_inner_html": true // HTML : отступы для тегов head и body
+    "end_with_newline": false, // пустая строка в конце файла
+    "indent_char": " ", // символ отступа
+    "indent_with_tabs": false, // перевод отступов в табы
+    "preserve_newlines": true, // сохранять переносы строк
+    "extra_liners": ["head", "body", "/html"], // разрыв перед этими тегами
+    "indent_inner_html": true // отступы для тегов head и body
   },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
-  },
-  "[javascript]": {
-    // идентификация пробелов (серыми точками)
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2,
-    "editor.renderWhitespace": "all"
-  },
-  "[json]": {
-    // идентификация пробелов (серыми точками)
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2,
-    "editor.renderWhitespace": "all"
-  },
-  "[jsonc]": {
-    // идентификация пробелов (серыми точками)
-    "editor.tabSize": 2,
-    "editor.renderWhitespace": "all"
-  },
-  // длина строки до переноса
-  "prettier.printWidth": 1000,
-  // замена двойных кавычек на одинарные
-  "prettier.singleQuote": true,
-  // скобки в функциях с одним аргументом
-  "prettier.arrowParens": "always",
-  // табы вместо пробелов
-  "prettier.useTabs": false,
   "[markdown]": {
-    // идентификация пробелов (серыми точками)
     "editor.renderWhitespace": "all"
   },
   "markdownlint.config": {
-    // исключения для линтера
     "MD033": {
-      "allowed_elements": ["details", "summary", "small", "a", "br"]
+      "allowed_elements": ["details", "summary", "small", "a", "br"] // исключения для линтера
     },
-    // подчёркивание табов в блоках с кодом
-    "MD010": false,
-    // первым в документе должен быть h1 (#)
-    "MD041": false
+    "MD010": true, // подчёркивание табов в блоках с кодом
+    "MD041": false // первым в документе должен быть h1 (#)
   },
   "liveSassCompile.settings.formats": [
     {
