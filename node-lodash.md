@@ -1,6 +1,6 @@
 << [На главную](./README.md)
 
-# JS : Lodash - библиотека
+# node : Lodash - библиотека
 
 - [Официальный сайт](https://lodash.com/)
 
