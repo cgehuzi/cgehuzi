@@ -31,13 +31,12 @@ String.substring(); // извлекает подстроку
 ```js
 const str = '0123456';
 
-str.substring(1); // ===> "123456"
-str.substring(-1, 3); // ===> "012"
-str.substring(3, -1); // ===> "012"
-str.substring(1, 3); // ===> "12"
+str.substring(1); //      ==> '123456'
+str.substring(-1, 3); //  ==> '012'
+str.substring(3, -1); //  ==> '012'
+str.substring(1, 3); //   ==> '12'
 
-console.log(str);
-// "0123456"
+// str === '0123456'
 ```
 
 </details><br>
@@ -61,14 +60,11 @@ const str1 = '   0123456 ';
 const str2 = `
 0123456 `;
 
-str1.trim(); // ===> "0123456"
-str2.trim(); // ===> "0123456"
+str1.trim(); // ==> '0123456'
+str2.trim(); // ==> '0123456'
 
-console.log(str1);
-// "   0123456 "
-console.log(str2);
-// "
-// 0123456 "
+// str1 === '   0123456 '
+// str2 === '\n0123456 '
 ```
 
 </details><br>
@@ -92,10 +88,9 @@ String.split(); // преобразует строку в массив
 ```js
 const planets = 'Меркурий,Венера,Земля,Марс';
 
-planets.split(','); // ===> (4) ["Меркурий", "Венера", "Земля", "Марс"]
+planets.split(','); // ==> [ 'Меркурий', 'Венера', 'Земля', 'Марс' ]
 
-console.log(planets);
-// "Меркурий,Венера,Земля,Марс"
+// planets === 'Меркурий,Венера,Земля,Марс'
 ```
 
 Обратное действие: [Array => String](./js-array.md#join)

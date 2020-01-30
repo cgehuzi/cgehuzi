@@ -46,9 +46,9 @@ Object.hasOwnProperty(); // проверяет, есть ли такой клю�
 
 ```js
 const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
+const prop = 'name';
 
 user.hasOwnProperty('name'); //       ===> true
-const prop = 'name';
 user.hasOwnProperty(prop); //         ===> true
 user.hasOwnProperty('User'); //       ===> false
 user.hasOwnProperty('name.last'); //  ===> false
