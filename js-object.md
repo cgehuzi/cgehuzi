@@ -14,6 +14,7 @@
 - [Object : Поиск](#object--поиск)
 - [Object : Проверка](#object--проверка)
 - [Object : Преобразование](#object--преобразование)
+- [Object : Использование spread](#object--использование-spread)
 
 ---
 
@@ -44,13 +45,13 @@ Object.hasOwnProperty(); // проверяет, есть ли такой клю�
 <summary>Примеры</summary>
 
 ```js
-const user = { name: 'User', height: 192, married: true };
+const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
 
-user.hasOwnProperty('name'); // ===> true
+user.hasOwnProperty('name'); //       ===> true
 const prop = 'name';
-user.hasOwnProperty(prop); // ===> true
-user.hasOwnProperty('User'); // ===> false
-user.hasOwnProperty(length); // ===> false
+user.hasOwnProperty(prop); //         ===> true
+user.hasOwnProperty('User'); //       ===> false
+user.hasOwnProperty('name.last'); //  ===> false
 ```
 
 </details><br>
@@ -72,9 +73,68 @@ Object.keys(); // возвращает массив ключей
 <summary>Примеры</summary>
 
 ```js
-const user = { name: 'User', height: 192, married: true };
+const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
 
 Object.keys(user); // ===> [ 'name', 'height', 'married' ]
+```
+
+</details><br>
+
+## Object : Использование spread
+
+<a id="spread"></a>
+
+```js
+...planets // spread-оператор
+```
+
+Раскладывает массив на список элементов.
+
+- [Спецификация](https://tc39.es/ecma262/#prod-SpreadElement)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+// Создание копии объекта (а не ссылки на объеки)
+// ------------------------------------------------------------
+const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
+
+const newUser = { ...user };
+// newUser === { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true }
+```
+
+```js
+// Добавление значений в объект
+// ------------------------------------------------------------
+const userName = { name: 'Ihar' };
+const userHeight = { height: 192 };
+const married = true;
+const property = 'sex';
+
+const userChars = { ...userHeight, weight: 63, [property]: 'male', married };
+// userChars === { height: 192, weight: 63, sex: 'male', married: true }
+
+const user = { ...userName, ...userChars };
+// user === { name: 'Ihar', height: 192, weight: 63, sex: 'male', married: true }
+```
+
+```js
+// Замена значений в объекте
+// ------------------------------------------------------------
+const user = { name: 'Ihar', height: 192, married: true };
+const userName = { name: { fisrt: 'Ihar', last: 'Spurhiash' } };
+const userFix = { ...user, ...userName };
+// userFix === { name: { fisrt: 'Ihar', last: 'Spurhiash' }, height: 192, married: true }
+```
+
+```js
+// Замена списка аргументов функции
+// ------------------------------------------------------------
+const planets = ['Венера', 'Земля'];
+const func = (a, b, c) => `${a} : ${b} : ${c}`;
+func(...planets); // ===> "Венера : Земля : undefined"
 ```
 
 </details><br>
