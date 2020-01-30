@@ -48,10 +48,10 @@ Object.hasOwnProperty(); // проверяет, есть ли такой клю�
 const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
 const prop = 'name';
 
-user.hasOwnProperty('name'); //       ===> true
-user.hasOwnProperty(prop); //         ===> true
-user.hasOwnProperty('User'); //       ===> false
-user.hasOwnProperty('name.last'); //  ===> false
+user.hasOwnProperty('name'); //       ==> true
+user.hasOwnProperty(prop); //         ==> true
+user.hasOwnProperty('User'); //       ==> false
+user.hasOwnProperty('name.last'); //  ==> false
 ```
 
 </details><br>
@@ -75,7 +75,7 @@ Object.keys(); // возвращает массив ключей
 ```js
 const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
 
-Object.keys(user); // ===> [ 'name', 'height', 'married' ]
+Object.keys(user); // ==> [ 'name', 'height', 'married' ]
 ```
 
 </details><br>
@@ -129,12 +129,5 @@ const userFix = { ...user, ...userName };
 // userFix === { name: { fisrt: 'Ihar', last: 'Spurhiash' }, height: 192, married: true }
 ```
 
-```js
-// Замена списка аргументов функции
-// ------------------------------------------------------------
-const planets = ['Венера', 'Земля'];
-const func = (a, b, c) => `${a} : ${b} : ${c}`;
-func(...planets); // ===> "Венера : Земля : undefined"
-```
-
 </details><br>
+```
