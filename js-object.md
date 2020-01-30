@@ -80,6 +80,50 @@ Object.keys(user); // ==> [ 'name', 'height', 'married' ]
 
 </details><br>
 
+<a id="values"></a>
+
+```js
+Object.values(); // возвращает массив значений
+```
+
+Возвращает массив, содержащий значения элементов в том порядке, в котором они были заведены.
+
+- [Спецификация](https://tc39.es/ecma262/#sec-object.prototype.values)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
+
+Object.values(user); // ==> [ { first: 'Ihar', last: 'Spurhiash' }, 192, true ]
+```
+
+</details><br>
+
+<a id="entries"></a>
+
+```js
+Object.entries(); // возвращает массив значений
+```
+
+Возвращает массив, содержащий значения элементов в формате `[ key, value ]` в том порядке, в котором они были заведены.
+
+- [Спецификация](https://tc39.es/ecma262/#sec-object.prototype.entries)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
+
+Object.entries(user); // ==> [ [ 'name', { first: 'Ihar', last: 'Spurhiash' } ], [ 'height', 192 ], [ 'married', true ] ]
+```
+
+</details><br>
+
 ## Object : Использование spread
 
 <a id="spread"></a>
