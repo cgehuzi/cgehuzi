@@ -7,26 +7,12 @@
 
 ## Навигация
 
-- [Object : Изменение (мутабельно)](#object--изменение-мутабельно)
-- [Object : Изменение (иммутабельно)](#object--изменение-иммутабельно)
-- [Object : Перебор](#object--перебор)
-- [Object : Функции высшего порядка](#object--функции-высшего-порядка)
-- [Object : Поиск](#object--поиск)
 - [Object : Проверка](#object--проверка)
 - [Object : Преобразование](#object--преобразование)
 - [Object : Использование spread](#object--использование-spread)
+- [Object : Деструктуризация](#object--деструктуризация)
 
 ---
-
-## Object : Изменение (мутабельно)
-
-## Object : Изменение (иммутабельно)
-
-## Object : Перебор
-
-## Object : Функции высшего порядка
-
-## Object : Поиск
 
 ## Object : Проверка
 
@@ -129,7 +115,7 @@ Object.entries(user); // ==> [ [ 'name', { first: 'Ihar', last: 'Spurhiash' } ],
 <a id="spread"></a>
 
 ```js
-...planets // spread-оператор
+...user // spread-оператор
 ```
 
 Раскладывает массив на список элементов.
@@ -168,10 +154,71 @@ const user = { ...userName, ...userChars };
 // Замена значений в объекте
 // ------------------------------------------------------------
 const user = { name: 'Ihar', height: 192, married: true };
-const userName = { name: { fisrt: 'Ihar', last: 'Spurhiash' } };
+const userName = { name: { first: 'Ihar', last: 'Spurhiash' } };
 const userFix = { ...user, ...userName };
-// userFix === { name: { fisrt: 'Ihar', last: 'Spurhiash' }, height: 192, married: true }
+// userFix === { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true }
 ```
 
 </details><br>
 ```
+
+## Object : Деструктуризация
+
+<a id="destructuring"></a>
+
+```js
+{ a: 'a', b: 'b', c: 'c' } = user; // извлечение данных из объекта в переменные
+```
+
+Позволяет извлекать данные из объектов при помощи синтаксиса, подобного объявлению объекта.  
+Базовый синтаксис: `const/let { что_записывать: куда_записывать }`
+
+- [Спецификация](https://tc39.es/ecma262/#sec-destructuring-assignment)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Разбор_объектов)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+// объявление переменных со значениями
+// ------------------------------------------------------------
+const user = {
+  name: { first: 'Ihar', last: 'Spurhiash' },
+  height: 192,
+  married: true
+};
+const {
+  height: userHeight,
+  name: userName, //  порядок переменных не обязан совпадать с порядком ключей
+  married //          имя переменной совпадает с ключём
+} = user;
+
+// userName === { first: 'Ihar', last: 'Spurhiash' }
+// userHeight === 192
+// married === true
+```
+
+```js
+// присвоение значений переменным
+// ------------------------------------------------------------
+const user = {
+  name: { first: 'Ihar', last: 'Spurhiash' },
+  height: 192
+};
+
+const {
+  name: { first: userFirstName },
+  height: userHeight,
+  weight: userWeight = null, // значения по умолчанию
+  weight = null, //             значения по умолчанию
+  married //                    несуществующий ключ
+} = user;
+
+// userFirstName === 'Ihar'
+// userHeight === 192
+// userWeight === null
+// weight === null
+// married === undefined
+```
+
+</details><br>

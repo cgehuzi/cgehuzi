@@ -780,7 +780,7 @@ const allPlanets = ['Меркурий', ...planets, 'Марс', ...lastPlanets];
 Позволяет извлекать данные из массивов при помощи синтаксиса, подобного объявлению массива.
 
 - [Спецификация](https://tc39.es/ecma262/#sec-destructuring-assignment)
-- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Разбор_массивов)
 
 <details>
 <summary>Примеры</summary>
