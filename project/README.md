@@ -1,3 +1,3 @@
 # empty NPM package
 
-![lint](https://github.com/cgehuzi/______/workflows/build/badge.svg)
+![build](https://github.com/cgehuzi/______/workflows/build/badge.svg)
