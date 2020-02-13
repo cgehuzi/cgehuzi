@@ -1,6 +1,6 @@
 << [На главную](./README.md)
 
-# Notes : Подкасты
+# Подкасты
 
 - [Веб-стандарты](https://podcasts.google.com/?feed=aHR0cHM6Ly93ZWItc3RhbmRhcmRzLnJ1L3BvZGNhc3QvZmVlZC8)
 - [Frontend Weekend](https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjMwNjQ1NTI2MS9zb3VuZHMucnNzP3F1ZXJ5PTE)
