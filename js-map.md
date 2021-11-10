@@ -22,7 +22,7 @@
 
   Добавляет новый элемент или обновляет существующий с указанными значениями key и value.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.set)  
+  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.set)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/set)
 
   ```javascript
@@ -39,7 +39,7 @@
 
   Удаляет указанный элемент из объекта.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.delete)  
+  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.delete)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/delete)
 
   ```javascript
@@ -56,7 +56,7 @@
 
   Удаляет все элементы из объекта.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.clear)  
+  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.clear)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/clear)
 
   ```javascript
@@ -74,7 +74,7 @@
 
   Выполняет переданную функцию для каждой пары `[key, value]` в том порядке, в котором они были заведены.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.foreach)  
+  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.foreach)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)
 
   ```javascript
@@ -110,7 +110,7 @@
 
   Возвращает указанный элемент объекта.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.get)  
+  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.get)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/get)
 
   ```javascript
@@ -127,7 +127,7 @@
 
   Проверяет наличие указанного ключа в объекте.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.has)  
+  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.has)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/has)
 
   ```javascript
@@ -146,7 +146,7 @@
 
   Возвращает [итерируемый объект](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B), содержащий ключи элементов в том порядке, в котором они были заведены.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.keys)  
+  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.keys)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/keys)
 
   ```javascript
@@ -188,7 +188,7 @@
 
   Возвращает [итерируемый объект](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B), содержащий значения элементов в том порядке, в котором они были заведены.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.values)  
+  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.values)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/values)
 
   ```javascript
@@ -230,7 +230,7 @@
 
   Возвращает [итерируемый объект](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B), содержащий пары `[key, value]` элементов в том порядке, в котором они были заведены.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.entries)  
+  [Спецификация](https://tc39.es/ecma262/#sec-map.prototype.entries)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
 
   ```javascript

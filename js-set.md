@@ -21,7 +21,7 @@
 
   Добавляет новый элемент с указанным значением.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.add)  
+  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.add)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/add)
 
   ```javascript
@@ -38,7 +38,7 @@
 
   Удаляет указанный элемент из множества.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.delete)  
+  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.delete)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
 
   ```javascript
@@ -55,7 +55,7 @@
 
   Удаляет все элементы из множества.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.clear)  
+  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.clear)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/clear)
 
   ```javascript
@@ -73,7 +73,7 @@
 
   Выполняет переданную функцию для каждой пары `[key, value]` в том порядке, в котором они были заведены.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.foreach)  
+  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.foreach)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)
 
   ```javascript
@@ -99,7 +99,7 @@
 
   Проверяет наличие указанного элемента в множестве.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.has)  
+  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.has)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/has)
 
   ```javascript
@@ -116,10 +116,10 @@
 
   <a id="values"></a>
 
-  Возвращает [итерируемый объект](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B), содержащий значения элементов в том порядке, в котором они были заведены.  
+  Возвращает [итерируемый объект](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B), содержащий значения элементов в том порядке, в котором они были заведены.<br>
   Преобразование в массив типа Array: [Set.values() => Array](./js-array.md#from)
 
-  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.values)  
+  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.values)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/values)
 
   ```javascript
@@ -162,7 +162,7 @@
 
   Возвращает [итерируемый объект](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B), содержащий пары `[key, value]` элементов в том порядке, в котором они были заведены.
 
-  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.entries)  
+  [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.entries)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/entries)
 
   ```javascript

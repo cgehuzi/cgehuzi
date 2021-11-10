@@ -20,7 +20,7 @@ npm install --save-dev eslint eslint-config-airbnb-base eslint-plugin-import esl
 
 ## ESLint : Настройка
 
-Настройка производится с помощью файла `.eslintrc.json`.  
+Настройка производится с помощью файла `.eslintrc.json`.<br>
 Его необходимо создать вручную в директории с файлом package.json.
 
 ```jsonc

@@ -27,7 +27,7 @@ npm install @babel/polyfill
 
 ## Babel : Настройка
 
-Настройка производится с помощью файла `babel.config.json`.  
+Настройка производится с помощью файла `babel.config.json`.<br>
 Его необходимо создать вручную в директории с файлом package.json.
 
 <details>

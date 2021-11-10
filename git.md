@@ -182,13 +182,13 @@ MM file_5
 # ------------------
 ```
 
-- **Первая колонка (A,A,A,D,M)** - `Changes to be committed`  
+- **Первая колонка (A,A,A,D,M)** - `Changes to be committed`<br>
   состояния файлов в момент подготовки их к коммиту
 
-- **Вторая колонка (M,D,M,D)** - `Changes not staged for commit`  
+- **Вторая колонка (M,D,M,D)** - `Changes not staged for commit`<br>
   состояния файлов, не подготовленных к коммиту
 
-- **??** - `Untracked files`  
+- **??** - `Untracked files`<br>
   не отслеживаемые (новые) файлы
 
 </details><br>
@@ -307,7 +307,7 @@ git checkout -- <file>  # сбросить файл к состоянию пос
 
 <a id="gitignore"></a>
 
-Задаётся через файл `.gitignore`.  
+Задаётся через файл `.gitignore`.<br>
 [Примеры файлов](https://github.com/github/gitignore) : для разных проектов и языков
 
 <details>
