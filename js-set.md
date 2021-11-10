@@ -108,9 +108,9 @@
   ```javascript
   const numbers = new Set([1, 2, 3, 4]);
 
-  numbers.has(4); // ===> true
+  numbers.has(4);   // ===> true
   numbers.has('4'); // ===> false
-  numbers.has(5); // ===> false
+  numbers.has(5);   // ===> false
   ```
 
 ## Set : Преобразование

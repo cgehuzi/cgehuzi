@@ -50,13 +50,13 @@ import * as exportModule from './export';
 <summary>Использование</summary>
 
 ```js
-exportModule.func1(1); //   ==> 1
-exportModule.func2(1); //   ==> 2
-exportModule.wrong3(1); //  ==> 3
-exportModule.func4(1); //   ==> 4
-exportModule.default(1); // ==> 5
-exportModule.a; //          ==> true
-exportModule.b; //          ==> false
+exportModule.func1(1);    // ==> 1
+exportModule.func2(1);    // ==> 2
+exportModule.wrong3(1);   // ==> 3
+exportModule.func4(1);    // ==> 4
+exportModule.default(1);  // ==> 5
+exportModule.a;           // ==> true
+exportModule.b;           // ==> false
 ```
 
 </details><br>
@@ -70,13 +70,13 @@ import { func1, func2, wrong3 as func3, func4, a, b }, func5 from './export';
 <summary>Использование</summary>
 
 ```js
-func1(1); //  ==> 1
-func2(1); //  ==> 2
-func3(1); //  ==> 3
-func4(1); //  ==> 4
-func5(1); //  ==> 5
-a; //         ==> true
-b; //         ==> false
+func1(1); // ==> 1
+func2(1); // ==> 2
+func3(1); // ==> 3
+func4(1); // ==> 4
+func5(1); // ==> 5
+a;        // ==> true
+b;        // ==> false
 ```
 
 </details><br>

@@ -37,10 +37,10 @@ Object.hasOwnProperty(); // проверяет, есть ли такой клю�
 const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
 const prop = 'name';
 
-user.hasOwnProperty('name'); //       ==> true
-user.hasOwnProperty(prop); //         ==> true
-user.hasOwnProperty('User'); //       ==> false
-user.hasOwnProperty('name.last'); //  ==> false
+user.hasOwnProperty('name');      // ==> true
+user.hasOwnProperty(prop);        // ==> true
+user.hasOwnProperty('User');      // ==> false
+user.hasOwnProperty('name.last'); // ==> false
 ```
 
 </details><br>
@@ -191,8 +191,8 @@ const user = {
 };
 const {
   height: userHeight,
-  name: userName, //  порядок переменных не обязан совпадать с порядком ключей
-  married //          имя переменной совпадает с ключём
+  name: userName, // порядок переменных не обязан совпадать с порядком ключей
+  married         // имя переменной совпадает с ключём
 } = user;
 
 // userName === { first: 'Ihar', last: 'Spurhiash' }
@@ -211,9 +211,9 @@ const user = {
 const {
   name: { first: userFirstName },
   height: userHeight,
-  weight: userWeight = null, // значения по умолчанию
-  weight = null, //             значения по умолчанию
-  married //                    несуществующий ключ
+  weight: userWeight = null,  // значения по умолчанию
+  weight = null,              // значения по умолчанию
+  married                     // несуществующий ключ
 } = user;
 
 // userFirstName === 'Ihar'

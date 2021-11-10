@@ -5,7 +5,7 @@
 ## Обычная установка
 
 ```bash
-brew install nodejs     # установка последней версии Node.js (macOS)
+brew install nodejs # установка последней версии Node.js (macOS)
 ```
 
 <details>

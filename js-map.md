@@ -31,7 +31,7 @@
   ```javascript
   const user = new Map([['name', 'Ihar'], ['surname']]);
 
-  user.set('surname', 'Spurhiash'); // ===> Map(2) {"name" => "Ihar", "surname" => "Spurhiash"}
+  user.set('surname', 'Spurhiash');   // ===> Map(2) {"name" => "Ihar", "surname" => "Spurhiash"}
   user.set('birthday', '26.03.1991'); // ===> Map(3) {"name" => "Ihar", "surname" => "Spurhiash", "birthday" => "26.03.1991"}
 
   console.log(user);
@@ -119,8 +119,8 @@
   ```javascript
   const user = new Map([['name', 'Ihar'], ['surname']]);
 
-  user.get('name'); // ===> "Ihar"
-  user.get('surname'); // ===> undefined
+  user.get('name');     // ===> "Ihar"
+  user.get('surname');  // ===> undefined
   user.get('birthday'); // ===> undefined
   ```
 
@@ -136,8 +136,8 @@
   ```javascript
   const user = new Map([['name', 'Ihar'], ['surname']]);
 
-  user.has('name'); // ===> true
-  user.has('surname'); // ===> true
+  user.has('name');     // ===> true
+  user.has('surname');  // ===> true
   user.has('birthday'); // ===> false
   ```
 

@@ -30,7 +30,7 @@ if (ident(1) !== 1) {
   throw new Error('Функция работает неверно!');
 }
 
-//  Uncaught Error: Функция работает неверно!
+// Uncaught Error: Функция работает неверно!
 ```
 
 ## Assert : встроенный модуль
@@ -64,22 +64,22 @@ assert(expression); // проверка истинности выражения
 ```js
 const ident = (a) => a;
 
-assert(ident(1) === 1); //   ==> всё ок
-assert(ident(2) === 1); //   ==> выдаст ошибку
+assert(ident(1) === 1); // ==> всё ок
+assert(ident(2) === 1); // ==> выдаст ошибку
 
 // Uncaught AssertionError [ERR_ASSERTION]: false == true
-//    generatedMessage: true,
-//    code: 'ERR_ASSERTION',
-//    actual: false,
-//    expected: true,
-//    operator: '=='
+// generatedMessage: true,
+// code: 'ERR_ASSERTION',
+// actual: false,
+// expected: true,
+// operator: '=='
 ```
 
 </details><br>
 
 ```js
-assert.equal(actual, expected); //      проверка равенства элементов (по ссылке)
-assert.notEqual(actual, expected); //   проверка неравенства элементов (по ссылке)
+assert.equal(actual, expected); // проверка равенства элементов (по ссылке)
+assert.notEqual(actual, expected); // проверка неравенства элементов (по ссылке)
 ```
 
 <details>
@@ -88,33 +88,33 @@ assert.notEqual(actual, expected); //   проверка неравенства 
 ```js
 const ident = (a) => a;
 
-assert.equal(ident(1), 1); //         ==> всё ок
-assert.equal(ident([1]), [1]); //     ==> выдаст ошибку
+assert.equal(ident(1), 1);      // ==> всё ок
+assert.equal(ident([1]), [1]);  // ==> выдаст ошибку
 
 // Uncaught AssertionError [ERR_ASSERTION]: [1] == [1]
-//    generatedMessage: true,
-//    code: 'ERR_ASSERTION',
-//    actual: [1],
-//    expected: [1],
-//    operator: '=='
+// generatedMessage: true,
+// code: 'ERR_ASSERTION',
+// actual: [1],
+// expected: [1],
+// operator: '=='
 
-assert.notEqual(ident(2), 1); //      ==> всё ок
-assert.notEqual(ident([1]), [1]); //  ==> всё ок
-assert.notEqual(ident(1), 1); //      ==> выдаст ошибку
+assert.notEqual(ident(2), 1);     // ==> всё ок
+assert.notEqual(ident([1]), [1]); // ==> всё ок
+assert.notEqual(ident(1), 1);     // ==> выдаст ошибку
 
 // Uncaught AssertionError [ERR_ASSERTION]: 1 != 1
-//    generatedMessage: true,
-//    code: 'ERR_ASSERTION',
-//    actual: 1,
-//    expected: 1,
-//    operator: '!='
+// generatedMessage: true,
+// code: 'ERR_ASSERTION',
+// actual: 1,
+// expected: 1,
+// operator: '!='
 ```
 
 </details><br>
 
 ```js
-assert.deepEqual(actual, expected); //    проверка равенства элементов (по значению)
-assert.notDeepEqual(actual, expected); // проверка неравенства элементов (по значению)
+assert.deepEqual(actual, expected);     // проверка равенства элементов (по значению)
+assert.notDeepEqual(actual, expected);  // проверка неравенства элементов (по значению)
 ```
 
 <details>
@@ -123,25 +123,25 @@ assert.notDeepEqual(actual, expected); // проверка неравенств�
 ```js
 const ident = (a) => a;
 
-assert.deepEqual(ident([1]), [1]); //   ==> всё ок
-assert.deepEqual(ident([2]), [1]); //   ==> выдаст ошибку
+assert.deepEqual(ident([1]), [1]); // ==> всё ок
+assert.deepEqual(ident([2]), [1]); // ==> выдаст ошибку
 
 // Uncaught AssertionError [ERR_ASSERTION]: Expected values to be loosely deep-equal: [2] should loosely deep-equal [1]
-//    generatedMessage: true,
-//    code: 'ERR_ASSERTION',
-//    actual: [2],
-//    expected: [1],
-//    operator: 'deepEqual'
+// generatedMessage: true,
+// code: 'ERR_ASSERTION',
+// actual: [2],
+// expected: [1],
+// operator: 'deepEqual'
 
-assert.notDeepEqual(ident([2]), [1]); //   ==> всё ок
-assert.notDeepEqual(ident([1]), [1]); //   ==> выдаст ошибку
+assert.notDeepEqual(ident([2]), [1]); // ==> всё ок
+assert.notDeepEqual(ident([1]), [1]); // ==> выдаст ошибку
 
 // Uncaught: AssertionError [ERR_ASSERTION]: Expected "actual" not to be loosely deep-equal to: [1]
-//    generatedMessage: true,
-//    code: 'ERR_ASSERTION',
-//    actual: [1],
-//    expected: [1],
-//    operator: 'notDeepEqual'
+// generatedMessage: true,
+// code: 'ERR_ASSERTION',
+// actual: [1],
+// expected: [1],
+// operator: 'notDeepEqual'
 ```
 
 </details><br>

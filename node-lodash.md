@@ -36,9 +36,9 @@ const planets1 = ['Меркурий', 'Венера', 'Земля'];
 const planets2 = ['Венера', 'Земля', 'Марс'];
 const planets3 = ['Земля', 'Марс', 'Юпитер'];
 
-_.intersection(planets1); //                      ==> [ 'Меркурий', 'Венера', 'Земля' ]
-_.intersection(planets1, planets2); //            ==> [ 'Венера', 'Земля' ]
-_.intersection(planets1, planets2, planets3); //  ==> [ 'Земля' ]
+_.intersection(planets1);                     // ==> [ 'Меркурий', 'Венера', 'Земля' ]
+_.intersection(planets1, planets2);           // ==> [ 'Венера', 'Земля' ]
+_.intersection(planets1, planets2, planets3); // ==> [ 'Земля' ]
 ```
 
 </details><br>
@@ -61,9 +61,9 @@ const planets1 = ['Меркурий', 'Венера', 'Земля'];
 const planets2 = ['Венера', 'Земля', 'Марс'];
 const planets3 = ['Земля', 'Марс', 'Юпитер'];
 
-_.union(planets1); //                     ==> [ 'Меркурий', 'Венера', 'Земля' ]
-_.union(planets1, planets2); //           ==> [ 'Меркурий', 'Венера', 'Земля', 'Марс' ]
-_.union(planets1, planets2, planets3); // ==> [ 'Меркурий', 'Венера', 'Земля', 'Марс', 'Юпитер' ]
+_.union(planets1);                      // ==> [ 'Меркурий', 'Венера', 'Земля' ]
+_.union(planets1, planets2);            // ==> [ 'Меркурий', 'Венера', 'Земля', 'Марс' ]
+_.union(planets1, planets2, planets3);  // ==> [ 'Меркурий', 'Венера', 'Земля', 'Марс', 'Юпитер' ]
 ```
 
 </details><br>
@@ -85,9 +85,9 @@ _.difference(); // вычисляет разницу массивов
 const planets1 = ['Меркурий', 'Венера', 'Земля'];
 const planets2 = ['Венера', 'Земля', 'Марс'];
 
-_.difference(planets1); //            ==> [ 'Меркурий', 'Венера', 'Земля' ]
-_.difference(planets1, planets2); //  ==> [ 'Меркурий' ]
-_.difference(planets2, planets1); //  ==> [ 'Марс' ]
+_.difference(planets1);           // ==> [ 'Меркурий', 'Венера', 'Земля' ]
+_.difference(planets1, planets2); // ==> [ 'Меркурий' ]
+_.difference(planets2, planets1); // ==> [ 'Марс' ]
 ```
 
 </details><br>
@@ -110,10 +110,10 @@ _.has(); // проверяет наличие прямых и вложенных
 ```js
 const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
 
-_.has(user, 'name'); //             ==> true
-_.has(user, 'name.first'); //       ==> true
-_.has(user, ['name', 'first']); //  ==> true
-_.has(user, 'Ihar'); //             ==> false
+_.has(user, 'name');            // ==> true
+_.has(user, 'name.first');      // ==> true
+_.has(user, ['name', 'first']); // ==> true
+_.has(user, 'Ihar');            // ==> false
 ```
 
 </details><br>
