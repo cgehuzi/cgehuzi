@@ -5,12 +5,15 @@
 - [Спецификация](https://tc39.es/ecma262/#sec-object-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
-## Навигация
+---
 
-- [Object : Проверка](#object--проверка)
-- [Object : Преобразование](#object--преобразование)
-- [Object : Использование spread](#object--использование-spread)
-- [Object : Деструктуризация](#object--деструктуризация)
+Навигация:
+
+- [JS : Object - объект](#js--object---объект)
+  - [Object : Проверка](#object--проверка)
+  - [Object : Преобразование](#object--преобразование)
+  - [Object : Использование spread](#object--использование-spread)
+  - [Object : Деструктуризация](#object--деструктуризация)
 
 ---
 
@@ -160,7 +163,6 @@ const userFix = { ...user, ...userName };
 ```
 
 </details><br>
-```
 
 ## Object : Деструктуризация
 

@@ -6,18 +6,21 @@
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Урок на Hexlet](https://ru.hexlet.io/courses/js_collections/lessons/array/theory_unit)
 
-## Навигация
+---
 
-- [Array : Изменение (мутабельно)](#array--изменение-мутабельно)
-- [Array : Изменение (иммутабельно)](#array--изменение-иммутабельно)
-- [Array : Перебор](#array--перебор)
-- [Array : Функции высшего порядка](#array--функции-высшего-порядка)
-- [Array : Поиск](#array--поиск)
-- [Array : Проверка](#array--проверка)
-- [Array : Преобразование](#array--преобразование)
-- [Array : Spread-оператор](#array--spread-оператор)
-- [Array : Деструктуризация](#array--деструктуризация)
-- [Array : Rest-оператор](#array--rest-оператор)
+Навигация:
+
+- [JS : Array - массив](#js--array---массив)
+  - [Array : Изменение (мутабельно)](#array--изменение-мутабельно)
+  - [Array : Изменение (иммутабельно)](#array--изменение-иммутабельно)
+  - [Array : Перебор](#array--перебор)
+  - [Array : Функции высшего порядка](#array--функции-высшего-порядка)
+  - [Array : Поиск](#array--поиск)
+  - [Array : Проверка](#array--проверка)
+  - [Array : Преобразование](#array--преобразование)
+  - [Array : Spread-оператор](#array--spread-оператор)
+  - [Array : Деструктуризация](#array--деструктуризация)
+  - [Array : Rest-оператор](#array--rest-оператор)
 
 ---
 

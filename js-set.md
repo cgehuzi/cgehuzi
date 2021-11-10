@@ -6,12 +6,15 @@
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set)
 - [Урок на Hexlet](https://ru.hexlet.io/courses/js_collections/lessons/set/theory_unit)
 
-## Навигация
+---
 
-- [Set : Изменение (мутабельно)](#set--изменение-мутабельно)
-- [Set : Перебор](#set--перебор)
-- [Set : Проверка](#set--проверка)
-- [Set : Преобразование](#set--преобразование)
+Навигация:
+
+- [JS : Set - множество](#js--set---множество)
+  - [Set : Изменение (мутабельно)](#set--изменение-мутабельно)
+  - [Set : Перебор](#set--перебор)
+  - [Set : Проверка](#set--проверка)
+  - [Set : Преобразование](#set--преобразование)
 
 ---
 

@@ -2,10 +2,13 @@
 
 # JS : Modules - модули
 
-## Навигация
+---
 
-- [Modules : Экспорт](#modules--экспорт)
-- [Modules : Импорт](#modules--импорт)
+Навигация:
+
+- [JS : Modules - модули](#js--modules---модули)
+  - [Modules : Экспорт](#modules--экспорт)
+  - [Modules : Импорт](#modules--импорт)
 
 ---
 

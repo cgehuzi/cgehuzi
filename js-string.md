@@ -5,10 +5,13 @@
 - [Спецификация](https://tc39.es/ecma262/#sec-string-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String)
 
-## Навигация
+---
 
-- [String : Изменение](#string--изменение)
-- [String : Преобразование](#string--преобразование)
+Навигация:
+
+- [JS : String - строка](#js--string---строка)
+  - [String : Изменение](#string--изменение)
+  - [String : Преобразование](#string--преобразование)
 
 ---
 

@@ -6,13 +6,16 @@
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - [Урок на Hexlet](https://ru.hexlet.io/courses/js_collections/lessons/map/theory_unit)
 
-## Навигация
+---
 
-- [Map : Изменение (мутабельно)](#map--изменение-мутабельно)
-- [Map : Перебор](#map--перебор)
-- [Map : Поиск](#map--поиск)
-- [Map : Проверка](#map--проверка)
-- [Map : Преобразование](#map--преобразование)
+Навигация:
+
+- [JS : Map - ассациативный массив](#js--map---ассациативный-массив)
+  - [Map : Изменение (мутабельно)](#map--изменение-мутабельно)
+  - [Map : Перебор](#map--перебор)
+  - [Map : Поиск](#map--поиск)
+  - [Map : Проверка](#map--проверка)
+  - [Map : Преобразование](#map--преобразование)
 
 ---
 
