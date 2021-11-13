@@ -1,3 +1,5 @@
+// Переворот числа (Введение в программирование)
+
 const reverseInt = (num) => {
     const num_str = String(num);
     let result = '';
