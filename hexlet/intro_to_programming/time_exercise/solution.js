@@ -1,5 +1,6 @@
 // Форматированное время (Введение в программирование)
 
+//const getFormattedTime = (time) => String(time).padStart(2, '0');
 const getFormattedTime = (time) => time < 10 ? `0${time}` : time;
 
 const formattedTime = (minites_total) => {
@@ -8,8 +9,8 @@ const formattedTime = (minites_total) => {
     const hh = hours_total - days * 24;
     const mm = minites_total - hours_total * 60;
 
-    // return `${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}`
-    return `${getFormattedTime(hh)}:${getFormattedTime(mm)}`;
+    const result = `${getFormattedTime(hh)}:${getFormattedTime(mm)}`
+    return result;
 }
 
 export default formattedTime;

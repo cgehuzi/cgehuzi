@@ -7,7 +7,9 @@ const reverseInt = (num) => {
         const char = num_str[i];
         result = char === '-' ? `${result}` : `${char}${result}`;
     }
-    return num < 0 ? Number(`-${result}`) : Number(result);
+
+    result = num < 0 ? Number(`-${result}`) : Number(result);
+    return result;
 }
 
 export default reverseInt;
