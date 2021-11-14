@@ -15,12 +15,8 @@
 ## Примеры
 
 ```js
-formattedTime(5); // 00:05
-formattedTime(15); // 00:15
-formattedTime(60); // 01:00
-formattedTime(67); // 01:07
-formattedTime(175); // 02:55
-formattedTime(600); // 10:00
-formattedTime(754); // 12:34
-formattedTime(1504); // 01:04
+sumSquareDifference(0); // 0
+sumSquareDifference(10); // 2640
+sumSquareDifference(13); // 7462
+sumSquareDifference(21); // 50050
 ```
