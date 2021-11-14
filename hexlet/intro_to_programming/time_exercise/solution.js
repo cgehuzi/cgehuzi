@@ -1,5 +1,3 @@
-// Форматированное время (Введение в программирование)
-
 //const getFormattedTime = (time) => String(time).padStart(2, '0');
 const getFormattedTime = (time) => time < 10 ? `0${time}` : time;
 
