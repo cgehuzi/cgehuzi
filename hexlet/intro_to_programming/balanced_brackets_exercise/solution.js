@@ -1,5 +1,4 @@
 const areBracketsBalanced = (str) => {
-    console.log(str);
 
     if (str === '') {
         return true;
