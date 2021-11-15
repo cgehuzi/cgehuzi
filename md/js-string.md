@@ -17,6 +17,33 @@
 
 ## String : Изменение
 
+<a id="slice"></a>
+
+```js
+String.slice(); // извлекает подстроку
+```
+
+Возвращает подстроку строки между двумя индексами, или от одного индекса и до конца строки.
+
+- [Спецификация](https://tc39.es/ecma262/#sec-string.prototype.slice)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/slice)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const str = '0123456';
+
+str.slice(1); // ==> '123456'
+str.slice(-1, 3); // ==> ''     (-1 < 0) ---> если start < 0, возвращается ''
+str.slice(3, -1); // ==> '345'  (-1 < 0) ---> если end < 0, end = str.length + end ---> 6
+str.slice(1, 3); // ==> '12'
+
+// str === '0123456'
+```
+
+</details><br>
+
 <a id="substring"></a>
 
 ```js
@@ -35,8 +62,8 @@ String.substring(); // извлекает подстроку
 const str = '0123456';
 
 str.substring(1); // ==> '123456'
-str.substring(-1, 3); // ==> '012'
-str.substring(3, -1); // ==> '012'
+str.substring(-1, 3); // ==> '012'  (-1 < 0) ---> вместо него используется 0
+str.substring(3, -1); // ==> '012'  (3 > -1) ---> они меняются местами
 str.substring(1, 3); // ==> '12'
 
 // str === '0123456'
