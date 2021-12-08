@@ -28,7 +28,7 @@ _Ведутся с целью структурирования получаем�
 - [git : Основные команды](./md/git.md)
 - [git : Ветвление](./md/git-branch.md)
 - [git : GitHub Actions](./md/git-github-actions.md)
-- [git : SSH](./md/git-ssh.md)
+- [git : SSH (интеграция с GitHub)](./md/git-ssh.md)
 
 <br>
 
