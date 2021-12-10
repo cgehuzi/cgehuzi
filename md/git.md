@@ -356,11 +356,11 @@ git commit --amend -m "____"  # с указанием подписи
 
 Управление редактором [vim](./bash#vim)
 
-</details><br>
+</details>
 
 ### Именование коммитов
 
-[Соглашение по именованию коммитов](https://conventionalcommits.org/)
+[Соглашение по именованию коммитов](https://www.conventionalcommits.org/ru/)
 
 ## Git : Отправка коммитов
 
