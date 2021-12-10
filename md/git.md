@@ -2,6 +2,8 @@
 
 # Git : Основные команды
 
+[Шпаргалка от GitLab (на английском)](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
+
 ---
 
 Навигация:
