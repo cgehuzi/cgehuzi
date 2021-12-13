@@ -657,6 +657,21 @@ git log <dir>               # изменялись файлы в <dir> (указ
 ```
 <br>
 
+<a id="rev-list"></a>
+
+```bash
+git rev-list     # список коммитов (от последнего к первому)
+```
+
+<details>
+<summary>Примеры</summary>
+
+```bash
+git rev-list --all    # hash-суммы всех коммитов
+```
+
+</details><br>
+
 <a id="blame"></a>
 
 ```bash
