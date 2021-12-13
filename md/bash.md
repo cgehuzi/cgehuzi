@@ -524,15 +524,29 @@ cat <file> | grep some_text | sort  # - ИТОГО:
 
 ```bash
 ____ > ____     # STDOUT --> STDIN : запись данных в файл
+                # (с полной заменой содержимого файла)
 ```
 
 <details>
 <summary>Примеры</summary>
 
 ```bash
-<command> > <file>          # с полной заменой содержимого <file>
-<command> >> <file>         # с добавлением в конец <file>
+<command> > <file>          # запись данных в <file>
 echo some_text > <file>     # вывод some_text на экран и запись результата в <file>
+```
+
+</details><br>
+
+```bash
+____ >> ____    # STDOUT --> STDIN : запись данных в файл
+                # (с добавлением в конец файла)
+```
+
+<details>
+<summary>Примеры</summary>
+
+```bash
+<command> >> <file>         # запись данных в <file>
 echo some_text >> <file>    # вывод some_text на экран и запись результата в конец <file>
 ```
 
