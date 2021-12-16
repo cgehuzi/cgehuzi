@@ -273,19 +273,36 @@ git add -p        # | краткая запись
 
 </details><br>
 
-<a id="reset"></a>
+<a id="restore"></a>
 
 ```bash
-git reset   # отмена подготовки к коммиту
+git restore   # отмена изменений в файлах
 ```
 
 <details>
 <summary>Примеры</summary>
 
 ```bash
-git reset .         # все файлы
-git reset <file>    # один файл
-git reset <dir>     # все файлы в директории (включая файлы поддиректориях)
+git restore <file>            # отмена неотслеживаемых изменений
+git restore --staged <file>   # отмена подготовки файла к коммиту
+```
+
+</details><br>
+
+<a id="reset"></a>
+
+```bash
+git reset   # отмена изменений в репозитории
+```
+
+<details>
+<summary>Примеры</summary>
+
+```bash
+git reset <file>          # отмена подготовки к коммиту
+git reset HEAD~1          # отмена последнего коммита (с сохранением изменений файлов)
+git reset --hard HEAD~1   # отмена последнего коммита (без сохранением изменений файлов)
+git reset HEAD~2          # отмена последних 2-ух коммитов
 ```
 
 </details><br>
