@@ -8,7 +8,7 @@
 
 Функция Аккермана определяется рекурсивно для неотрицательных целых чисел m и n следующим образом:
 
-![Функция Аккермана](https://github.com/cgehuzi/notes/raw/master/images/ackermann_exercise.png)
+![Функция Аккермана](https://github.com/cgehuzi/notes/raw/main/images/ackermann_exercise.png)
 
 Справа в формуле указаны условия при которых выполняются расчёты.
 

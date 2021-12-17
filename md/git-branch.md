@@ -131,8 +131,8 @@ git rebase      # перебазирование веток
 # Простое перебазирование
 # ----------------------------------------
 git checkout <branch>   # переключиться на ветку <branch>
-git rebase master       # перебазировать ветку в master
-git checkout master     # переключиться на ветку master
+git rebase main       # перебазировать ветку в main
+git checkout main     # переключиться на ветку main
 git merge <branch>      # объединить изменения
 # ----------------------------------------
 ```

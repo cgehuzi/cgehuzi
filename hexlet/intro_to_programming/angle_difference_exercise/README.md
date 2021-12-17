@@ -8,7 +8,7 @@
 
 Угол между лучами измеряется двумя способами:
 
-![Разница углов](https://github.com/cgehuzi/notes/raw/master/images/angle_difference_exercise.png)
+![Разница углов](https://github.com/cgehuzi/notes/raw/main/images/angle_difference_exercise.png)
 
 Функция должна вернуть наименьшее значение.
 

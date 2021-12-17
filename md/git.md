@@ -107,20 +107,20 @@ git remote show <remote>                # получение информаци�
 * remote origin                                     # <remote> репозитория
   Fetch URL: https://github.com/cgehuzi/cgehuzi.git # <url> для получения коммитов
   Push  URL: https://github.com/cgehuzi/cgehuzi.git # <url> для отправки коммитов
-  HEAD branch: master                               # активная ветка <branch>
+  HEAD branch: main                               # активная ветка <branch>
   Remote branches:                                  # | список отслеживаемых удалённых веток
     bash    tracked                                 # |
     english tracked                                 # |
     git     tracked                                 # |
     js      tracked                                 # |
-    master  tracked                                 # |
+    main  tracked                                 # |
     notes   tracked                                 # \
   Local branches configured for 'git pull':         # | список веток, из которыч будут получены изменения
     git    merges with remote git                   # |
-    master merges with remote master                # \
+    main merges with remote main                # \
   Local refs configured for 'git push':             # | список веток, в которые будут отправлены изменения
     git    pushes to git    (fast-forwardable)      # |
-    master pushes to master (up to date)            # \
+    main pushes to main (up to date)            # \
 # ---------------------------------------------------
 ```
 
@@ -156,8 +156,8 @@ git status -s       # | краткая запись
 ```bash
 # git status
 # --------------------------------------------------
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -551,7 +551,7 @@ git log --oneline --graph   # со схемой ветвления
 ```bash
 # git log --pretty=oneline
 # -----------------------------------------
-68cc805d693af489769e9c226d0cef0cad64d674 (HEAD -> git, origin/master, origin/git, origin/HEAD, master) fix merge
+68cc805d693af489769e9c226d0cef0cad64d674 (HEAD -> git, origin/main, origin/git, origin/HEAD, main) fix merge
 d0f2fe2ce4cf84ef60a38c47f37bf07b3a8072c2 add tag
 a88a6ee9c4e2ece045c553062c8150aaba963da7 add tag
 4e9abc1dfa5224dc2b267aab131828f9b3c457be add remote, fetch, pull and push commands
@@ -561,7 +561,7 @@ af8d77ee2a8d525e00d5d9332c7e7020a776a591 merge git
 
 # git log --oneline
 # -----------------------------------------
-68cc805 (HEAD -> git, origin/master, origin/git, origin/HEAD, master) fix merge
+68cc805 (HEAD -> git, origin/main, origin/git, origin/HEAD, main) fix merge
 d0f2fe2 add tag
 a88a6ee add tag
 4e9abc1 add remote, fetch, pull and push commands
@@ -571,7 +571,7 @@ af8d77e merge git
 
 # git log --oneline --graph
 # -----------------------------------------
-*   68cc805 (HEAD -> git, origin/master, origin/git, origin/HEAD, master) fix merge
+*   68cc805 (HEAD -> git, origin/main, origin/git, origin/HEAD, main) fix merge
 |\
 | * a88a6ee add tag
 * | d0f2fe2 add tag
