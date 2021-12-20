@@ -438,6 +438,8 @@ git pull    # получить данные из удалённого репоз
 git pull                    # получить данные из текущего репозитория
 git pull <remote>           # из репозитория <remote> (по умолчнию = origin)
 git pull <remote> <branch>  # из ветки <branch> репозитория <remote>
+
+git pull --rebase           # локальные коммиты расположить после полученных
 ```
 
 </details><br>
