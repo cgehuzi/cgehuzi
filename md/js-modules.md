@@ -63,7 +63,7 @@ exportModule.b;           // ==> false
 
 ```js
 // Импорт по частям
-import { func1, func2, wrong3 as func3, func4, a, b }, func5 from './export';
+import func5, { func1, func2, wrong3 as func3, func4, a, b } from './export';
 ```
 
 <details>
