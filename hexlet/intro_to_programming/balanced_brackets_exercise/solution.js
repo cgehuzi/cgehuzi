@@ -1,5 +1,6 @@
+// @ts-check
+// BEGIN (write your solution here)
 const areBracketsBalanced = (str) => {
-
     if (str === '') {
         return true;
     }
@@ -11,6 +12,7 @@ const areBracketsBalanced = (str) => {
     }
 
     return false;
-}
+};
 
 export default areBracketsBalanced;
+// END

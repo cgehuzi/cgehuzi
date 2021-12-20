@@ -1,21 +1,24 @@
+// @ts-check
+// BEGIN (write your solution here)
 const sumSquareDifference = (n) => {
-    const squareSum = (n, acc) => {
-        if (n === 0) {
+    const squareSum = (m, acc) => {
+        if (m === 0) {
             return acc ** 2;
         }
 
-        return squareSum(n - 1, acc + n);
-    }
+        return squareSum(m - 1, acc + m);
+    };
 
-    const sumSquare = (n) => {
-        if (n === 0) {
+    const sumSquare = (m) => {
+        if (m === 0) {
             return 0;
         }
 
-        return n ** 2 + sumSquare(n - 1);
-    }
+        return m ** 2 + sumSquare(m - 1);
+    };
 
     return squareSum(n, 0) - sumSquare(n);
-}
+};
 
 export default sumSquareDifference;
+// END

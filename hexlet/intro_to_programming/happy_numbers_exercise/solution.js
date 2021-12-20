@@ -1,28 +1,31 @@
+// @ts-check
 const sumOfSquareDigits = (num) => {
-    const str = String(num);
-    let sum = 0;
+  const numAsStr = String(num);
+  let sum = 0;
+  for (let i = 0; i < numAsStr.length; i += 1) {
+    const digit = Number(numAsStr[i]);
+    sum += digit * digit;
+  }
 
-    for (let i = 0; i < str.length; i += 1) {
-        sum += Number(str[i]) ** 2;
-    }
+  return sum;
+};
 
-    return sum;
-}
-
+// BEGIN (write your solution here)
 const isHappyNumber = (num) => {
-    const max_iter = 10;
+  const maxIter = 10;
 
-    const iter = (counter, acc) => {
-        if (acc === 1) {
-            return true;
-        }
-        if (counter === 0) {
-            return false;
-        }
-        return iter(counter - 1, sumOfSquareDigits(acc));
+  const iter = (counter, acc) => {
+    if (acc === 1) {
+      return true;
     }
+    if (counter === 0) {
+      return false;
+    }
+    return iter(counter - 1, sumOfSquareDigits(acc));
+  };
 
-    return iter(max_iter, num);
-}
+  return iter(maxIter, num);
+};
 
 export default isHappyNumber;
+// END

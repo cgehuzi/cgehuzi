@@ -1,3 +1,5 @@
+// @ts-check
+// BEGIN (write your solution here)
 const isPerfect = (num) => {
     if (num <= 0) {
         return false;
@@ -12,6 +14,7 @@ const isPerfect = (num) => {
     }
 
     return dividerSum === num;
-}
+};
 
 export default isPerfect;
+// END

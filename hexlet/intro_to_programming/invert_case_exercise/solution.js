@@ -1,15 +1,21 @@
+// @ts-check
+// BEGIN (write your solution here)
 const invertCase = (str) => {
-    const iter = (acc, counter) => {
-        if (counter === str.length) {
-            return acc;
-        }
-        const char = str[counter];
-        acc += char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
-
-        return iter(acc, counter += 1);
+  const iter = (acc, counter) => {
+    if (counter === str.length) {
+      return acc;
     }
+    const char = str[counter];
+    const plusChar = char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
 
-    return iter('', 0);
-}
+    const newAcc = acc + plusChar;
+    const newCounter = counter + 1;
+
+    return iter(newAcc, newCounter);
+  };
+
+  return iter('', 0);
+};
 
 export default invertCase;
+// END

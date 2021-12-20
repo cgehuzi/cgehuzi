@@ -1,11 +1,14 @@
+// @ts-check
+// BEGIN (write your solution here)
 const diff = (one, two) => {
-    const small = one < two ? one : two;
-    const big = one > two ? one : two;
+  const small = one < two ? one : two;
+  const big = one > two ? one : two;
 
-    const diff_one = (360 - big) + small;
-    const diff_two = big - small
+  const diffOne = (360 - big) + small;
+  const diffTwo = big - small;
 
-    return diff_one < diff_two ? diff_one : diff_two;
-}
+  return diffOne < diffTwo ? diffOne : diffTwo;
+};
 
 export default diff;
+// END
