@@ -817,23 +817,36 @@ let earth = null;
 let mars = null;
 let jupiter = null;
 
-[venus, earth, mars] = ['Венера', 'Земля']; // ==> [ 'Венера', 'Земля' ]
+[venus, earth, mars] = ['Венера', 'Земля'];
 // venus === 'Венера'
 // earth === 'Земля'
 // mars === undefined
 // jupiter === null
 
-[venus, earth, mars = 'Марс'] = ['Венера', 'Земля']; // ==> [ 'Венера', 'Земля' ]
-// venus === 'Венера'
-// earth === 'Земля'
-// mars === 'Марс'
+[venus, earth, mars = null] = [null, null];
+// venus === null
+// earth === null
+// mars === null
 // jupiter === null
 
-[, , , jupiter] = ['Не Венера', 'Не Земля', 'Не Марс', 'Юпитер']; // ==> [ 'Не Венера', 'Не Земля', 'Не Марс', 'Юпитер' ]
+[venus, , , jupiter] = ['Венера', 'Земля', 'Марс', 'Юпитер', 'Сатурн'];
+// venus === 'Венера'
+// earth === null
+// mars === null
+// jupiter === 'Юпитер'
+
+[, earth, , , mars] = ['Венера', 'Земля', 'Луна', 'Фобос', 'Марс', 'Юпитер'];
 // venus === 'Венера'
 // earth === 'Земля'
 // mars === 'Марс'
 // jupiter === 'Юпитер'
+
+let moon = null;
+let fobos = null;
+
+[, , [moon, fobos]] = ['Венера', 'Земля', ['Луна', 'Фобос'], 'Марс', 'Юпитер'];
+// moon === 'Луна'
+// fobos === 'Фобос'
 ```
 
 </details><br>
