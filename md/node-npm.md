@@ -239,8 +239,8 @@ npm publish --dry-run   # публикация пакета локально
 
 Зависимости хранятся в файле `package.json` в специальных секциях:
 
-- **dependencies** – основные
-- **devDependencies** – не публикуемые
+- **dependencies** – основные (нужны в продакшене)
+- **devDependencies** – не публикуемые (нужны только для разработки)
 
 [Документация](https://docs.npmjs.com/files/package.json#dependencies)
 
@@ -302,3 +302,14 @@ npx <package> # запуск утилиты <package>
 npm ci    # установка пакетов из зависимостей
 ```
 Cкачивает зависимости в директорию node_modules, базируясь на содержимом package.json и версиях из package-lock.json.
+
+
+<details>
+<summary>Примеры</summary>
+
+```bash
+npm ci                # устанавливает dependencies и devDependencies
+npm ci --production   # устанавливает только dependencies
+```
+
+</details><br>
