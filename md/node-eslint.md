@@ -18,51 +18,66 @@
 [Официальный сайт](https://eslint.org/)
 
 ```bash
-npm install --save-dev eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-babel babel-eslint
+npm install eslint --save-dev
 ```
 
 ## ESLint : Настройка
 
-Настройка производится с помощью файла `.eslintrc.json`.<br>
-Его необходимо создать вручную в директории с файлом package.json.
+Настройка производится с помощью файла `.eslintrc.yml`.
 
-```jsonc
-{
-  "extends": [ ... ],         // расширение доступных правил сторонними
-  "plugins": [ ... ],         // добавление сторонних плагинов
-  "env": { ... },             // настройка синтаксиса поддерживаемых сред
-  "parserOptions": { ... },   // настройка параметов, которые нужно поддерживать
-  "ignorePatterns": [ ... ],  // игнорируемые файлы и директории (или создайте файл .eslintignore)
-  "rules": { ... }            // правила оформления кода
-                              // | 0 / "off"     – выключено
-                              // | 1 / "warn"    – предупреждение
-                              // | 2 / "error"   – ошибка
+```bash
+npx eslint --init   # инициализация (пошаговое создание файла .eslintrc.yml)
+```
+
+<details>
+<summary>Пример вопросов / ответов</summary>
+
+```txt
+✔ How would you like to use ESLint? · style
+✔ What type of modules does your project use? · esm (JS Modules)
+✔ Which framework does your project use? · none
+✔ Does your project use TypeScript? · No
+✔ Where does your code run? · Node
+✔ How would you like to define a style for your project? · guide
+✔ Which style guide do you want to follow? · airbnb
+✔ What format do you want your config file to be in? · YAML
+Checking peerDependencies of eslint-config-airbnb-base@latest
+The config that you've selected requires the following dependencies:
+
+eslint-config-airbnb-base@latest eslint@^5.16.0 || ^6.8.0 || ^7.2.0 eslint-plugin-import@^2.21.2
+✔ Would you like to install them now with npm? · Yes
+```
+
+</details><br>
+
+Либо можно создать вручную в директории с файлом `package.json`.
+
+```yml
+extends:          # расширение доступных правил сторонними
+plugins:          # добавление сторонних плагинов
+env:              # настройка синтаксиса поддерживаемых сред
+parserOptions:    # настройка параметов, которые нужно поддерживать
+ignorePatterns:   # игнорируемые файлы и директории (или создайте файл .eslintignore)
+rules:            # правила оформления кода
+                  # | 0 / "off"     – выключено
+                  # | 1 / "warn"    – предупреждение
+                  # | 2 / "error"   – ошибка
 }
 ```
 
 <details>
 <summary>Пример файла</summary>
 
-```jsonc
-{
-  "extends": ["eslint:recommended", "airbnb-base"],
-  "plugins": ["import", "babel"],
-  "env": {
-    "es6": true,
-    "node": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "impliedStrict": true
-    }
-  },
-  "ignorePatterns": ["node_modules", "dist"],
-  "rules": {
-    "no-console": 0
-  }
-}
+```yml
+env:
+  browser: true
+  es2021: true
+extends:
+  - airbnb-base
+parserOptions:
+  ecmaVersion: 13
+  sourceType: module
+rules: {}
 ```
 
 </details><br>
