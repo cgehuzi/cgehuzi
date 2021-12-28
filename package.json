@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/cgehuzi/cgehuzi#readme",
   "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
     "prettier": "^2.5.1"
   }
 }
