@@ -1,0 +1,22 @@
+{
+  "name": "cgehuzi",
+  "version": "1.0.0",
+  "description": "Заметки по основным направлениям обучения.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgehuzi/cgehuzi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cgehuzi/cgehuzi/issues"
+  },
+  "homepage": "https://github.com/cgehuzi/cgehuzi#readme",
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}
