@@ -24,8 +24,8 @@
 ## Примеры
 
 ```js
-dnaToRna('ACGTGGTCTTAA'); // 'UGCACCAGAAUU'
-dnaToRna('CCGTA'); // 'GGCAU'
-dnaToRna(''); // ''
-dnaToRna('ACNTG'); // null
+dnaToRna("ACGTGGTCTTAA"); // 'UGCACCAGAAUU'
+dnaToRna("CCGTA"); // 'GGCAU'
+dnaToRna(""); // ''
+dnaToRna("ACNTG"); // null
 ```

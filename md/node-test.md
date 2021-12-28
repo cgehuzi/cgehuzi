@@ -27,7 +27,7 @@ const ident = (a) => a;
 // если результат функции не равен ожидаемому значению
 if (ident(1) !== 1) {
   // выбрасываем исключение и останавливаем выполнение кода
-  throw new Error('Функция работает неверно!');
+  throw new Error("Функция работает неверно!");
 }
 
 // Uncaught Error: Функция работает неверно!
@@ -49,7 +49,7 @@ Node.js поставляется с модулем assert, в котором е�
 
 ```js
 // npm install --save-dev power-assert
-import assert from 'power-assert';
+import assert from "power-assert";
 ```
 
 ### Assert : Основные методы
@@ -88,8 +88,8 @@ assert.notEqual(actual, expected); // проверка неравенства э
 ```js
 const ident = (a) => a;
 
-assert.equal(ident(1), 1);      // ==> всё ок
-assert.equal(ident([1]), [1]);  // ==> выдаст ошибку
+assert.equal(ident(1), 1); // ==> всё ок
+assert.equal(ident([1]), [1]); // ==> выдаст ошибку
 
 // Uncaught AssertionError [ERR_ASSERTION]: [1] == [1]
 // generatedMessage: true,
@@ -98,9 +98,9 @@ assert.equal(ident([1]), [1]);  // ==> выдаст ошибку
 // expected: [1],
 // operator: '=='
 
-assert.notEqual(ident(2), 1);     // ==> всё ок
+assert.notEqual(ident(2), 1); // ==> всё ок
 assert.notEqual(ident([1]), [1]); // ==> всё ок
-assert.notEqual(ident(1), 1);     // ==> выдаст ошибку
+assert.notEqual(ident(1), 1); // ==> выдаст ошибку
 
 // Uncaught AssertionError [ERR_ASSERTION]: 1 != 1
 // generatedMessage: true,
@@ -113,8 +113,8 @@ assert.notEqual(ident(1), 1);     // ==> выдаст ошибку
 </details><br>
 
 ```js
-assert.deepEqual(actual, expected);     // проверка равенства элементов (по значению)
-assert.notDeepEqual(actual, expected);  // проверка неравенства элементов (по значению)
+assert.deepEqual(actual, expected); // проверка равенства элементов (по значению)
+assert.notDeepEqual(actual, expected); // проверка неравенства элементов (по значению)
 ```
 
 <details>

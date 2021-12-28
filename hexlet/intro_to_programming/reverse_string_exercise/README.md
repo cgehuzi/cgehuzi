@@ -11,6 +11,6 @@
 ## Примеры
 
 ```js
-reverse('str');    // rts
-reverse('hexlet'); // telxeh
+reverse("str"); // rts
+reverse("hexlet"); // telxeh
 ```

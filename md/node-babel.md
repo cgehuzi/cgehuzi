@@ -111,8 +111,8 @@ npx babel-node <file>   # запуск кода из файла
 ```jsonc
 {
   "scripts": {
-    "build": "NODE_ENV=production babel src --out-dir dist",  // сборка проекта
-    "prepublishOnly": "npm run build"                         // автозапуск сборки
+    "build": "NODE_ENV=production babel src --out-dir dist", // сборка проекта
+    "prepublishOnly": "npm run build" // автозапуск сборки
   }
 }
 ```

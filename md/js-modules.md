@@ -43,27 +43,27 @@ export default wrong5;
 
 ```js
 // Импорт всего модуля
-import * as exportModule from './export';
+import * as exportModule from "./export";
 ```
 
 <details>
 <summary>Использование</summary>
 
 ```js
-exportModule.func1(1);    // ==> 1
-exportModule.func2(1);    // ==> 2
-exportModule.wrong3(1);   // ==> 3
-exportModule.func4(1);    // ==> 4
-exportModule.default(1);  // ==> 5
-exportModule.a;           // ==> true
-exportModule.b;           // ==> false
+exportModule.func1(1); // ==> 1
+exportModule.func2(1); // ==> 2
+exportModule.wrong3(1); // ==> 3
+exportModule.func4(1); // ==> 4
+exportModule.default(1); // ==> 5
+exportModule.a; // ==> true
+exportModule.b; // ==> false
 ```
 
 </details><br>
 
 ```js
 // Импорт по частям
-import func5, { func1, func2, wrong3 as func3, func4, a, b } from './export';
+import func5, { func1, func2, wrong3 as func3, func4, a, b } from "./export";
 ```
 
 <details>
@@ -75,8 +75,8 @@ func2(1); // ==> 2
 func3(1); // ==> 3
 func4(1); // ==> 4
 func5(1); // ==> 5
-a;        // ==> true
-b;        // ==> false
+a; // ==> true
+b; // ==> false
 ```
 
 </details><br>

@@ -14,6 +14,6 @@
 ## Примеры
 
 ```js
-areBracketsBalanced('(())');  // true
-areBracketsBalanced('((())'); // false
+areBracketsBalanced("(())"); // true
+areBracketsBalanced("((())"); // false
 ```

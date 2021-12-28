@@ -7,6 +7,7 @@
 ---
 
 Навигация:
+
 - [node : NPM - менеджер пакетов](#node--npm---менеджер-пакетов)
   - [NPM : Пакеты](#npm--пакеты)
   - [NPM : Конфигурация](#npm--конфигурация)
@@ -301,8 +302,8 @@ npx <package> # запуск утилиты <package>
 ```bash
 npm ci    # установка пакетов из зависимостей
 ```
-Cкачивает зависимости в директорию node_modules, базируясь на содержимом package.json и версиях из package-lock.json.
 
+Cкачивает зависимости в директорию node_modules, базируясь на содержимом package.json и версиях из package-lock.json.
 
 <details>
 <summary>Примеры</summary>

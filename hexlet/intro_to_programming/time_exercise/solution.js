@@ -1,6 +1,6 @@
 // @ts-check
 // BEGIN (write your solution here)
-const getFormattedTime = (time) => time < 10 ? `0${time}` : time;
+const getFormattedTime = (time) => (time < 10 ? `0${time}` : time);
 
 const formattedTime = (minitesTotal) => {
   const hoursTotal = Math.floor(minitesTotal / 60);

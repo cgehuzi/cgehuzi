@@ -29,10 +29,10 @@
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/set)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname']]);
+  const user = new Map([["name", "Ihar"], ["surname"]]);
 
-  user.set('surname', 'Spurhiash');   // ===> Map(2) {"name" => "Ihar", "surname" => "Spurhiash"}
-  user.set('birthday', '26.03.1991'); // ===> Map(3) {"name" => "Ihar", "surname" => "Spurhiash", "birthday" => "26.03.1991"}
+  user.set("surname", "Spurhiash"); // ===> Map(2) {"name" => "Ihar", "surname" => "Spurhiash"}
+  user.set("birthday", "26.03.1991"); // ===> Map(3) {"name" => "Ihar", "surname" => "Spurhiash", "birthday" => "26.03.1991"}
 
   console.log(user);
   // Map(3) {"name" => "Ihar", "surname" => "Spurhiash", "birthday" => "26.03.1991"}
@@ -46,10 +46,10 @@
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/delete)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname']]);
+  const user = new Map([["name", "Ihar"], ["surname"]]);
 
-  user.delete('surname'); // ===> true
-  user.delete('surname'); // ===> false
+  user.delete("surname"); // ===> true
+  user.delete("surname"); // ===> false
 
   console.log(user);
   // Map(1) {"name" => "Ihar"}
@@ -63,7 +63,7 @@
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/clear)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname']]);
+  const user = new Map([["name", "Ihar"], ["surname"]]);
 
   user.clear(); // ===> undefined
 
@@ -81,7 +81,11 @@
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
 
   user.forEach((value, key, map) => {
     console.log(`${key} = ${value}`);
@@ -117,11 +121,11 @@
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/get)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname']]);
+  const user = new Map([["name", "Ihar"], ["surname"]]);
 
-  user.get('name');     // ===> "Ihar"
-  user.get('surname');  // ===> undefined
-  user.get('birthday'); // ===> undefined
+  user.get("name"); // ===> "Ihar"
+  user.get("surname"); // ===> undefined
+  user.get("birthday"); // ===> undefined
   ```
 
 ## Map : Проверка
@@ -134,11 +138,11 @@
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/has)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname']]);
+  const user = new Map([["name", "Ihar"], ["surname"]]);
 
-  user.has('name');     // ===> true
-  user.has('surname');  // ===> true
-  user.has('birthday'); // ===> false
+  user.has("name"); // ===> true
+  user.has("surname"); // ===> true
+  user.has("birthday"); // ===> false
   ```
 
 ## Map : Преобразование
@@ -153,7 +157,11 @@
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/keys)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
 
   user.keys(); // ===> MapIterator {"name", "surname", "birthday"}
   ```
@@ -161,7 +169,11 @@
   Преобразование в Array: [Map.keys() => Array](./js-array.md#from)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
 
   Array.from(user.keys()); // ===> (3) ["name", "surname", "birthday"]
   ```
@@ -169,7 +181,11 @@
   Перебор: [Цикл for...of](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...of)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
   const keys = user.keys();
   console.log(keys);
   // MapIterator {"name", "surname", "birthday"}
@@ -195,7 +211,11 @@
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/values)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
 
   user.values(); // ===> MapIterator {"Ihar", undefined, "26.03.1991"}
   ```
@@ -203,7 +223,11 @@
   Преобразование в Array: [Map.values() => Array](./js-array.md#from)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
 
   Array.from(user.values()); // ===> (3) ["Ihar", undefined, "26.03.1991"]
   ```
@@ -211,7 +235,11 @@
   Перебор: [Цикл for...of](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...of)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
   const values = user.values();
   console.log(values);
   // MapIterator {"Ihar", undefined, "26.03.1991"}
@@ -237,7 +265,11 @@
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
 
   user.entries(); // ===> MapIterator {"name" => "Ihar", "surname" => undefined, "birthday" => "26.03.1991"}
   ```
@@ -245,7 +277,11 @@
   Преобразование в Array: [Map.entries() => Array](./js-array.md#from)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
 
   Array.from(user.entries()); // ===> (3) [["name", "Ihar"], ["surname", undefined], ["birthday", "26.03.1991"]]
   ```
@@ -253,7 +289,11 @@
   Перебор: [Цикл for...of](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...of)
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
   const entries = user.entries();
   console.log(entries);
   // MapIterator {"name" => "Ihar", "surname" => undefined, "birthday" => "26.03.1991"}
@@ -270,7 +310,11 @@
   ```
 
   ```javascript
-  const user = new Map([['name', 'Ihar'], ['surname'], ['birthday', '26.03.1991']]);
+  const user = new Map([
+    ["name", "Ihar"],
+    ["surname"],
+    ["birthday", "26.03.1991"],
+  ]);
   const entries = user.entries();
   console.log(entries);
   // MapIterator {"name" => "Ihar", "surname" => undefined, "birthday" => "26.03.1991"}
