@@ -95,6 +95,8 @@ npx eslint      # запуск линтера
 npx eslint .            # проверить все файлы
 npx eslint <file>       # проверить файл
 npx eslint <dir>        # проверить все файлы в директории
+
+npx eslint --fix        # проверить и исправить (по возможности)
 ```
 
 </details><br>
