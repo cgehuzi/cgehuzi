@@ -36,6 +36,7 @@ _Ведутся с целью структурирования получаем�
 - [node : Node.js](./md/node.md)
 - [node : NPM - менеджер пакетов](./md/node-npm.md)
 - [node : Babel - транспайлер кода](./md/node-babel.md)
+- [node : Prettier - форматирование кода](./md/node-prettier.md)
 - [node : ESLint - линтер кода](./md/node-eslint.md)
 - [node : Lodash - библиотека](./md/node-lodash.md)
 - [node : Тесты](./md/node-test.md)
