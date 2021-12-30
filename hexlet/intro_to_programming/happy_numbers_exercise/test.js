@@ -1,6 +1,6 @@
-import isHappyNumber from "./solution.js";
+import isHappyNumber from './solution.js';
 
-test("Счастливые числа" + "\n  # " + "Введение в программирование", () => {
+test('Счастливые числа / Введение в программирование', () => {
   expect(isHappyNumber(7)).toBe(true);
   expect(isHappyNumber(31)).toBe(true);
   expect(isHappyNumber(97)).toBe(true);

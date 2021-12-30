@@ -43,7 +43,7 @@ export default wrong5;
 
 ```js
 // Импорт всего модуля
-import * as exportModule from "./export";
+import * as exportModule from './export';
 ```
 
 <details>
@@ -63,7 +63,7 @@ exportModule.b; // ==> false
 
 ```js
 // Импорт по частям
-import func5, { func1, func2, wrong3 as func3, func4, a, b } from "./export";
+import func5, { func1, func2, wrong3 as func3, func4, a, b } from './export';
 ```
 
 <details>

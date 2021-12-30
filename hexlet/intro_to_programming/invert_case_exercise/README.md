@@ -9,6 +9,6 @@
 ## Примеры
 
 ```js
-invertCase("Hello, World!"); // hELLO, wORLD!
-invertCase("I loVe JS"); // i LOvE js
+invertCase('Hello, World!'); // hELLO, wORLD!
+invertCase('I loVe JS'); // i LOvE js
 ```

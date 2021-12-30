@@ -1,6 +1,6 @@
-import diff from "./solution.js";
+import diff from './solution.js';
 
-test("Разница углов" + "\n  # " + "Введение в программирование", () => {
+test('Разница углов / Введение в программирование', () => {
   expect(diff(0, 45)).toBe(45);
   expect(diff(0, 180)).toBe(180);
   expect(diff(0, 190)).toBe(170);

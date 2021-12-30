@@ -1,6 +1,6 @@
-import withoutTwoZeros from "./solution.js";
+import withoutTwoZeros from './solution.js';
 
-test("Без двух нулей" + "\n  # " + "Введение в программирование", () => {
+test('Без двух нулей / Введение в программирование', () => {
   expect(withoutTwoZeros(2, 2)).toBe(3);
   expect(withoutTwoZeros(1, 1)).toBe(2);
   expect(withoutTwoZeros(1, 3)).toBe(4);

@@ -60,15 +60,15 @@ Math.abs(); // модуль числа
 <summary>Примеры</summary>
 
 ```js
-Math.abs("-1"); // ==> 1
+Math.abs('-1'); // ==> 1
 Math.abs(-2); // ==> 2
 Math.abs(null); // ==> 0
-Math.abs(""); // ==> 0
+Math.abs(''); // ==> 0
 Math.abs([]); // ==> 0
 Math.abs([2]); // ==> 2
 Math.abs([1, 2]); // ==> NaN
 Math.abs({}); // ==> NaN
-Math.abs("string"); // ==> NaN
+Math.abs('string'); // ==> NaN
 Math.abs(); // ==> NaN
 ```
 
@@ -89,20 +89,20 @@ Math.sign(); // знак числа
 <summary>Примеры</summary>
 
 ```js
-Math.sign("0"); // ==> 0
+Math.sign('0'); // ==> 0
 Math.sign(0); // ==> 0
 Math.sign(-0); // ==> -0
-Math.sign("1"); // ==> 1
+Math.sign('1'); // ==> 1
 Math.sign(2); // ==> 1
-Math.sign("-1"); // ==> -1
+Math.sign('-1'); // ==> -1
 Math.sign(-2); // ==> -1
 Math.sign(null); // ==> 0
-Math.sign(""); // ==> 0
+Math.sign(''); // ==> 0
 Math.sign([]); // ==> 0
 Math.sign([2]); // ==> 1
 Math.sign([1, 2]); // ==> NaN
 Math.sign({}); // ==> NaN
-Math.sign("string"); // ==> NaN
+Math.sign('string'); // ==> NaN
 Math.sign(); // ==> NaN
 ```
 
@@ -127,12 +127,12 @@ Math.max(); // наибольшее из чисел
 ```js
 Math.max(-2, 3); // ==> 3
 Math.max(-2, 0, 4); // ==> 4
-Math.max(""); // ==> 0
+Math.max(''); // ==> 0
 Math.max([]); // ==> 0
 Math.max([2]); // ==> 2
 Math.max([1, 2]); // ==> NaN
 Math.max({}); // ==> NaN
-Math.max("string"); // ==> NaN
+Math.max('string'); // ==> NaN
 Math.max(); // ==> -Infinity
 ```
 
@@ -155,12 +155,12 @@ Math.min(); // наименьшее из чисел
 ```js
 Math.min(-2, 3); // ==> -2
 Math.min(-2, 0, 4); // ==> -2
-Math.min(""); // ==> 0
+Math.min(''); // ==> 0
 Math.min([]); // ==> 0
 Math.min([2]); // ==> 2
 Math.min([1, 2]); // ==> NaN
 Math.min({}); // ==> NaN
-Math.min("string"); // ==> NaN
+Math.min('string'); // ==> NaN
 Math.min(); // ==> Infinity
 ```
 

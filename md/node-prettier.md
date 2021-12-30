@@ -30,7 +30,7 @@ npm install --save-dev --save-exact prettier
 <summary>Пример файла</summary>
 
 ```yml
-trailingComma: "es5"
+trailingComma: 'es5'
 tabWidth: 4
 semi: false
 singleQuote: true

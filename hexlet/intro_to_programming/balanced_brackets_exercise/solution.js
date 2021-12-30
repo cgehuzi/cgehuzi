@@ -1,12 +1,12 @@
 // @ts-check
 // BEGIN (write your solution here)
 const areBracketsBalanced = (str) => {
-  if (str === "") {
+  if (str === '') {
     return true;
   }
 
   for (let i = 0; i < str.length; i += 1) {
-    if (`${str[i]}${str[i + 1]}` === "()") {
+    if (`${str[i]}${str[i + 1]}` === '()') {
       return areBracketsBalanced(`${str.slice(0, i)}${str.slice(i + 2)}`);
     }
   }

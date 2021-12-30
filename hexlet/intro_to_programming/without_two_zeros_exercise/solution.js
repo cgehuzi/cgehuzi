@@ -7,8 +7,7 @@ const factorial = (num) => {
   return num * factorial(num - 1);
 };
 
-const countPositions = (a, b) =>
-  factorial(a + b) / (factorial(a) * factorial(b));
+const countPositions = (a, b) => factorial(a + b) / (factorial(a) * factorial(b));
 
 const withoutTwoZeros = (zero, one) => {
   if (zero - one > 1) {

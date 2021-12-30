@@ -35,16 +35,19 @@ Object.hasOwnProperty(); // проверяет, есть ли такой клю�
 
 ```js
 const user = {
-  name: { first: "Ihar", last: "Spurhiash" },
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
   height: 192,
   married: true,
 };
-const prop = "name";
+const prop = 'name';
 
-user.hasOwnProperty("name"); // ==> true
+user.hasOwnProperty('name'); // ==> true
 user.hasOwnProperty(prop); // ==> true
-user.hasOwnProperty("User"); // ==> false
-user.hasOwnProperty("name.last"); // ==> false
+user.hasOwnProperty('User'); // ==> false
+user.hasOwnProperty('name.last'); // ==> false
 ```
 
 </details><br>
@@ -67,7 +70,10 @@ Object.keys(); // возвращает массив ключей
 
 ```js
 const user = {
-  name: { first: "Ihar", last: "Spurhiash" },
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
   height: 192,
   married: true,
 };
@@ -93,7 +99,10 @@ Object.values(); // возвращает массив значений
 
 ```js
 const user = {
-  name: { first: "Ihar", last: "Spurhiash" },
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
   height: 192,
   married: true,
 };
@@ -119,7 +128,10 @@ Object.entries(); // возвращает массив значений
 
 ```js
 const user = {
-  name: { first: "Ihar", last: "Spurhiash" },
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
   height: 192,
   married: true,
 };
@@ -149,36 +161,65 @@ Object.entries(user); // ==> [ [ 'name', { first: 'Ihar', last: 'Spurhiash' } ],
 // Создание копии объекта (а не ссылки на объеки)
 // ------------------------------------------------------------
 const user = {
-  name: { first: "Ihar", last: "Spurhiash" },
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
   height: 192,
   married: true,
 };
 
-const newUser = { ...user };
+const newUser = {
+  ...user,
+};
 // newUser === { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true }
 ```
 
 ```js
 // Добавление значений в объект
 // ------------------------------------------------------------
-const userName = { name: "Ihar" };
-const userHeight = { height: 192 };
+const userName = {
+  name: 'Ihar',
+};
+const userHeight = {
+  height: 192,
+};
 const married = true;
-const property = "sex";
+const property = 'sex';
 
-const userChars = { ...userHeight, weight: 63, [property]: "male", married };
+const userChars = {
+  ...userHeight,
+  weight: 63,
+  [property]: 'male',
+  married,
+};
 // userChars === { height: 192, weight: 63, sex: 'male', married: true }
 
-const user = { ...userName, ...userChars };
+const user = {
+  ...userName,
+  ...userChars,
+};
 // user === { name: 'Ihar', height: 192, weight: 63, sex: 'male', married: true }
 ```
 
 ```js
 // Замена значений в объекте
 // ------------------------------------------------------------
-const user = { name: "Ihar", height: 192, married: true };
-const userName = { name: { first: "Ihar", last: "Spurhiash" } };
-const userFix = { ...user, ...userName };
+const user = {
+  name: 'Ihar',
+  height: 192,
+  married: true,
+};
+const userName = {
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
+};
+const userFix = {
+  ...user,
+  ...userName,
+};
 // userFix === { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true }
 ```
 
@@ -205,7 +246,10 @@ const userFix = { ...user, ...userName };
 // объявление переменных со значениями
 // ------------------------------------------------------------
 const user = {
-  name: { first: "Ihar", last: "Spurhiash" },
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
   height: 192,
   married: true,
 };
@@ -224,7 +268,10 @@ const {
 // присвоение значений переменным
 // ------------------------------------------------------------
 const user = {
-  name: { first: "Ihar", last: "Spurhiash" },
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
   height: 192,
 };
 

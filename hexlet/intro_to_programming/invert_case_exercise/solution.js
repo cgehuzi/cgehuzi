@@ -6,8 +6,7 @@ const invertCase = (str) => {
       return acc;
     }
     const char = str[counter];
-    const plusChar =
-      char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
+    const plusChar = char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
 
     const newAcc = acc + plusChar;
     const newCounter = counter + 1;
@@ -15,7 +14,7 @@ const invertCase = (str) => {
     return iter(newAcc, newCounter);
   };
 
-  return iter("", 0);
+  return iter('', 0);
 };
 
 export default invertCase;
