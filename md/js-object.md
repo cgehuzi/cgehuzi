@@ -14,7 +14,8 @@
     - [1 вариант](#1-вариант)
     - [2 вариант](#2-вариант)
     - [3 вариант](#3-вариант)
-  - [Object : Преобразование](#object--преобразование)
+  - [Object : Получение данных](#object--получение-данных)
+  - [Object : Изменение](#object--изменение)
   - [Object : Использование spread](#object--использование-spread)
   - [Object : Деструктуризация](#object--деструктуризация)
 
@@ -99,7 +100,7 @@ import _ from 'lodash';
 _.has(object, key); // проверяет, есть ли такой ключ
 ```
 
-## Object : Преобразование
+## Object : Получение данных
 
 <a id="keys"></a>
 
@@ -184,6 +185,52 @@ const user = {
 };
 
 Object.entries(user); // ==> [ [ 'name', { first: 'Ihar', last: 'Spurhiash' } ], [ 'height', 192 ], [ 'married', true ] ]
+```
+
+</details><br>
+
+## Object : Изменение
+
+```js
+Object.assign(); // сливает объекты
+```
+
+Копирует значения всех перечисляемых свойств из одного или более объектов в другой объект.
+
+- [Спецификация](https://tc39.es/ecma262/#sec-object.prototype.assign)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const user1 = {
+  name: {
+    first: 'Hanna',
+    last: 'Chabaniuk',
+  },
+  age: 29,
+  married: false,
+};
+
+const user2 = {
+  name: {
+    first: 'Hanna',
+    last: 'Spurhiash',
+  },
+  married: true,
+};
+
+Object.assign(user1, user2); // ==> user1
+
+// user1 === {
+//   name: {
+//     first: 'Hanna',
+//     last: 'Spurhiash',
+//   },
+//   age: 29,
+//   married: true,
+// }
 ```
 
 </details><br>
