@@ -12,6 +12,7 @@
 - [JS : String - строка](#js--string---строка)
   - [String : Изменение](#string--изменение)
   - [String : Преобразование](#string--преобразование)
+  - [String : Проверка](#string--проверка)
   - [String : Деструктуризация](#string--деструктуризация)
   - [String : Rest-оператор](#string--rest-оператор)
 
@@ -178,6 +179,39 @@ planets.split(','); // ==> [ 'Меркурий', 'Венера', 'Земля', '
 ```
 
 Обратное действие: [Array => String](./js-array.md#join)
+
+</details><br>
+
+## String : Проверка
+
+<a id="startsWith"></a>
+
+```js
+String.startsWith(); // начинается ли строка с указанного символа
+```
+
+Определяет, начинается ли строка с символов указанных в скобках.
+
+- [Спецификация](https://tc39.es/ecma262/#sec-string.prototype.startswith)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const planets = 'Меркурий,Венера,Земля,Марс';
+
+planets.startsWith('М'); // ==> true
+planets.startsWith('Меркурий'); // ==> true
+planets.startsWith(''); // ==> true
+planets.startsWith('Венера'); // ==> false
+
+planets.startsWith('М', 0); // ==> true
+planets.startsWith('Венера', 9); // ==> true
+planets.startsWith('Венера', 0); // ==> false
+
+// planets === 'Меркурий,Венера,Земля,Марс'
+```
 
 </details><br>
 
