@@ -10,14 +10,42 @@
 Навигация:
 
 - [JS : Object - объект](#js--object---объект)
-  - [Object : Проверка](#object--проверка)
+  - [Object : Проверка ключей](#object--проверка-ключей)
+    - [1 вариант](#1-вариант)
+    - [2 вариант](#2-вариант)
+    - [3 вариант](#3-вариант)
   - [Object : Преобразование](#object--преобразование)
   - [Object : Использование spread](#object--использование-spread)
   - [Object : Деструктуризация](#object--деструктуризация)
 
 ---
 
-## Object : Проверка
+## Object : Проверка ключей
+
+Проверка на присутствие ключей в объекте.  
+**SPOILER** : лучше по возможности использовать [3 вариант](#3-вариант)
+
+### 1 вариант
+
+```js
+{ ... }.key === undefined // проверяет, есть ли значение у такого ключа
+```
+
+<details>
+<summary>Возможные проблемы</summary>
+
+```js
+const someFunction = () => {
+  console.log('Hello, World!');
+}; // ==> undefined
+
+const user = { name: someFunction() };
+user.name === undefined; // ==> true
+```
+
+</details><br>
+
+### 2 вариант
 
 <a id="hasOwnProperty"></a>
 
@@ -25,7 +53,7 @@
 Object.hasOwnProperty(); // проверяет, есть ли такой ключ
 ```
 
-Проверяет, содержит ли объект определённый ключ.
+Проверяет, содержит ли объект определённый ключ при помощи стандартного свойства объекта.
 
 - [Спецификация](https://tc39.es/ecma262/#sec-object.prototype.hasownproperty)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
@@ -50,7 +78,26 @@ user.hasOwnProperty('User'); // ==> false
 user.hasOwnProperty('name.last'); // ==> false
 ```
 
+</details>
+
+<details>
+<summary>Возможные проблемы</summary>
+
+```js
+const user = { name: 'Ihar Spurhiash', hasOwnProperty: 'Ooops!' };
+user.hasOwnProperty('name'); // ==> TypeError: user.hasOwnProperty is not a function
+```
+
 </details><br>
+
+### 3 вариант
+
+Проверка с помощью метода [has](node-lodash.md#has) из библиотеки Lodash.
+
+```js
+import _ from 'lodash';
+_.has(object, key); // проверяет, есть ли такой ключ
+```
 
 ## Object : Преобразование
 
