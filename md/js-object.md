@@ -267,7 +267,8 @@ Object.assign(user1, user2); // ==> user1
 
 ### Поверхностное (shallow)
 
-Не затрагивает вложенные объекты. Они оказываются в новом объекте по ссылке из старого.
+Не затрагивает вложенные объекты. Они оказываются в новом объекте по ссылке из старого.  
+**SPOILER** : лучше по возможности использовать [spreed-оператор](#object--использование-spread)
 
 ```js
 Object.entries({}, obj); // нативное
@@ -343,8 +344,8 @@ copy.name === user.name; // ==> false
 <summary>Примеры</summary>
 
 ```js
-// Создание копии объекта (а не ссылки на объеки)
-// ------------------------------------------------------------
+// Поверхностное копирование объекта (shallow)
+// --------------------------------------------
 const user = {
   name: {
     first: 'Ihar',
@@ -354,15 +355,15 @@ const user = {
   married: true,
 };
 
-const newUser = {
-  ...user,
-};
-// newUser === { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true }
+const newUser = { ...user };
+
+user === newUser; // ==> false
+user.name === newUser.name; // ==> true
 ```
 
 ```js
 // Добавление значений в объект
-// ------------------------------------------------------------
+// --------------------------------------------
 const userName = {
   name: 'Ihar',
 };
@@ -380,16 +381,13 @@ const userChars = {
 };
 // userChars === { height: 192, weight: 63, sex: 'male', married: true }
 
-const user = {
-  ...userName,
-  ...userChars,
-};
+const user = { ...userName, ...userChars };
 // user === { name: 'Ihar', height: 192, weight: 63, sex: 'male', married: true }
 ```
 
 ```js
 // Замена значений в объекте
-// ------------------------------------------------------------
+// --------------------------------------------
 const user = {
   name: 'Ihar',
   height: 192,
@@ -401,10 +399,7 @@ const userName = {
     last: 'Spurhiash',
   },
 };
-const userFix = {
-  ...user,
-  ...userName,
-};
+const userFix = { ...user, ...userName };
 // userFix === { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true }
 ```
 
@@ -429,7 +424,7 @@ const userFix = {
 
 ```js
 // объявление переменных со значениями
-// ------------------------------------------------------------
+// --------------------------------------------
 const user = {
   name: {
     first: 'Ihar',
@@ -451,7 +446,7 @@ const {
 
 ```js
 // присвоение значений переменным
-// ------------------------------------------------------------
+// --------------------------------------------
 const user = {
   name: {
     first: 'Ihar',
