@@ -19,7 +19,7 @@
   - [Object : Клонирование (копирование)](#object--клонирование-копирование)
     - [Поверхностное (shallow)](#поверхностное-shallow)
     - [Глубокое (deep)](#глубокое-deep)
-  - [Object : Использование spread](#object--использование-spread)
+  - [Object : Spread-оператор](#object--spread-оператор)
   - [Object : Деструктуризация](#object--деструктуризация)
 
 ---
@@ -268,7 +268,7 @@ Object.assign(user1, user2); // ==> user1
 ### Поверхностное (shallow)
 
 Не затрагивает вложенные объекты. Они оказываются в новом объекте по ссылке из старого.  
-**SPOILER** : лучше по возможности использовать [spreed-оператор](#object--использование-spread)
+**SPOILER** : лучше по возможности использовать [spreed-оператор](#object--spread-оператор)
 
 ```js
 Object.entries({}, obj); // нативное
@@ -327,7 +327,7 @@ copy.name === user.name; // ==> false
 
 </details><br>
 
-## Object : Использование spread
+## Object : Spread-оператор
 
 <a id="spread"></a>
 
