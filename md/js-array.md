@@ -21,6 +21,7 @@
   - [Array : Spread-оператор](#array--spread-оператор)
   - [Array : Деструктуризация](#array--деструктуризация)
   - [Array : Rest-оператор](#array--rest-оператор)
+  - [Array : Lodash](#array--lodash)
 
 ---
 
@@ -874,6 +875,82 @@ const [firstPlanet, secondPlanet, ...otherPlanets] = planets;
 // firstPlanet === 'Меркурий'
 // secondPlanet === 'Венера'
 // otherPlanets === [ ]
+```
+
+</details><br>
+
+## Array : Lodash
+
+<a id="lodash_intersection"></a>
+
+```js
+_.intersection(); // сравнивает массивы (возвращает одинаковые элементы)
+```
+
+Возвращает массив, в который входят элементы, встречающиеся во всех переданных массивах одновременно.
+
+- [Документация](https://lodash.com/docs/#intersection)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const planets1 = ['Меркурий', 'Венера', 'Земля'];
+const planets2 = ['Венера', 'Земля', 'Марс'];
+const planets3 = ['Земля', 'Марс', 'Юпитер'];
+
+_.intersection(planets1); // ==> [ 'Меркурий', 'Венера', 'Земля' ]
+_.intersection(planets1, planets2); // ==> [ 'Венера', 'Земля' ]
+_.intersection(planets1, planets2, planets3); // ==> [ 'Земля' ]
+```
+
+</details><br>
+
+<a id="lodash_union"></a>
+
+```js
+_.union(); // объединяет массивы (без повторяющихся элементов)
+```
+
+Возвращает массив, в который входят все элементы переданных массивов. Повторяющиеся элементы отсеиваются.
+
+- [Документация](https://lodash.com/docs/#union)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const planets1 = ['Меркурий', 'Венера', 'Земля'];
+const planets2 = ['Венера', 'Земля', 'Марс'];
+const planets3 = ['Земля', 'Марс', 'Юпитер'];
+
+_.union(planets1); // ==> [ 'Меркурий', 'Венера', 'Земля' ]
+_.union(planets1, planets2); // ==> [ 'Меркурий', 'Венера', 'Земля', 'Марс' ]
+_.union(planets1, planets2, planets3); // ==> [ 'Меркурий', 'Венера', 'Земля', 'Марс', 'Юпитер' ]
+```
+
+</details><br>
+
+<a id="lodash_difference"></a>
+
+```js
+_.difference(); // вычисляет разницу массивов
+```
+
+Возвращает массив, в который входят элементы первого массива, которых нет во втором массиве.
+
+- [Документация](https://lodash.com/docs/#difference)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const planets1 = ['Меркурий', 'Венера', 'Земля'];
+const planets2 = ['Венера', 'Земля', 'Марс'];
+
+_.difference(planets1); // ==> [ 'Меркурий', 'Венера', 'Земля' ]
+_.difference(planets1, planets2); // ==> [ 'Меркурий' ]
+_.difference(planets2, planets1); // ==> [ 'Марс' ]
 ```
 
 </details><br>

@@ -96,12 +96,37 @@ user.hasOwnProperty('name'); // ==> TypeError: user.hasOwnProperty is not a func
 
 ### 3 вариант
 
-Проверка с помощью метода [has](node-lodash.md#has) из библиотеки Lodash.
+<a id="lodash_has"></a>
 
 ```js
 import _ from 'lodash';
-_.has(object, key); // проверяет, есть ли такой ключ
+_.has(); // проверяет наличие прямых и вложенных ключей
 ```
+
+Возвращает true, если ключ или ключи найдены.
+
+- [Документация](https://lodash.com/docs/#has)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const user = {
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
+  height: 192,
+  married: true,
+};
+
+_.has(user, 'name'); // ==> true
+_.has(user, 'name.first'); // ==> true
+_.has(user, ['name', 'first']); // ==> true
+_.has(user, 'Ihar'); // ==> false
+```
+
+</details><br>
 
 ## Object : Получение данных
 
