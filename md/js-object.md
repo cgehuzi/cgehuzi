@@ -16,6 +16,9 @@
     - [3 вариант](#3-вариант)
   - [Object : Получение данных](#object--получение-данных)
   - [Object : Изменение](#object--изменение)
+  - [Object : Клонирование (копирование)](#object--клонирование-копирование)
+    - [Поверхностное (shallow)](#поверхностное-shallow)
+    - [Глубокое (deep)](#глубокое-deep)
   - [Object : Использование spread](#object--использование-spread)
   - [Object : Деструктуризация](#object--деструктуризация)
 
@@ -231,6 +234,69 @@ Object.assign(user1, user2); // ==> user1
 //   age: 29,
 //   married: true,
 // }
+```
+
+</details><br>
+
+## Object : Клонирование (копирование)
+
+### Поверхностное (shallow)
+
+Не затрагивает вложенные объекты. Они оказываются в новом объекте по ссылке из старого.
+
+```js
+Object.entries({}, obj); // нативное
+_.clone(obj); // метод из Lodash
+```
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const user = {
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
+  height: 192,
+  married: true,
+};
+
+const copy1 = Object.assign({}, user);
+copy1 === user; // ==> false
+copy1.name === user.name; // ==> true
+
+const copy2 = _.clone(user);
+copy2 === user; // ==> false
+copy2.name === user.name; // ==> true
+```
+
+</details><br>
+
+### Глубокое (deep)
+
+Полное клонирование, включая вложенные объекты.
+
+```js
+_.cloneDeep(obj); // метод из Lodash
+```
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const user = {
+  name: {
+    first: 'Ihar',
+    last: 'Spurhiash',
+  },
+  height: 192,
+  married: true,
+};
+
+const copy = _.cloneDeep(user);
+copy === user; // ==> false
+copy.name === user.name; // ==> false
 ```
 
 </details><br>
