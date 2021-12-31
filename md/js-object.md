@@ -21,6 +21,7 @@
     - [Глубокое (deep)](#глубокое-deep)
   - [Object : Spread-оператор](#object--spread-оператор)
   - [Object : Деструктуризация](#object--деструктуризация)
+  - [Object : Rest-оператор](#object--rest-оператор)
 
 ---
 
@@ -468,6 +469,38 @@ const {
 // userWeight === null
 // weight === null
 // married === undefined
+```
+
+</details><br>
+
+## Object : Rest-оператор
+
+<a id="rest"></a>
+
+```js
+{ key: 'value', ...rest } // rest-оператор
+```
+
+Извлекает из объекта ПОСЛЕДНИЕ элементы, оставшиеся после деструктуризации.
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const user = {
+  name: { first: 'Ihar', last: 'Spurhiash' },
+  height: 192,
+};
+
+const { name, ...rest } = user;
+// name === { first: 'Ihar', last: 'Spurhiash' }
+// rest === { height: 192 }
+user.name === name; // ==> true (ссылаются на один и тот же объект)
+
+const { name, height, ...rest } = user;
+// name === { first: 'Ihar', last: 'Spurhiash' }
+// height === 192
+// rest === { }
 ```
 
 </details><br>
