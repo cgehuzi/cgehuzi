@@ -11,19 +11,24 @@ _Ведутся с целью структурирования получаем�
 
 ## Инструменты
 
+### JavaScript
+
 - [js : Array - массив](./md/js-array.md)
 - [js : Object - объект](./md/js-object.md)
-- [js : Map - ассациативный массив](./md/js-map.md)
-- [js : Math - математика](./md/js-math.md)
-- [js : Set - множество](./md/js-set.md)
 - [js : String - строка](./md/js-string.md)
+- [js : Math - математика](./md/js-math.md)
 - [js : Modules - модули](./md/js-modules.md)
 
-<br>
+---
+
+- [js : Map - ассациативный массив](./md/js-map.md)
+- [js : Set - множество](./md/js-set.md)
+
+### Bash
 
 - [bash : Командная строка](./md/bash.md)
 
-<br>
+### Git
 
 - [git : Основные команды](./md/git.md)
 - [git : Ветвление](./md/git-branch.md)
@@ -31,14 +36,17 @@ _Ведутся с целью структурирования получаем�
 - [git : GitHub Actions](./md/git-github-actions.md)
 - [git : SSH (Интеграция с GitHub)](./md/git-ssh.md)
 
-<br>
+### Node.js
 
 - [node : Node.js](./md/node.md)
 - [node : NPM - менеджер пакетов](./md/node-npm.md)
-- [node : Babel - транспайлер кода](./md/node-babel.md)
 - [node : Prettier - форматирование кода](./md/node-prettier.md)
 - [node : ESLint - линтер кода](./md/node-eslint.md)
 - [node : Тесты](./md/node-test.md)
+
+---
+
+- [node : Babel - транспайлер кода](./md/node-babel.md)
 
 ## Английский язык
 
