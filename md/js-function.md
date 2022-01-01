@@ -58,6 +58,16 @@ func(...spread); // spread-оператор
 <summary>Примеры</summary>
 
 ```js
+const sum = (...params) => {
+  let result = 0;
+  for (const param of params) {
+    result += param;
+  }
+  return result;
+};
+```
+
+```js
 const numbers = [1, 7, 4];
 sum(...numbers); // ==> 12
 sum(8, 10, ...numbers); // ==> 30
