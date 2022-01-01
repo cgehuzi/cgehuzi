@@ -151,41 +151,6 @@ planets.reverse(); // ==> ['Марс', 'Земля', 'Венера', 'Мерку
 
 </details><br>
 
-<a id="sort"></a>
-
-```js
-Array.sort(); // сортирует массив
-```
-
-Сортирует элементы массива и возвращает отсортированный массив.
-
-- [Спецификация](https://tc39.es/ecma262/#sec-array.prototype.sort)
-- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-
-<details>
-<summary>Примеры</summary>
-
-```js
-const planets = ['Меркурий', 'Венера', 'Земля', 'Марс'];
-
-planets.sort(); // ==> ['Венера', 'Земля', 'Марс', 'Меркурий']
-planets.sort((a, b) => {
-  if (a.length > b.length) {
-    return 1;
-  }
-  if (a.length < b.length) {
-    return -1;
-  }
-  if (a.length === b.length) {
-    return 0;
-  }
-}); // ==> ['Марс', 'Земля', 'Венера', 'Меркурий']
-
-// planets === ['Марс', 'Земля', 'Венера', 'Меркурий']
-```
-
-</details><br>
-
 ## Array : Изменение (иммутабельно)
 
 <a id="slice"></a>
@@ -349,6 +314,42 @@ for (const elem of planets) {
 </details><br>
 
 ## Array : Функции высшего порядка
+
+<a id="sort"></a>
+
+```js
+Array.sort(); // сортирует массив
+```
+
+Сортирует элементы массива и возвращает отсортированный массив.  
+**ВНИМАНИЕ!** : функция изменят исходный массив (мутабельная)
+
+- [Спецификация](https://tc39.es/ecma262/#sec-array.prototype.sort)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const planets = ['Меркурий', 'Венера', 'Земля', 'Марс'];
+
+planets.sort(); // ==> ['Венера', 'Земля', 'Марс', 'Меркурий']
+planets.sort((a, b) => {
+  if (a.length > b.length) {
+    return 1;
+  }
+  if (a.length < b.length) {
+    return -1;
+  }
+  if (a.length === b.length) {
+    return 0;
+  }
+}); // ==> ['Марс', 'Земля', 'Венера', 'Меркурий']
+
+// planets === ['Марс', 'Земля', 'Венера', 'Меркурий']
+```
+
+</details><br>
 
 <a id="map"></a>
 
