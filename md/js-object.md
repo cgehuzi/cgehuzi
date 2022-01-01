@@ -134,7 +134,7 @@ Object.keys(); // возвращает массив ключей
 ```js
 const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
 
-Object.keys(user); // ==> [ 'name', 'height', 'married' ]
+Object.keys(user); // ==> ['name', 'height', 'married']
 ```
 
 </details><br>
@@ -156,7 +156,7 @@ Object.values(); // возвращает массив значений
 ```js
 const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
 
-Object.values(user); // ==> [ { first: 'Ihar', last: 'Spurhiash' }, 192, true ]
+Object.values(user); // ==> [{ first: 'Ihar', last: 'Spurhiash' }, 192, true]
 ```
 
 </details><br>
@@ -167,7 +167,7 @@ Object.values(user); // ==> [ { first: 'Ihar', last: 'Spurhiash' }, 192, true ]
 Object.entries(); // возвращает массив значений
 ```
 
-Возвращает массив, содержащий значения элементов в формате `[ key, value ]` в том порядке, в котором они были заведены.
+Возвращает массив, содержащий значения элементов в формате `[key, value]` в том порядке, в котором они были заведены.
 
 - [Спецификация](https://tc39.es/ecma262/#sec-object.prototype.entries)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
@@ -178,7 +178,7 @@ Object.entries(); // возвращает массив значений
 ```js
 const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
 
-Object.entries(user); // ==> [ [ 'name', { first: 'Ihar', last: 'Spurhiash' } ], [ 'height', 192 ], [ 'married', true ] ]
+Object.entries(user); // ==> [['name', { first: 'Ihar', last: 'Spurhiash' }], ['height', 192], ['married', true]]
 ```
 
 </details><br>
