@@ -16,6 +16,7 @@ _Ведутся с целью структурирования получаем�
 - [js : Array - массив](./md/js-array.md)
 - [js : Object - объект](./md/js-object.md)
 - [js : String - строка](./md/js-string.md)
+- [js : Function - функция](./md/js-function.md)
 - [js : Math - математика](./md/js-math.md)
 - [js : Modules - модули](./md/js-modules.md)
 
