@@ -377,6 +377,37 @@ planets.map((elem, index) => {
 
 </details><br>
 
+<a id="flatMap"></a>
+
+```js
+Array.flatMap(); // обрабатывает элементы (с последующим вызовом .flat())
+```
+
+Cоздаёт новый массив с результатом вызова указанной функции для каждого элемента массива.  
+Затем выводит результат с применением к нему метода [Array.flat()](#flat)
+
+- [Спецификация](https://tc39.es/ecma262/#sec-array.prototype.flatmap)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const planets = ['Меркурий', 'Венера', 'Земля', 'Марс'];
+
+planets.flatMap((elem, index) => {
+  return [index + 1, elem];
+}); // ==> [1, 'Меркурий', 2, 'Венера', 3, 'Земля', 4, 'Марс']
+
+planets.map((elem, index) => {
+  return [index + 1, elem];
+}); // ==> [[1, 'Меркурий'], [2, 'Венера'], [3, 'Земля'], [4, 'Марс']]
+
+// planets === ['Меркурий', 'Венера', 'Земля', 'Марс']
+```
+
+</details><br>
+
 <a id="filter"></a>
 
 ```js
