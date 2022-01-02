@@ -3,3 +3,6 @@ lint:
 
 prettier:
 	npx prettier . --write
+
+test:
+	node test.js
