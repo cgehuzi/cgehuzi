@@ -4,6 +4,8 @@
 
 Автоматический запуск рабочих процессов при изменениях репозитория.
 
+- [Курс на Hexlet](https://ru.hexlet.io/courses/github-actions)
+
 ## Actions : Конфигурация
 
 [Документация GitHub](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#in-this-article)
