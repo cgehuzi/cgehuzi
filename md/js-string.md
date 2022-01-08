@@ -257,6 +257,42 @@ planets.startsWith('Венера', 0); // ==> false
 
 </details><br>
 
+<a id="endsWith"></a>
+
+```js
+String.endsWith(); // заканчивается ли строка указанной подстрокой
+```
+
+Определяет, заканчивается ли строка подстрокой, указанной в скобках.
+
+- [Спецификация](https://tc39.es/ecma262/#sec-string.prototype.endswith)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const planets = 'Меркурий,Венера,Земля,Марс';
+
+planets.endsWith('с'); // ==> true
+planets.endsWith('Марс'); // ==> true
+planets.endsWith(''); // ==> true
+planets.endsWith('Венера'); // ==> false
+
+planets.endsWith('c', 26); // ==> true (26 — длина проверяемой подстроки)
+planets.slice(0, 26); // 'Меркурий,Венера,Земля,Марс'
+
+planets.endsWith('Венера', 15); // ==> true
+planets.slice(0, 15); // 'Меркурий,Венера'
+
+planets.endsWith('Меркурий', 4); // ==> false
+planets.slice(0, 4); // 'Мерк'
+
+// planets === 'Меркурий,Венера,Земля,Марс'
+```
+
+</details><br>
+
 ## String : Деструктуризация
 
 Аналог [деструктуризации массивов](./js-array.md#destructuring)
