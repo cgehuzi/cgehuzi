@@ -229,10 +229,10 @@ _.words('Земля и Луна, Марс & Фобос'); // ==> ['Земля', 
 <a id="startsWith"></a>
 
 ```js
-String.startsWith(); // начинается ли строка с указанного символа
+String.startsWith(); // начинается ли строка с указанной подстроки
 ```
 
-Определяет, начинается ли строка с символов указанных в скобках.
+Определяет, начинается ли строка с подстроки, указанной в скобках.
 
 - [Спецификация](https://tc39.es/ecma262/#sec-string.prototype.startswith)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith)
