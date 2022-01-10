@@ -127,6 +127,35 @@ planets.pop(); // ==> 'Земля'
 
 </details><br>
 
+<a id="splice"></a>
+
+```js
+Array.splice(); // изменение массива (удаление, добавление)
+```
+
+Изменяет содержимое массива, удаляя существующие элементы и/или добавляя новые.
+
+- [Спецификация](https://tc39.es/ecma262/#sec-array.prototype.splice)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const planets = ['Меркурий', 'Венера', 'Земля', 'Марс'];
+
+planets.splice(3, 0, 'Луна', 'Фобос'); // ==> []
+// planets === ['Меркурий', 'Венера', 'Земля', 'Луна', 'Фобос', 'Марс']
+
+planets.splice(3, 1); // ==> ['Луна']
+// planets === ['Меркурий', 'Венера', 'Земля', 'Фобос', 'Марс']
+
+planets.splice(3); // ==> ['Фобос', 'Марс']
+// planets === ['Меркурий', 'Венера', 'Земля']
+```
+
+</details><br>
+
 <a id="reverse"></a>
 
 ```js
