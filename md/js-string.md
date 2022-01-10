@@ -226,6 +226,42 @@ _.words('Земля и Луна, Марс & Фобос'); // ==> ['Земля', 
 
 ## String : Проверка
 
+<a id="includes"></a>
+
+```js
+String.includes(); // содержит ли строка подстроку
+```
+
+Определяет, содержит ли строка подстроку, указанную в скобках.
+
+- [Спецификация](https://tc39.es/ecma262/#sec-string.prototype.includes)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const planets = 'Меркурий,Венера,Земля,Марс';
+
+planets.includes('М'); // ==> true
+planets.includes('Меркурий'); // ==> true
+planets.includes(''); // ==> true
+planets.includes('Юпитер'); // ==> false
+
+planets.includes('Венера', 0); // ==> true
+planets.slice(0); // 'Меркурий,Венера,Земля,Марс'
+
+planets.includes('Венера', 9); // ==> true
+planets.slice(9); // 'Венера,Земля,Марс'
+
+planets.includes('Венера', 16); // ==> false
+planets.slice(16); // 'Земля,Марс'
+
+// planets === 'Меркурий,Венера,Земля,Марс'
+```
+
+</details><br>
+
 <a id="startsWith"></a>
 
 ```js
