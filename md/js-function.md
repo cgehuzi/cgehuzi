@@ -66,7 +66,7 @@ user2.getName(); // ==> 'Hanna'
 <a id="call"></a>
 
 ```js
-func.call(); // вызов функции
+func.call(); // вызов функции с переданным контекстом
 ```
 
 Вызывает функцию с указанным значением `this` и индивидуально предоставленными аргументами.
@@ -78,14 +78,60 @@ func.call(); // вызов функции
 <summary>Примеры</summary>
 
 ```js
-const getName = function getName(prefix = 'Name is') {
-  return `${prefix} ${this.name}`;
+const getName = function getName(start = 'Name is ') {
+  return `${start}${this.name}`;
 };
 
 const user = { name: 'Ihar' };
 getName.call(); // ==> 'Name is undefined'
 getName.call(user); // ==> 'Name is Ihar'
-getName.call(user, 'Hello,'); // ==> 'Hello, Ihar'
+getName.call(user, 'Hello, '); // ==> 'Hello, Ihar'
+```
+
+</details><br>
+
+<a id="bind"></a>
+
+```js
+func.bind(); // создание новой функции и связь её с переданным контекстом
+```
+
+Создаёт новую функцию, которая при вызове устанавливает в качестве контекста выполнения `this` предоставленное значение.  
+В метод также передаётся набор аргументов, которые будут установлены перед переданными в привязанную функцию аргументами при её вызове.
+
+**SPOILER** : лучше по возможности использовать анонимные стрелочные функции
+
+- [Спецификация](https://tc39.es/ecma262/#sec-function.prototype.bind)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+
+<details>
+<summary>Примеры (bind)</summary>
+
+```js
+const printName = function printName(start = 'Name is ', end = '.') {
+  console.log(`${start}${this.name}${end}`);
+};
+
+const user = { name: 'Ihar', printName };
+user.printName(); // ==> 'Name is Ihar.'
+setTimeout(user.printName, 1000); // ==> 'Name is undefined.'
+
+let printNameBinded;
+
+printNameBinded = user.printName.bind(user);
+printNameBinded(); // === user.printName() ==> 'Name is Ihar.'
+setTimeout(printNameBinded, 1000); // ==> 'Name is Ihar.'
+
+// !!! более приемлимое решение
+setTimeout(() => user.printName(), 1000); // ==> 'Name is Ihar.'
+
+printNameBinded = user.printName.bind(user, 'Hello, ');
+printNameBinded(); // === user.printName('Hello, ') ==> 'Hello, Ihar.'
+printNameBinded('!'); // === user.printName('Hello, ', '!') ==> 'Hello, Ihar!'
+setTimeout(printNameBinded, 1000); // ==> 'Hello, Ihar.'
+
+// !!! более приемлимое решение
+setTimeout(() => user.printName('Hello, '), 1000); // ==> 'Hello, Ihar.'
 ```
 
 </details><br>
