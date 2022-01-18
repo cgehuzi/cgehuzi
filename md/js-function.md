@@ -105,7 +105,7 @@ func.bind(); // создание новой функции и связь её с
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
 <details>
-<summary>Примеры (bind)</summary>
+<summary>Примеры</summary>
 
 ```js
 const printName = function printName(start = 'Name is ', end = '.') {
