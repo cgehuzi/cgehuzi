@@ -22,6 +22,7 @@
   - [Object : Spread-оператор](#object--spread-оператор)
   - [Object : Деструктуризация](#object--деструктуризация)
   - [Object : Rest-оператор](#object--rest-оператор)
+  - [Object : Методы](#object--методы)
 
 ---
 
@@ -394,3 +395,22 @@ const { name, height, ...rest } = user;
 ```
 
 </details><br>
+
+## Object : Методы
+
+<a id="method"></a>
+
+```js
+{ ... }.method() // вызов метода для объекта
+```
+
+```js
+const user = {
+  name: 'Ihar',
+  getName() {
+    return this.name;
+  },
+};
+
+user.getName(); // ==> 'Ihar'
+```
