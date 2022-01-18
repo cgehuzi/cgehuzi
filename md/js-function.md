@@ -10,11 +10,55 @@
 Навигация:
 
 - [JS : Function - функция](#js--function---функция)
+  - [Function : this](#function--this)
+    - [Обычная функция](#обычная-функция)
   - [Function : Rest-оператор](#function--rest-оператор)
   - [Function : Spread-оператор](#function--spread-оператор)
   - [Function : Деструктуризация параметров](#function--деструктуризация-параметров)
 
 ---
+
+## Function : this
+
+<a id="this"></a>
+
+`this` — это привязка, которая создается во время вызова функции, и ссылается на контекст вызова. Контекс зависит от того, где и при каких условиях функция была вызвана.
+
+### Обычная функция
+
+```js
+const user = {
+  name: 'Ihar',
+  // присваиваем свойство-метод
+  getName() {
+    return this.name;
+  },
+};
+
+user.getName(); // ==> 'Ihar'
+// user — контекст вызова функции getName
+```
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const user1 = {
+  name: 'Ihar',
+  getName() {
+    return this.name;
+  },
+};
+const user2 = { name: 'Hanna' };
+
+user1.getName(); // ==> 'Ihar'
+user2.getName(); // ==> TypeError: user2.getName is not a function
+
+user2.getName = user1.getName;
+user2.getName(); // ==> 'Hanna'
+```
+
+</details><br>
 
 ## Function : Rest-оператор
 
