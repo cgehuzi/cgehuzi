@@ -12,6 +12,7 @@
 - [JS : Function - функция](#js--function---функция)
   - [Function : this](#function--this)
     - [Обычная функция](#обычная-функция)
+  - [Function : Методы](#function--методы)
   - [Function : Rest-оператор](#function--rest-оператор)
   - [Function : Spread-оператор](#function--spread-оператор)
   - [Function : Деструктуризация параметров](#function--деструктуризация-параметров)
@@ -56,6 +57,35 @@ user2.getName(); // ==> TypeError: user2.getName is not a function
 
 user2.getName = user1.getName;
 user2.getName(); // ==> 'Hanna'
+```
+
+</details><br>
+
+## Function : Методы
+
+<a id="call"></a>
+
+```js
+func.call(); // вызов функции
+```
+
+Вызывает функцию с указанным значением `this` и индивидуально предоставленными аргументами.
+
+- [Спецификация](https://tc39.es/ecma262/#sec-function.prototype.call)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const getName = function getName(prefix = 'Name is') {
+  return `${prefix} ${this.name}`;
+};
+
+const user = { name: 'Ihar' };
+getName.call(); // ==> 'Name is undefined'
+getName.call(user); // ==> 'Name is Ihar'
+getName.call(user, 'Hello,'); // ==> 'Hello, Ihar'
 ```
 
 </details><br>
