@@ -78,14 +78,45 @@ func.call(); // вызов функции с переданным контекс
 <summary>Примеры</summary>
 
 ```js
-const getName = function getName(start = 'Name is ') {
-  return `${start}${this.name}`;
+const getName = function getName(start = 'Name is ', end = '.') {
+  return `${start}${this.name}${end}`;
 };
 
 const user = { name: 'Ihar' };
-getName.call(); // ==> 'Name is undefined'
-getName.call(user); // ==> 'Name is Ihar'
-getName.call(user, 'Hello, '); // ==> 'Hello, Ihar'
+
+getName.call(); // ==> 'Name is undefined.'
+getName.call(user); // ==> 'Name is Ihar.'
+getName.call(user, 'Hello, '); // ==> 'Hello, Ihar.'
+getName.call(user, 'Hello, ', '!'); // ==> 'Hello, Ihar!'
+```
+
+</details><br>
+
+<a id="call"></a>
+
+```js
+func.apply(); // вызов функции с переданным контекстом
+```
+
+Вызывает функцию с указанным значением `this` и аргументами, предоставленными в виде массива.
+
+- [Спецификация](https://tc39.es/ecma262/#sec-function.prototype.apply)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const getName = function getName(start = 'Name is ', end = '.') {
+  return `${start}${this.name}${end}`;
+};
+
+const user = { name: 'Ihar' };
+
+getName.apply(); // ==> 'Name is undefined.'
+getName.apply(user); // ==> 'Name is Ihar.'
+getName.apply(user, ['Hello, ']); // ==> 'Hello, Ihar.'
+getName.apply(user, ['Hello, ', '!']); // ==> 'Hello, Ihar!'
 ```
 
 </details><br>
@@ -113,6 +144,7 @@ const printName = function printName(start = 'Name is ', end = '.') {
 };
 
 const user = { name: 'Ihar', printName };
+
 user.printName(); // ==> 'Name is Ihar.'
 setTimeout(user.printName, 1000); // ==> 'Name is undefined.'
 
