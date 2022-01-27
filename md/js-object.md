@@ -168,7 +168,8 @@ Object.values(user); // ==> [{ first: 'Ihar', last: 'Spurhiash' }, 192, true]
 Object.entries(); // возвращает массив значений
 ```
 
-Возвращает массив, содержащий значения элементов в формате `[key, value]` в том порядке, в котором они были заведены.
+Возвращает массив, содержащий значения элементов в формате `[key, value]` в том порядке, в котором они были заведены.  
+Обратный метод: [Object.fromEntries()](#fromEntries)
 
 - [Спецификация](https://tc39.es/ecma262/#sec-object.prototype.entries)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
@@ -180,6 +181,33 @@ Object.entries(); // возвращает массив значений
 const user = { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true };
 
 Object.entries(user); // ==> [['name', { first: 'Ihar', last: 'Spurhiash' }], ['height', 192], ['married', true]]
+```
+
+</details><br>
+
+<a id="fromEntries"></a>
+
+```js
+Object.fromEntries(); // преобразует
+```
+
+Преобразует список пар `[key, value]` в объект  
+Обратный метод: [Object.entries()](#entries)
+
+- [Спецификация](https://tc39.es/ecma262/#sec-object.prototype.fromEntries)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const user = [
+  ['name', { first: 'Ihar', last: 'Spurhiash' }],
+  ['height', 192],
+  ['married', true],
+];
+
+Object.fromEntries(user); // ==> { name: { first: 'Ihar', last: 'Spurhiash' }, height: 192, married: true }
 ```
 
 </details><br>
