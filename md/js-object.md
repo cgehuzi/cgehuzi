@@ -23,6 +23,9 @@
   - [Object : Деструктуризация](#object--деструктуризация)
   - [Object : Rest-оператор](#object--rest-оператор)
   - [Object : Методы](#object--методы)
+  - [Object : Proxy](#object--proxy)
+    - [Ловушки (traps)](#ловушки-traps)
+    - [Перенаправление](#перенаправление)
 
 ---
 
@@ -188,7 +191,7 @@ Object.entries(user); // ==> [['name', { first: 'Ihar', last: 'Spurhiash' }], ['
 <a id="fromEntries"></a>
 
 ```js
-Object.fromEntries(); // преобразует
+Object.fromEntries(); // преобразует массив значений в объект
 ```
 
 Преобразует список пар `[key, value]` в объект  
@@ -441,4 +444,108 @@ const user = {
 };
 
 user.getName(); // ==> 'Ihar'
+```
+
+## Object : Proxy
+
+<a id="proxy"></a>
+
+```js
+new Proxy(target, handler); // переопределение операций над объектами
+```
+
+Позволяет создать Proxy для перехватывата и переопределения основных операций для данного объекта.  
+`target` — объект-цель, обрабатываемый с помощью Proxy  
+`handler` — объект-заменитель, содержащий ловушки (traps)
+
+- [Спецификация](https://tc39.es/ecma262/#sec-proxy-objects)
+- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+
+### Ловушки (traps)
+
+Методы, которые предоставляют доступ к свойствам.
+
+```js
+{ get: () => ... } // получение значения из объекта
+```
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const target = { name: 'Ihar' };
+const handler = {
+  get: (target, prop) => {
+    // если ключ есть, возвращаем значение
+    if (prop in target) {
+      return target[prop];
+    }
+
+    // заменяем стандартный undefined
+    return 'Not found';
+  },
+};
+
+const user = new Proxy(target, handler);
+
+user.name; // ==> 'Ihar'
+user; // ==> { name: 'Ihar' }
+
+user.married; // ==> 'Not found'
+user; // ==> { name: 'Ihar' }
+```
+
+</details><br>
+
+```js
+{ set: () => ... } // присвоение значения объекту
+```
+
+<details>
+<summary>Примеры</summary>
+
+```js
+const target = { name: 'Ihar' };
+const handler = {
+  set: (target, prop, value) => {
+    // обработка значения
+    if (prop === 'age' && value < 18) {
+      throw new Error('Слишком молод!');
+    }
+
+    // стандартное присвоение
+    target[prop] = value;
+
+    // можно что-нибудь вернуть
+    return value;
+  },
+};
+
+const user = new Proxy(target, handler);
+
+user.age = 12; // ==>  Error: Слишком молод!
+user; // ==> { name: 'Ihar' }
+
+user.age = 30; // ==>  30
+user; // ==> { name: 'Ihar', age: 30 }
+```
+
+</details><br>
+
+### Перенаправление
+
+Перенаправление всех запросов к `Proxy` на целевой объект.
+
+```js
+const user = { name: 'Ihar' };
+const proxy = new Proxy(user, {});
+
+proxy.name; // ==> 'Ihar'
+user; // ==> { name: 'Ihar' }
+
+proxy.married; // ==> undefined
+user; // ==> { name: 'Ihar' }
+
+proxy.married = true; // ==> true
+user; // ==> { name: 'Ihar', married: true }
 ```
