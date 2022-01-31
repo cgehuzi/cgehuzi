@@ -22,7 +22,8 @@
   - [BASH : Управление утилитами](#bash--управление-утилитами)
     - [macOS](#macos)
   - [BASH : Makefile - шаблонизация команд](#bash--makefile---шаблонизация-команд)
-    - [Makefile](#makefile)
+  - [BASH : PS1 - строка-приглашение в терминале](#bash--ps1---строка-приглашение-в-терминале)
+    - [zsh](#zsh)
 
 ---
 
@@ -826,8 +827,6 @@ brew update ____    # обновить пакетный менеджер
 make <alias>    # запуск команд из Makefile
 ```
 
-### Makefile
-
 ```bash
 test:                               # alias для вызова
     npm run test                    # вызываемая команда
@@ -850,4 +849,37 @@ build: test                         # alias для вызова : зависим
 make test       # === $ npm run test
 make logs N=13  # === $ sudo tail -n 13 <log_file>
 make build      # === $ npm run test; npm run build
+```
+
+## BASH : PS1 - строка-приглашение в терминале
+
+<a id="ps1"></a>
+
+### zsh
+
+```bash
+user /directory [git-branch] $
+```
+
+Открыть в текстовом редакторе файл `~/.zshrc`  
+Если файла нет — создать.
+
+```bash
+touch ~/.zshrc  # создаём, если нет
+vim ~/.zshrc    # редактируем
+```
+
+Добавить в файл конструкцию:
+
+```bash
+function parse_git_branch() {
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+}
+
+COLOR_DEF=$'\e[0m'
+COLOR_USR=$'\e[38;5;243m'
+COLOR_DIR=$'\e[38;5;197m'
+COLOR_GIT=$'\e[38;5;39m'
+setopt PROMPT_SUBST
+export PROMPT='${COLOR_USR}%n ${COLOR_DEF}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
 ```
