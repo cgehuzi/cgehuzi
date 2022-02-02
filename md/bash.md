@@ -284,6 +284,12 @@ find <dir> -type f  -name <string>  # файлы c именем <string>
 find <dir> -type d  -name <string>  # директории c именем <string>
 ```
 
+```bash
+                                    # выполнить <command> для каждого найденного файла
+find ... -exec <command> "{}" \;    # файлы, содержащие пробелы в имени будут обработаны корректно
+find ... -exec <command> {} \;      # !!! файлы, содержащие пробелы в имени будут обработаны некорректно
+```
+
 </details><br>
 
 <a id="wc"></a>
