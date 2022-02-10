@@ -16,6 +16,11 @@
   - [Promise : Цепочка](#promise--цепочка)
   - [Promise : Конструктор](#promise--конструктор)
   - [Promise : Методы](#promise--методы)
+  - [Promise : async/await](#promise--asyncawait)
+    - [Ситнаксис](#ситнаксис)
+    - [Последовательное выполнение](#последовательное-выполнение)
+    - [Параллельное выполнение](#параллельное-выполнение)
+    - [Обработка ошибок](#обработка-ошибок)
 
 ---
 
@@ -33,10 +38,10 @@ promise.then((value) => { ... }); // обработка успешной аси�
 **!!! ВСЕГДА** возвращай новый Promise после обработки операции
 
 ```js
-promise.catch((err) => { ... }); // обработка проваленной асинхронной операции
+promise.catch((error) => { ... }); // обработка проваленной асинхронной операции
 ```
 
-**!!! ВСЕГДА** вызывай исключение `throw err` после обработки ошибки
+**!!! ВСЕГДА** вызывай исключение `throw error` после обработки ошибки
 
 ## Promise : Конструктор
 
@@ -44,9 +49,9 @@ promise.catch((err) => { ... }); // обработка проваленной а
 import fs from 'fs';
 
 const promise = new Promise((resolve, reject) => {
-  fs.readFile('/dir/file', (err, data) => {
-    if (err) {
-      reject(err);
+  fs.readFile('/dir/file', (error, data) => {
+    if (error) {
+      reject(error);
       return;
     }
 
@@ -71,9 +76,9 @@ Promise.resolve(value); // возвращает Promise, выполненный 
 
 ```js
 Promise.resolve([1, 2, 3])
-  .catch((err) => {
+  .catch((error) => {
     console.log('Ошибка!');
-    return err;
+    return error;
   })
   .then((value) => {
     console.log(value);
@@ -88,7 +93,7 @@ Promise.resolve([1, 2, 3])
 <a id="reject"></a>
 
 ```js
-Promise.reject(err); // возвращает Promise, который был отклонён
+Promise.reject(error); // возвращает Promise, который был отклонён
 ```
 
 <details>
@@ -96,9 +101,9 @@ Promise.reject(err); // возвращает Promise, который был от
 
 ```js
 Promise.reject([1, 2, 3])
-  .catch((err) => {
+  .catch((error) => {
     console.log('Ошибка!');
-    return err;
+    return error;
   })
   .then((value) => {
     console.log(value);
@@ -148,3 +153,52 @@ Promise.all(['/dir1/file', '/dir1', '/dir2', '/dir2/file'])
   [Документация на GitHub](https://github.com/nodejs/node/blob/master/doc/api/fs.md)
 
 </details><br>
+
+## Promise : async/await
+
+`async` принимает параметры и возвращает промис  
+`await` принимает промис и возвращает значения
+
+### Ситнаксис
+
+```js
+async (...params) => {
+  const result = await doSomething(...params);
+  return result;
+};
+```
+
+### Последовательное выполнение
+
+```js
+const waitSum = async (a, b, c) => {
+  const awaitA = await getAfterTime(a); // ждём получения a
+  const awaitB = await getAfterTime(b); // затем получаем b
+  return awaitA + awaitB + c;
+};
+```
+
+### Параллельное выполнение
+
+```js
+const waitSum = async (a, b, c) => {
+  const promiseA = getAfterTime(a); // запускаем получение a
+  const promiseB = getAfterTime(b); // параллельно получаем b
+  const [awaitA, awaitB] = await Promise.all([promiseA, promiseB]); // ждём получения a и b
+  return awaitA + awaitB + c;
+};
+```
+
+### Обработка ошибок
+
+```js
+async (...params) => {
+  try {
+    const result = await doSomething(...params);
+    return result;
+  } catch (error) {
+    console.log(error); // обрабатываем ошибку, затем...
+    throw error; // !!! ВСЕГДА бросаем исключение, чтобы не нарушать семантику
+  }
+};
+```
