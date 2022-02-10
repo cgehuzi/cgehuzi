@@ -18,6 +18,7 @@ _Ведутся с целью структурирования получаем�
 - [js : String - строка](./md/js-string.md)
 - [js : Function - функция](./md/js-function.md)
 - [js : Class - класс](./md/js-class.md)
+- [js : Promise - промис](./md/js-promise.md)
 - [js : Math - математика](./md/js-math.md)
 - [js : Modules - модули](./md/js-modules.md)
 
