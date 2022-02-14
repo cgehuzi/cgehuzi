@@ -119,7 +119,7 @@ new line
 ---
 
 ```js
-/[aj]/; // ==> a[или]j
+/[aj]/; // ==> ((a),(j))
 ```
 
 `ja`v`a` 11_34-1938 t`a`b  
@@ -128,7 +128,7 @@ new line
 ---
 
 ```js
-/[^aj]/; // ==> [всё, кроме]a[и]j
+/[^aj]/; // ==> [всё, кроме]((a),(j))
 ```
 
 ja`v`a` 11_34-1938 t`a`b`  
@@ -137,7 +137,7 @@ ja`v`a` 11_34-1938 t`a`b`
 ---
 
 ```js
-/[aj-]/; // ==> a[или]j[или]-
+/[aj-]/; // ==> ((a),(j),(-))
 ```
 
 `ja`v`a` 11_34`-`1938 t`a`b  
@@ -155,7 +155,7 @@ new line
 ---
 
 ```js
-/\D/; // ==> [всё, кроме][цифр]
+/\D/; // ==> [всё, кроме](цифры)
 ```
 
 `java `11`_`34`-`1938` tab`  
@@ -164,7 +164,7 @@ new line
 ---
 
 ```js
-/\w/; // ==> [цифры][или][латиница][или]_
+/\w/; // ==> ((цифры),(латиница),(_))
 // равносильно /[0-9a-zA-Z_]/
 ```
 
@@ -174,7 +174,7 @@ new line
 ---
 
 ```js
-/\W/; // ==> [всё, кроме][цифр][и][латиницы][и]_
+/\W/; // ==> [всё, кроме]((цифры),(латиница),(_))
 ```
 
 java` `11_34`-`1938` `tab  
@@ -247,10 +247,34 @@ java ruby clo`j`urescriptj javascript
 ---
 
 ```js
-// ==>
+/gray|grow/; // ==> ((gray),(grow))
 ```
 
-asdasdasdasdasd
+`gray` `grow` grey
+
+---
+
+```js
+/gr(ay|ow)/; // ==> gr((ay),(ow))
+```
+
+`gray` `grow` grey
+
+---
+
+```js
+/gr(a|e)y/; // ==> gr((a),(e))y
+```
+
+`gray` grow `grey`
+
+---
+
+```js
+/gr[ae]y/; // ==> gr((a),(e))y
+```
+
+`gray` grow `grey`
 
 ---
 
@@ -259,10 +283,74 @@ asdasdasdasdasd
 ---
 
 ```js
-// ==>
+/colou?/; // ==> colo(u)[0-1 раз]
 ```
 
-asdasdasdasdasd
+colr, `colo`r, `colou`r, `colou`ur, `colou`uur
+
+---
+
+```js
+/colou?r/; // ==> colo(u)[0-1 раз]r
+```
+
+colr, `color`, `colour`, colouur, colouuur
+
+---
+
+```js
+/col(ou)?r/; // ==> col(ou)[0-1 раз]r
+```
+
+`colr`, color, `colour`, colouur, colouuur
+
+---
+
+```js
+/col[ou]?r/; // ==> col((o),(u))[0-1 раз]r
+```
+
+`colr`, `color`, colour, colouur, colouuur
+
+---
+
+```js
+/colou+r/; // ==> colo(u)[1+ раз]r
+```
+
+colr, color, `colour`, `colouur`, `colouuur`
+
+---
+
+```js
+/colou*r/; // ==> colo(u)[0+ раз]r
+```
+
+colr, `color`, `colour`, `colouur`, `colouuur`
+
+---
+
+```js
+/colou{2}r/; // ==> colo(u)[2 раза]r
+```
+
+colr, color, colour, `colouur`, colouuur
+
+---
+
+```js
+/colou{2,3}r/; // ==> colo(u)[2-3 раза]r
+```
+
+colr, color, colour, `colouur`, `colouuur`, colouuuur
+
+---
+
+```js
+/colou{1,}r/; // ==> colo(u)[1+ раз]r
+```
+
+colr, color, `colour`, `colouur`, `colouuur`, `colouuuur`
 
 ---
 
@@ -270,11 +358,41 @@ asdasdasdasdasd
 
 ---
 
+ЖАДНАЯ квантификация:
+
 ```js
-// ==>
+/<.*>/; // ==> <([любой символ])[0+ раз][до последнего](>)>
 ```
 
-asdasdasdasdasd
+`<a href="https://www.yandex.ru">google</a>`
+
+---
+
+ЛЕНИВАЯ квантификация:
+
+```js
+/<.*?>/; // ==> <([любой символ])[0+ раз][до ближайшего](>)>
+```
+
+`<a href="https://www.yandex.ru">`google`</a>`
+
+---
+
+КОСТЫЛЬ:
+
+```js
+/<[^>]*>/; // ==> <([всё, кроме](>))[0+ раз]>
+```
+
+`<a href="https://www.yandex.ru">`google`</a>`
+
+---
+
+```js
+/<.?>/; // ==> <([любой символ])[0+ раз]>
+```
+
+`<p>`\<div class="url">google\</div>\</p>
 
 ---
 
