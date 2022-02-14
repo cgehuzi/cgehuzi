@@ -30,7 +30,7 @@
 
 `java` \ python ruby1.9 `java`script c#
 
-<br>
+---
 
 ```js
 /javab/;
@@ -38,7 +38,7 @@
 
 java \ python ruby1.9 javascript c#
 
-<br>
+---
 
 ```js
 /./;
@@ -46,7 +46,7 @@ java \ python ruby1.9 javascript c#
 
 `java \ python ruby1.9 javascript c#`
 
-<br>
+---
 
 ```js
 /.y/;
@@ -54,7 +54,7 @@ java \ python ruby1.9 javascript c#
 
 java \ `py`thon ru`by`1.9 javascript c#
 
-<br>
+---
 
 ```js
 /1.9/;
@@ -64,7 +64,7 @@ java \ python ruby`1.9` javascript c#
 java \ python ruby`189` javascript c#  
 java \ python ruby`1k9` javascript c#
 
-<br>
+---
 
 ```js
 /1\.9/;
@@ -74,7 +74,7 @@ java \ python ruby`1.9` javascript c#
 java \ python ruby189 javascript c#  
 java \ python ruby1k9 javascript c#
 
-<br>
+---
 
 ```js
 /\\/;
@@ -82,4 +82,4 @@ java \ python ruby1k9 javascript c#
 
 java `\` python ruby1d9 javascript c#
 
-<br>
+---
