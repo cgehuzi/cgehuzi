@@ -40,7 +40,9 @@
 /java/; // ==> java
 ```
 
-`java` \ python ruby1.9 `java`script c#
+| string                                  | matches | groups |
+| --------------------------------------- | ------- | ------ |
+| `java` \ python ruby1.9 `java`script c# | 2       | 1      |
 
 ---
 
@@ -48,7 +50,9 @@
 /javab/; // ==> javab
 ```
 
-java \ python ruby1.9 javascript c#
+| string                              | matches | groups |
+| ----------------------------------- | ------- | ------ |
+| java \ python ruby1.9 javascript c# | 0       | 0      |
 
 ---
 
@@ -56,7 +60,10 @@ java \ python ruby1.9 javascript c#
 /./; // ==> [любой символ]
 ```
 
-`java \ python ruby1.9 javascript c#`
+| string                                | matches                      | groups |
+| ------------------------------------- | ---------------------------- | ------ |
+| `java \ python ruby1.9 javascript c#` | 35 : `j` ... `#`             | 1      |
+| `java 12_34-5678 tab`<br>`new line`   | 27 : `j` ... `b` `n` ... `e` | 1      |
 
 ---
 
@@ -64,7 +71,9 @@ java \ python ruby1.9 javascript c#
 /.y/; // ==> [любой символ]y
 ```
 
-java \ `py`thon ru`by`1.9 javascript c#
+| string                                  | matches | groups |
+| --------------------------------------- | ------- | ------ |
+| java \ `py`thon ru`by`1.9 javascript c# | 2       | 1      |
 
 ---
 
@@ -72,9 +81,11 @@ java \ `py`thon ru`by`1.9 javascript c#
 /1.9/; // ==> 1[любой символ]9
 ```
 
-java \ python ruby`1.9` javascript c#  
-java \ python ruby`189` javascript c#  
-java \ python ruby`1k9` javascript c#
+| string                                | matches | groups |
+| ------------------------------------- | ------- | ------ |
+| java \ python ruby`1.9` javascript c# | 1       | 1      |
+| java \ python ruby`189` javascript c# | 1       | 1      |
+| java \ python ruby`1k9` javascript c# | 1       | 1      |
 
 ---
 
@@ -82,9 +93,11 @@ java \ python ruby`1k9` javascript c#
 /1\.9/; // ==> 1.9
 ```
 
-java \ python ruby`1.9` javascript c#  
-java \ python ruby189 javascript c#  
-java \ python ruby1k9 javascript c#
+| string                                | matches | groups |
+| ------------------------------------- | ------- | ------ |
+| java \ python ruby`1.9` javascript c# | 1       | 1      |
+| java \ python ruby189 javascript c#   | 0       | 0      |
+| java \ python ruby1k9 javascript c#   | 0       | 0      |
 
 ---
 
@@ -92,7 +105,9 @@ java \ python ruby1k9 javascript c#
 /\\/; // ==> \
 ```
 
-java `\` python ruby1d9 javascript c#
+| string                                | matches | groups |
+| ------------------------------------- | ------- | ------ |
+| java `\` python ruby1d9 javascript c# | 1       | 1      |
 
 ---
 
@@ -104,8 +119,9 @@ java `\` python ruby1d9 javascript c#
 /[a-z]/; // ==> [латиница](нижний регистр)
 ```
 
-`java` 11_34-1938 `tab`  
-`new` `line`
+| string                                  | matches                      | groups |
+| --------------------------------------- | ---------------------------- | ------ |
+| `java` 12_34-5678 `tab`<br>`new` `line` | 14 : `j` ... `b` `n` ... `e` | 1      |
 
 ---
 
@@ -113,8 +129,9 @@ java `\` python ruby1d9 javascript c#
 /[0-9]/; // ==> [цифры]
 ```
 
-java `11`\_`34`-`1938` tab  
-new line
+| string                                 | matches         | groups |
+| -------------------------------------- | --------------- | ------ |
+| java `12`\_`34`-`5678` tab<br>new line | 8 : `1` ... `8` | 1      |
 
 ---
 
@@ -122,8 +139,9 @@ new line
 /[aj]/; // ==> ((a),(j))
 ```
 
-`ja`v`a` 11_34-1938 t`a`b  
-new line
+| string                                | matches             | groups |
+| ------------------------------------- | ------------------- | ------ |
+| `ja`v`a` 12_34-5678 t`a`b<br>new line | 4 : `j` `a` `a` `a` | 1      |
 
 ---
 
@@ -131,8 +149,9 @@ new line
 /[^aj]/; // ==> [всё, кроме]((a),(j))
 ```
 
-ja`v`a` 11_34-1938 t`a`b`  
-`new line`
+| string                                  | matches                                | groups |
+| --------------------------------------- | -------------------------------------- | ------ |
+| ja`v`a` 12_34-5678 t`a`b`<br>`new line` | 24 : `v` ... `b` `перенос` `n` ... `e` | 1      |
 
 ---
 
@@ -140,8 +159,9 @@ ja`v`a` 11_34-1938 t`a`b`
 /[aj-]/; // ==> ((a),(j),(-))
 ```
 
-`ja`v`a` 11_34`-`1938 t`a`b  
-new line
+| string                                  | matches                 | groups |
+| --------------------------------------- | ----------------------- | ------ |
+| `ja`v`a` 12_34`-`5678 t`a`b<br>new line | 5 : `j` `a` `a` `-` `a` | 1      |
 
 ---
 
@@ -149,8 +169,9 @@ new line
 /\d/; // ==> [цифры]
 ```
 
-java `11`\_`34`-`1938` tab  
-new line
+| string                                 | matches         | groups |
+| -------------------------------------- | --------------- | ------ |
+| java `12`\_`34`-`5678` tab<br>new line | 8 : `1` ... `8` | 1      |
 
 ---
 
@@ -158,8 +179,9 @@ new line
 /\D/; // ==> [всё, кроме](цифры)
 ```
 
-`java `11`_`34`-`1938` tab`  
-`new line`
+| string                                    | matches                                | groups |
+| ----------------------------------------- | -------------------------------------- | ------ |
+| `java `12`_`34`-`5678` tab`<br>`new line` | 20 : `j` ... `b` `перенос` `n` ... `e` | 1      |
 
 ---
 
@@ -168,8 +190,9 @@ new line
 // равносильно /[0-9a-zA-Z_]/
 ```
 
-`java` `11_34`-`1938` `tab`  
-`new` `line`
+| string                                      | matches                      | groups |
+| ------------------------------------------- | ---------------------------- | ------ |
+| `java` `12_34`-`5678` `tab`<br>`new` `line` | 23 : `j` ... `b` `n` ... `e` | 1      |
 
 ---
 
@@ -177,8 +200,9 @@ new line
 /\W/; // ==> [всё, кроме]((цифры),(латиница),(_))
 ```
 
-java` `11_34`-`1938` `tab  
-new` `line
+| string                                  | matches                       | groups |
+| --------------------------------------- | ----------------------------- | ------ |
+| java` `12_34`-`5678` `tab<br>new` `line | 5 : ` ` `-` ` ` `перенос` ` ` | 1      |
 
 ---
 
@@ -190,7 +214,9 @@ new` `line
 /^java/; // ==> [начало строки]java
 ```
 
-`java` ruby clojurescript javascript
+| string                               | matches | groups |
+| ------------------------------------ | ------- | ------ |
+| `java` ruby clojurescript javascript | 1       | 1      |
 
 ---
 
@@ -198,7 +224,9 @@ new` `line
 /script$/; // ==> script[конец строки]
 ```
 
-java ruby clojurescript java`script`
+| string                               | matches | groups |
+| ------------------------------------ | ------- | ------ |
+| java ruby clojurescript java`script` | 1       | 1      |
 
 ---
 
@@ -206,7 +234,9 @@ java ruby clojurescript java`script`
 /a\b/; // ==> a[конец слова]
 ```
 
-jav`a` jav`a`-script java_script
+| string                           | matches | groups |
+| -------------------------------- | ------- | ------ |
+| jav`a` jav`a`-script java_script | 2       | 1      |
 
 ---
 
@@ -214,7 +244,9 @@ jav`a` jav`a`-script java_script
 /a\B/; // ==> a[не конец слова]
 ```
 
-j`a`va j`a`va-script j`a`v`a`\_script
+| string                                | matches | groups |
+| ------------------------------------- | ------- | ------ |
+| j`a`va j`a`va-script j`a`v`a`\_script | 4       | 1      |
 
 ---
 
@@ -222,7 +254,9 @@ j`a`va j`a`va-script j`a`v`a`\_script
 /\bj/; // ==> [начало слова]j
 ```
 
-`j`ava ruby clojurescript `j`avascript
+| string                                 | matches | groups |
+| -------------------------------------- | ------- | ------ |
+| `j`ava ruby clojurescript `j`avascript | 2       | 1      |
 
 ---
 
@@ -230,7 +264,9 @@ j`a`va j`a`va-script j`a`v`a`\_script
 /\Bj/; // ==> [не начало слова]j
 ```
 
-java ruby clo`j`urescript`j` javascript
+| string                                  | matches | groups |
+| --------------------------------------- | ------- | ------ |
+| java ruby clo`j`urescript`j` javascript | 2       | 1      |
 
 ---
 
@@ -238,7 +274,9 @@ java ruby clo`j`urescript`j` javascript
 /\Bj\B/; // ==> [не начало слова]j[не конец слова]
 ```
 
-java ruby clo`j`urescriptj javascript
+| string                                | matches | groups |
+| ------------------------------------- | ------- | ------ |
+| java ruby clo`j`urescriptj javascript | 1       | 1      |
 
 ---
 
@@ -250,7 +288,9 @@ java ruby clo`j`urescriptj javascript
 /gray|grow/; // ==> ((gray),(grow))
 ```
 
-`gray` `grow` grey
+| string             | matches | groups |
+| ------------------ | ------- | ------ |
+| `gray` `grow` grey | 2       | 1      |
 
 ---
 
@@ -258,7 +298,9 @@ java ruby clo`j`urescriptj javascript
 /gr(ay|ow)/; // ==> gr((ay),(ow))
 ```
 
-`gray` `grow` grey
+| string             | matches | groups                        |
+| ------------------ | ------- | ----------------------------- |
+| `gray` `grow` grey | 2       | 2 : `matches` / gr`ay` gr`ow` |
 
 ---
 
@@ -266,7 +308,9 @@ java ruby clo`j`urescriptj javascript
 /gr(a|e)y/; // ==> gr((a),(e))y
 ```
 
-`gray` grow `grey`
+| string             | matches | groups                        |
+| ------------------ | ------- | ----------------------------- |
+| `gray` grow `grey` | 2       | 2 : `matches` / gr`a`y gr`e`y |
 
 ---
 
@@ -274,7 +318,9 @@ java ruby clo`j`urescriptj javascript
 /gr[ae]y/; // ==> gr((a),(e))y
 ```
 
-`gray` grow `grey`
+| string             | matches | groups |
+| ------------------ | ------- | ------ |
+| `gray` grow `grey` | 2       | 1      |
 
 ---
 
@@ -286,7 +332,9 @@ java ruby clo`j`urescriptj javascript
 /colou?/; // ==> colo(u)[0-1 раз]
 ```
 
-colr, `colo`r, `colou`r, `colou`ur, `colou`uur
+| string                                         | matches | groups |
+| ---------------------------------------------- | ------- | ------ |
+| colr, `colo`r, `colou`r, `colou`ur, `colou`uur | 4       | 1      |
 
 ---
 
@@ -294,7 +342,9 @@ colr, `colo`r, `colou`r, `colou`ur, `colou`uur
 /colou?r/; // ==> colo(u)[0-1 раз]r
 ```
 
-colr, `color`, `colour`, colouur, colouuur
+| string                                     | matches | groups |
+| ------------------------------------------ | ------- | ------ |
+| colr, `color`, `colour`, colouur, colouuur | 2       | 1      |
 
 ---
 
@@ -302,7 +352,9 @@ colr, `color`, `colour`, colouur, colouuur
 /col(ou)?r/; // ==> col(ou)[0-1 раз]r
 ```
 
-`colr`, color, `colour`, colouur, colouuur
+| string                                     | matches | groups                   |
+| ------------------------------------------ | ------- | ------------------------ |
+| `colr`, color, `colour`, colouur, colouuur | 2       | 2 : `matches` / col`ou`r |
 
 ---
 
@@ -310,7 +362,9 @@ colr, `color`, `colour`, colouur, colouuur
 /col[ou]?r/; // ==> col((o),(u))[0-1 раз]r
 ```
 
-`colr`, `color`, colour, colouur, colouuur
+| string                                     | matches | groups |
+| ------------------------------------------ | ------- | ------ |
+| `colr`, `color`, colour, colouur, colouuur | 2       | 1      |
 
 ---
 
@@ -318,7 +372,9 @@ colr, `color`, `colour`, colouur, colouuur
 /colou+r/; // ==> colo(u)[1+ раз]r
 ```
 
-colr, color, `colour`, `colouur`, `colouuur`
+| string                                       | matches | groups |
+| -------------------------------------------- | ------- | ------ |
+| colr, color, `colour`, `colouur`, `colouuur` | 3       | 1      |
 
 ---
 
@@ -326,7 +382,9 @@ colr, color, `colour`, `colouur`, `colouuur`
 /colou*r/; // ==> colo(u)[0+ раз]r
 ```
 
-colr, `color`, `colour`, `colouur`, `colouuur`
+| string                                         | matches | groups |
+| ---------------------------------------------- | ------- | ------ |
+| colr, `color`, `colour`, `colouur`, `colouuur` | 4       | 1      |
 
 ---
 
@@ -334,7 +392,9 @@ colr, `color`, `colour`, `colouur`, `colouuur`
 /colou{2}r/; // ==> colo(u)[2 раза]r
 ```
 
-colr, color, colour, `colouur`, colouuur
+| string                                   | matches | groups |
+| ---------------------------------------- | ------- | ------ |
+| colr, color, colour, `colouur`, colouuur | 1       | 1      |
 
 ---
 
@@ -342,7 +402,9 @@ colr, color, colour, `colouur`, colouuur
 /colou{2,3}r/; // ==> colo(u)[2-3 раза]r
 ```
 
-colr, color, colour, `colouur`, `colouuur`, colouuuur
+| string                                                | matches | groups |
+| ----------------------------------------------------- | ------- | ------ |
+| colr, color, colour, `colouur`, `colouuur`, colouuuur | 2       | 1      |
 
 ---
 
@@ -350,7 +412,9 @@ colr, color, colour, `colouur`, `colouuur`, colouuuur
 /colou{1,}r/; // ==> colo(u)[1+ раз]r
 ```
 
-colr, color, `colour`, `colouur`, `colouuur`, `colouuuur`
+| string                                                    | matches | groups |
+| --------------------------------------------------------- | ------- | ------ |
+| colr, color, `colour`, `colouur`, `colouuur`, `colouuuur` | 4       | 1      |
 
 ---
 
@@ -364,7 +428,9 @@ colr, color, `colour`, `colouur`, `colouuur`, `colouuuur`
 /<.*>/; // ==> <([любой символ])[0+ раз][до последнего](>)>
 ```
 
-`<a href="https://www.yandex.ru">google</a>`
+| string                                       | matches | groups |
+| -------------------------------------------- | ------- | ------ |
+| `<a href="https://www.yandex.ru">google</a>` | 1       | 1      |
 
 ---
 
@@ -374,7 +440,9 @@ colr, color, `colour`, `colouur`, `colouuur`, `colouuuur`
 /<.*?>/; // ==> <([любой символ])[0+ раз][до ближайшего](>)>
 ```
 
-`<a href="https://www.yandex.ru">`google`</a>`
+| string                                         | matches | groups |
+| ---------------------------------------------- | ------- | ------ |
+| `<a href="https://www.yandex.ru">`google`</a>` | 2       | 1      |
 
 ---
 
@@ -384,7 +452,9 @@ colr, color, `colour`, `colouur`, `colouuur`, `colouuuur`
 /<[^>]*>/; // ==> <([всё, кроме](>))[0+ раз]>
 ```
 
-`<a href="https://www.yandex.ru">`google`</a>`
+| string                                         | matches | groups |
+| ---------------------------------------------- | ------- | ------ |
+| `<a href="https://www.yandex.ru">`google`</a>` | 2       | 1      |
 
 ---
 
@@ -392,7 +462,9 @@ colr, color, `colour`, `colouur`, `colouuur`, `colouuuur`
 /<.?>/; // ==> <([любой символ])[0+ раз]>
 ```
 
-`<p>`\<div class="url">google\</div>\</p>
+| string                                    | matches | groups |
+| ----------------------------------------- | ------- | ------ |
+| `<p>`\<div class="url">google\</div>\</p> | 1       | 1      |
 
 ---
 
@@ -404,7 +476,9 @@ colr, color, `colour`, `colouur`, `colouuur`, `colouuuur`
 /(ta|tu)-\1/; // ==> ((ta),(tu))-((ta),(tu))[соответственно]
 ```
 
-ta-tu `ta-ta` `tu-tu`
+| string                | matches | groups                          |
+| --------------------- | ------- | ------------------------------- |
+| ta-tu `ta-ta` `tu-tu` | 2       | 2 : `matches` / `ta`-ta `tu`-tu |
 
 ---
 
@@ -412,7 +486,9 @@ ta-tu `ta-ta` `tu-tu`
 /(?<group1>ta|tu)-\g<group1>/; // ==> (group1=((ta),(tu)))-(group1)
 ```
 
-`ta-tu` `ta-ta` `tu-tu`
+| string                  | matches | groups                                  |
+| ----------------------- | ------- | --------------------------------------- |
+| `ta-tu` `ta-ta` `tu-tu` | 3       | 2 : `matches` / `ta`-tu `ta`-ta `tu`-tu |
 
 ---
 
@@ -420,7 +496,9 @@ ta-tu `ta-ta` `tu-tu`
 /(?<group1>ta|tu)-\k<group1>/; // ==> (group1=((ta),(tu)))-(group1)[соответственно]
 ```
 
-ta-tu `ta-ta` `tu-tu`
+| string                | matches | groups                          |
+| --------------------- | ------- | ------------------------------- |
+| ta-tu `ta-ta` `tu-tu` | 2       | 2 : `matches` / `ta`-ta `tu`-tu |
 
 ---
 
@@ -430,7 +508,9 @@ ta-tu `ta-ta` `tu-tu`
 /(?:ta|tu)-\1/; // ==> ((ta),(tu))[откл]-((ta),(tu))[соответственно]
 ```
 
-ta-tu ta-ta tu-tu
+| string            | matches | groups |
+| ----------------- | ------- | ------ |
+| ta-tu ta-ta tu-tu | 0       | 0      |
 
 ---
 
@@ -440,7 +520,9 @@ ta-tu ta-ta tu-tu
 /a(?>bc|b|x)cc/; // ==> a((bc),(b),(x))[без возврата назад]cc
 ```
 
-abcca`axcc`
+| string      | matches | groups |
+| ----------- | ------- | ------ |
+| abcca`axcc` | 1       | 1      |
 
 1. a(bc)c – не подходит
 2. идём дальше -->
@@ -457,7 +539,9 @@ abcca`axcc`
 /a(bc|b|x)cc/; // ==> a((bc),(b),(x))cc
 ```
 
-`abcc`a`axcc`
+| string        | matches | groups                        |
+| ------------- | ------- | ----------------------------- |
+| `abcc`a`axcc` | 2       | 2 : `matches` / a`b`cc a`x`cc |
 
 1. a(bc)c – не подходит
 2. <-- возвращаемся
