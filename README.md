@@ -44,6 +44,7 @@ _Ведутся с целью структурирования получаем�
 
 - [node : Node.js](./md/node.md)
 - [node : NPM - менеджер пакетов](./md/node-npm.md)
+- [node : Webpack - сборка проектов](./md/node-webpack.md)
 - [node : Prettier - форматирование кода](./md/node-prettier.md)
 - [node : ESLint - линтер кода](./md/node-eslint.md)
 - [node : Jest - тестирование](./md/node-jest.md)
