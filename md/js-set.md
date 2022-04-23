@@ -27,7 +27,7 @@
   [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.add)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/add)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
 
   numbers.add(4); // ===> Set(4) {1, 2, 3, 4}
@@ -44,7 +44,7 @@
   [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.delete)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
 
   numbers.delete(4); // ===> true
@@ -61,7 +61,7 @@
   [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.clear)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/clear)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
 
   numbers.clear(); // ===> undefined
@@ -79,7 +79,7 @@
   [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.foreach)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
 
   numbers.forEach((value, key, set) => {
@@ -105,7 +105,7 @@
   [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.has)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/has)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
 
   numbers.has(4); // ===> true
@@ -125,7 +125,7 @@
   [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.values)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/values)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
 
   numbers.values(); // ===> SetIterator {1, 2, 3, 4}
@@ -133,7 +133,7 @@
 
   Преобразование в Array: [Set.values() => Array](./js-array.md#from)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
 
   Array.from(numbers.values()); // ===> (4) [1, 2, 3, 4]
@@ -141,7 +141,7 @@
 
   Перебор: [Цикл for...of](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...of)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
   const values = numbers.values();
   console.log(values);
@@ -168,7 +168,7 @@
   [Спецификация](https://tc39.es/ecma262/#sec-set.prototype.entries)<br>
   [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/entries)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
 
   numbers.entries(); // ===> SetIterator {1 => 1, 2 => 2, 3 => 3, 4 => 4}
@@ -176,7 +176,7 @@
 
   Преобразование в Array: [Set.entries() => Array](./js-array.md#from)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
 
   Array.from(numbers.entries()); // ===> (4) [[1, 1], [2, 2], [3, 3], [4, 4]]
@@ -184,7 +184,7 @@
 
   Перебор: [Цикл for...of](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...of)
 
-  ```javascript
+  ```js
   const numbers = new Set([1, 2, 3, 4]);
   const entries = numbers.entries();
   console.log(entries);

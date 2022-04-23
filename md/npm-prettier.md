@@ -6,7 +6,7 @@
 
 Навигация:
 
-- [Prettier - форматирование кода](#node--prettier---форматирование-кода)
+- [Prettier - форматирование кода](#prettier---форматирование-кода)
   - [Prettier : Установка](#prettier--установка)
   - [Prettier : Настройка](#prettier--настройка)
   - [Prettier : Использование](#prettier--использование)
@@ -18,7 +18,7 @@
 [Официальный сайт](https://prettier.io/)
 
 ```bash
-npm install --save-dev --save-exact prettier
+$ npm install --save-dev --save-exact prettier
 ```
 
 ## Prettier : Настройка
@@ -42,20 +42,20 @@ printWidth: 120
 ## Prettier : Использование
 
 ```bash
-npx prettier    # запуск форматирования
+$ npx prettier    # запуск форматирования
 ```
 
 <details>
 <summary>Примеры</summary>
 
 ```bash
-npx prettier --write .        # отформатировать все файлы
-npx prettier --write <file>   # отформатировать файл
-npx prettier --write <dir>    # отформатировать все файлы в директории
+$ npx prettier --write .        # отформатировать все файлы
+$ npx prettier --write <file>   # отформатировать файл
+$ npx prettier --write <dir>    # отформатировать все файлы в директории
 
-npx prettier --check .        # проверить форматирование всех файлов
-npx prettier --check <file>   # проверить форматирование файлы
-npx prettier --check <dir>    # проверить форматирование всех файлов в директории
+$ npx prettier --check .        # проверить форматирование всех файлов
+$ npx prettier --check <file>   # проверить форматирование файлы
+$ npx prettier --check <dir>    # проверить форматирование всех файлов в директории
 ```
 
 </details><br>

@@ -14,20 +14,20 @@
 1. Создание ssh-ключей
 
    ```bash
-   ssh-keygen -t rsa -b 4096 -C "<your_github_email>"
+   $ ssh-keygen -t rsa -b 4096 -C "<your_github_email>"
    # Дальше будет несколько вопросов. На все вопросы нужно нажимать Enter.
    ```
 
 2. Запуск агента ssh, который следит за ключами
 
    ```bash
-   eval "$(ssh-agent -s)"
+   $ eval "$(ssh-agent -s)"
    ```
 
 3. Добавления нового ssh-ключа в агент
 
    ```bash
-   ssh-add ~/.ssh/id_rsa
+   $ ssh-add ~/.ssh/id_rsa
    ```
 
 ## SSH : Интеграция с Github
@@ -39,7 +39,7 @@
 1. Выведите содержимое файла `~/.ssh/id_rsa.pub` и скопируйте его
 
    ```bash
-   cat ~/.ssh/id_rsa.pub
+   $ cat ~/.ssh/id_rsa.pub
    ```
 
 2. [Добавьте](https://github.com/settings/keys) ssh-ключ в аккаунт Github.<br>

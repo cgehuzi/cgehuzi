@@ -6,7 +6,7 @@
 
 Навигация:
 
-- [Babel - транспайлер кода](#node--babel---транспайлер-кода)
+- [Babel - транспайлер кода](#babel---транспайлер-кода)
   - [Babel : Установка](#babel--установка)
   - [Babel : Настройка](#babel--настройка)
     - [Основные секции](#основные-секции)
@@ -22,8 +22,8 @@
 [Официальный сайт](https://babeljs.io/)
 
 ```bash
-npm install --save-dev @babel/core @babel/cli @babel/node @babel/preset-env
-npm install @babel/polyfill
+$ npm install --save-dev @babel/core @babel/cli @babel/node @babel/preset-env
+$ npm install @babel/polyfill
 ```
 
 - **@babel/core** – ядро программы
@@ -76,30 +76,30 @@ npm install @babel/polyfill
 ### Запуск трасляции
 
 ```bash
-npx babel   # запуск трансляции исходного кода
+$ npx babel   # запуск трансляции исходного кода
 ```
 
 <details>
 <summary>Примеры</summary>
 
 ```bash
-npx babel <dir> --out-dir <dir>       # транслировать все файлы из одной директории в другую
-npx babel <file> --out-file <file>    # транслировать код из одного файла в другой
-npx babel ____ --source-maps          # добавить source map (файлом)
-npx babel ____ --source-maps inline   # добавить source map (комментарияем)
+$ npx babel <dir> --out-dir <dir>       # транслировать все файлы из одной директории в другую
+$ npx babel <file> --out-file <file>    # транслировать код из одного файла в другой
+$ npx babel ____ --source-maps          # добавить source map (файлом)
+$ npx babel ____ --source-maps inline   # добавить source map (комментарияем)
 ```
 
 </details><br>
 
 ```bash
-npx babel-node  # запуск исходного кода (с предварительной трансляцией)
+$ npx babel-node  # запуск исходного кода (с предварительной трансляцией)
 ```
 
 <details>
 <summary>Примеры</summary>
 
 ```bash
-npx babel-node <file>   # запуск кода из файла
+$ npx babel-node <file>   # запуск кода из файла
 ```
 
 </details><br>

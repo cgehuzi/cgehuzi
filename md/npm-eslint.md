@@ -6,7 +6,7 @@
 
 Навигация:
 
-- [ESLint - линтер кода](#node--eslint---линтер-кода)
+- [ESLint - линтер кода](#eslint---линтер-кода)
   - [ESLint : Установка](#eslint--установка)
   - [ESLint : Настройка](#eslint--настройка)
   - [ESLint : Использование](#eslint--использование)
@@ -18,7 +18,7 @@
 [Официальный сайт](https://eslint.org/)
 
 ```bash
-npm install eslint --save-dev
+$ npm install eslint --save-dev
 ```
 
 ## ESLint : Настройка
@@ -26,7 +26,7 @@ npm install eslint --save-dev
 Настройка производится с помощью файла `.eslintrc.yml`.
 
 ```bash
-npx eslint --init   # инициализация (пошаговое создание файла .eslintrc.yml)
+$ npx eslint --init   # инициализация (пошаговое создание файла .eslintrc.yml)
 ```
 
 <details>
@@ -85,18 +85,18 @@ rules: {}
 ## ESLint : Использование
 
 ```bash
-npx eslint      # запуск линтера
+$ npx eslint      # запуск линтера
 ```
 
 <details>
 <summary>Примеры</summary>
 
 ```bash
-npx eslint .            # проверить все файлы
-npx eslint <file>       # проверить файл
-npx eslint <dir>        # проверить все файлы в директории
+$ npx eslint .            # проверить все файлы
+$ npx eslint <file>       # проверить файл
+$ npx eslint <dir>        # проверить все файлы в директории
 
-npx eslint --fix        # проверить и исправить (по возможности)
+$ npx eslint --fix        # проверить и исправить (по возможности)
 ```
 
 </details><br>
