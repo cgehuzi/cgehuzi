@@ -1,63 +1,71 @@
-# Всякое разное
+# Заметки на полях
 
-Заметки по основным направлениям обучения.
+> Ведутся с целью структурирования получаемых знаний для их осмысления. Созданы под нужды и представления одного конкретного человека.
 
-_Ведутся с целью структурирования получаемых знаний, параллельной практики в изучаемых инструментах и создания своеобразной "базы получаемых знаний"._
+---
 
-## Заметки
+### JavaScript
+
+- [Array - массив](./md/js-array.md)
+- [Map - ассациативный массив](./md/js-map.md)
+- [Set - множество](./md/js-set.md)
+- [Object - объект](./md/js-object.md)
+- [String - строка](./md/js-string.md)
+- [Function - функция](./md/js-function.md)
+- [Class - класс](./md/js-class.md)
+- [Math - математика](./md/js-math.md)
+- [Throw - исключения](./md/js-throw.md)
+- [Promise - промис](./md/js-promise.md)
+- [Modules - модули](./md/js-modules.md)
+- [RegExp - регулярные выражения](./md/js-regexp.md)
+
+---
+
+### Terminal
+
+- [BASH - командная строка](./md/bash.md)
+
+---
+
+### Git
+
+- [Основные команды](./md/git.md)
+- [Ветвление](./md/git-branch.md)
+- [Припрятывание (stash)](./md/git-stash.md)
+- [GitHub Actions](./md/git-github-actions.md)
+- [SSH (Интеграция с GitHub)](./md/git-ssh.md)
+
+---
+
+### Node.js
+
+- [Node.js](./md/node.md)
+- [NPM - менеджер пакетов](./md/node-npm.md)
+
+---
+
+### Инструменты
+
+- [Webpack - сборка проектов](./md/npm-webpack.md)
+- [Babel - транспайлер кода](./md/npm-babel.md)
+- [ESLint - линтер кода](./md/npm-eslint.md)
+- [Prettier - форматирование кода](./md/npm-prettier.md)
+- [Jest - тестирование](./md/npm-jest.md)
+- [Assert - тестирование](./md/npm-assert.md)
+
+---
+
+## Всякое разное
+
+> В порядке бреда
 
 - [Подкасты](./md/notes-podcasts.md)
 - [Словарь терминов](./md/notes-dictionary.md)
 
-## Инструменты
+### Английский язык
 
-### JavaScript
-
-- [js : Array - массив](./md/js-array.md)
-- [js : Object - объект](./md/js-object.md)
-- [js : String - строка](./md/js-string.md)
-- [js : Function - функция](./md/js-function.md)
-- [js : Class - класс](./md/js-class.md)
-- [js : Promise - промис](./md/js-promise.md)
-- [js : Math - математика](./md/js-math.md)
-- [js : Modules - модули](./md/js-modules.md)
-- [js : RegExp - регулярные выражения](./md/js-regexp.md)
-
----
-
-- [js : Map - ассациативный массив](./md/js-map.md)
-- [js : Set - множество](./md/js-set.md)
-
-### Bash
-
-- [bash : Командная строка](./md/bash.md)
-
-### Git
-
-- [git : Основные команды](./md/git.md)
-- [git : Ветвление](./md/git-branch.md)
-- [git : Припрятывание (stash)](./md/git-stash.md)
-- [git : GitHub Actions](./md/git-github-actions.md)
-- [git : SSH (Интеграция с GitHub)](./md/git-ssh.md)
-
-### Node.js
-
-- [node : Node.js](./md/node.md)
-- [node : NPM - менеджер пакетов](./md/node-npm.md)
-- [node : Webpack - сборка проектов](./md/node-webpack.md)
-- [node : Prettier - форматирование кода](./md/node-prettier.md)
-- [node : ESLint - линтер кода](./md/node-eslint.md)
-- [node : Jest - тестирование](./md/node-jest.md)
-
----
-
-- [node : Тесты](./md/node-test.md)
-- [node : Babel - транспайлер кода](./md/node-babel.md)
-
-## Английский язык
-
-**Целевой уровень:** B2 : Upper-Intermediate<br>
-**Срок обучения:** ~ 1 год / ~ 53 недели / ~ 370 дней<br>
+**Целевой уровень:** B2 : Upper-Intermediate  
+**Срок обучения:** ~ 1 год / ~ 53 недели / ~ 370 дней  
 **Интенсивность:** ~ 1.5 ч/день
 
 - [Справочные материалы](./md/eng-sources.md)

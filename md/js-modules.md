@@ -1,12 +1,12 @@
 << [На главную](../README.md)
 
-# JS : Modules - модули
+# Modules - модули
 
 ---
 
 Навигация:
 
-- [JS : Modules - модули](#js--modules---модули)
+- [Modules - модули](#modules---модули)
   - [Modules : Экспорт](#modules--экспорт)
   - [Modules : Импорт](#modules--импорт)
 

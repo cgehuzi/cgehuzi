@@ -1,6 +1,6 @@
 << [На главную](../README.md)
 
-# JS : Set - множество
+# Set - множество
 
 - [Спецификация](https://tc39.es/ecma262/#sec-set-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set)
@@ -10,7 +10,7 @@
 
 Навигация:
 
-- [JS : Set - множество](#js--set---множество)
+- [Set - множество](#set---множество)
   - [Set : Изменение (мутабельно)](#set--изменение-мутабельно)
   - [Set : Перебор](#set--перебор)
   - [Set : Проверка](#set--проверка)

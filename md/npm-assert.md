@@ -1,41 +1,19 @@
 << [На главную](../README.md)
 
-# node : Тесты
+# Assert - тестирование
 
 ---
 
 Навигация:
 
-- [node : Тесты](#node--тесты)
-  - [Throw : исключения](#throw--исключения)
+- [Assert - тестирование](#node--assert---тестирование)
   - [Assert : встроенный модуль](#assert--встроенный-модуль)
-    - [Power Assert : надстройка модуля assert](#power-assert--надстройка-модуля-assert)
-    - [Assert : Основные методы](#assert--основные-методы)
+  - [Power Assert : надстройка модуля assert](#power-assert--надстройка-модуля-assert)
+  - [Assert : Основные методы](#assert--основные-методы)
 
 ---
 
-## Throw : исключения
-
-- [Спецификация](https://tc39.es/ecma262/#sec-throw-statement)
-- [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/throw)
-
-<a id="throw"></a>
-
-```js
-const ident = (a) => a;
-
-// если результат функции не равен ожидаемому значению
-if (ident(1) !== 1) {
-  // выбрасываем исключение и останавливаем выполнение кода
-  throw new Error('Функция работает неверно!');
-}
-
-// Uncaught Error: Функция работает неверно!
-```
-
 ## Assert : встроенный модуль
-
-<a id="assert"></a>
 
 Node.js поставляется с модулем assert, в котором есть несколько функций, упрощающих написание утверждений (тестов).
 
@@ -47,7 +25,7 @@ import { strict as assert } from 'assert';
 // правильно использовать strict
 ```
 
-### Power Assert : надстройка модуля assert
+## Power Assert : надстройка модуля assert
 
 Библиотека, предоставляющая визуально понятный вывод ошибок для наиболее удобной отладки. Синтаксис на 100% совместим с модулем assert. Требует лишь подключения библтиотеки.
 
@@ -58,7 +36,7 @@ import { strict as assert } from 'assert';
 import assert from 'power-assert';
 ```
 
-### Assert : Основные методы
+## Assert : Основные методы
 
 ```js
 assert(expression); // проверка истинности выражения

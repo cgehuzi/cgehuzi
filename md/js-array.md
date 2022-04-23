@@ -1,6 +1,6 @@
 << [На главную](../README.md)
 
-# JS : Array - массив
+# Array - массив
 
 - [Спецификация](https://tc39.es/ecma262/#sec-array-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)
@@ -10,7 +10,7 @@
 
 Навигация:
 
-- [JS : Array - массив](#js--array---массив)
+- [Array - массив](#array---массив)
   - [Array : Изменение (мутабельно)](#array--изменение-мутабельно)
   - [Array : Изменение (иммутабельно)](#array--изменение-иммутабельно)
   - [Array : Перебор](#array--перебор)

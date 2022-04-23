@@ -1,6 +1,6 @@
 << [На главную](../README.md)
 
-# JS : String - строка
+# String - строка
 
 - [Спецификация](https://tc39.es/ecma262/#sec-string-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String)
@@ -9,7 +9,7 @@
 
 Навигация:
 
-- [JS : String - строка](#js--string---строка)
+- [String - строка](#string---строка)
   - [String : Изменение длины](#string--изменение-длины)
   - [String : Изменение символов](#string--изменение-символов)
   - [String : Преобразование](#string--преобразование)

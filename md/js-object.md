@@ -1,6 +1,6 @@
 << [На главную](../README.md)
 
-# JS : Object - объект
+# Object - объект
 
 - [Спецификация](https://tc39.es/ecma262/#sec-object-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)
@@ -9,7 +9,7 @@
 
 Навигация:
 
-- [JS : Object - объект](#js--object---объект)
+- [Object - объект](#object---объект)
   - [Object : Проверка ключей](#object--проверка-ключей)
     - [1 вариант](#1-вариант)
     - [2 вариант](#2-вариант)

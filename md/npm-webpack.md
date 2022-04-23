@@ -1,12 +1,12 @@
 << [На главную](../README.md)
 
-# node : Webpack - сборка проектов
+# Webpack - сборка проектов
 
 ---
 
 Навигация:
 
-- [node : Webpack - сборка проектов](#node--webpack---сборка-проектов)
+- [Webpack - сборка проектов](#node--webpack---сборка-проектов)
   - [Webpack : Установка](#webpack--установка)
   - [Webpack : Настройка](#webpack--настройка)
   - [Webpack : HTML](#webpack--html)

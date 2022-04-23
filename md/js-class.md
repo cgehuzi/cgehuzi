@@ -1,6 +1,6 @@
 << [На главную](../README.md)
 
-# JS : Class - класс
+# Class - класс
 
 - [Спецификация](https://tc39.es/ecma262/#sec-class-definitions)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes)
@@ -9,7 +9,7 @@
 
 Навигация:
 
-- [JS : Class - класс](#js--class---класс)
+- [Class - класс](#class---класс)
   - [Class : Синтаксис](#class--синтаксис)
   - [Class : Прототипы](#class--прототипы)
   - [Class : toString()](#class--tostring)

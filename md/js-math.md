@@ -1,6 +1,6 @@
 << [На главную](../README.md)
 
-# JS : Math - математика
+# Math - математика
 
 - [Спецификация](https://tc39.es/ecma262/#sec-math-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math)
@@ -9,7 +9,7 @@
 
 Навигация:
 
-- [JS : Math - математика](#js--math---математика)
+- [Math - математика](#math---математика)
   - [Math : Общие методы](#math--общие-методы)
   - [Math : Приведение](#math--приведение)
   - [Math : Сравнение](#math--сравнение)

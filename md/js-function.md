@@ -1,6 +1,6 @@
 << [На главную](../README.md)
 
-# JS : Function - функция
+# Function - функция
 
 - [Спецификация](https://tc39.es/ecma262/#sec-function-objects)
 - [Документация MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function)
@@ -9,7 +9,7 @@
 
 Навигация:
 
-- [JS : Function - функция](#js--function---функция)
+- [Function - функция](#function---функция)
   - [Function : this](#function--this)
     - [Методы работы с `this`](#методы-работы-с-this)
   - [Function : Rest-оператор](#function--rest-оператор)
