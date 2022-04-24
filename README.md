@@ -6,24 +6,24 @@
 
 ### JavaScript
 
-- [Array - массив](./md/js-array.md)
-- [Map - ассациативный массив](./md/js-map.md)
-- [Set - множество](./md/js-set.md)
-- [Object - объект](./md/js-object.md)
-- [String - строка](./md/js-string.md)
-- [Function - функция](./md/js-function.md)
-- [Class - класс](./md/js-class.md)
-- [Math - математика](./md/js-math.md)
-- [Throw - исключения](./md/js-throw.md)
-- [Promise - промис](./md/js-promise.md)
-- [Modules - модули](./md/js-modules.md)
-- [RegExp - регулярные выражения](./md/js-regexp.md)
+- [Array](./md/js-array.md) - массив
+- [Map](./md/js-map.md) - ассациативный массив
+- [Set](./md/js-set.md) - множество
+- [Object](./md/js-object.md) - объект
+- [String](./md/js-string.md) - строка
+- [Function](./md/js-function.md) - функция
+- [Class](./md/js-class.md) - класс
+- [Math](./md/js-math.md) - математика
+- [Throw](./md/js-throw.md) - исключения
+- [Promise](./md/js-promise.md) - промис
+- [Modules](./md/js-modules.md) - модули
+- [RegExp](./md/js-regexp.md) - регулярные выражения
 
 ---
 
 ### Terminal
 
-- [BASH - командная строка](./md/bash.md)
+- [BASH](./md/bash.md) - командная строка
 
 ---
 
@@ -33,25 +33,26 @@
 - [Ветвление](./md/git-branch.md)
 - [Припрятывание (stash)](./md/git-stash.md)
 - [GitHub Actions](./md/git-github-actions.md)
-- [SSH (Интеграция с GitHub)](./md/git-ssh.md)
+- [SSH](./md/git-ssh.md) - интеграция с GitHub
 
 ---
 
 ### Node.js
 
-- [Node.js](./md/node.md)
-- [NPM - менеджер пакетов](./md/node-npm.md)
+- [Node](./md/node.md)
+- [NPM](./md/node-npm.md) - менеджер пакетов
 
 ---
 
 ### Инструменты
 
-- [Webpack - сборка проектов](./md/npm-webpack.md)
-- [Babel - транспайлер кода](./md/npm-babel.md)
-- [ESLint - линтер кода](./md/npm-eslint.md)
-- [Prettier - форматирование кода](./md/npm-prettier.md)
-- [Jest - тестирование](./md/npm-jest.md)
-- [Assert - тестирование](./md/npm-assert.md)
+- [React](./md/npm-react.md) - разработка интерфейсов
+- [Webpack](./md/npm-webpack.md) - сборка проектов
+- [Babel](./md/npm-babel.md) - транспайлер кода
+- [ESLint](./md/npm-eslint.md) - линтер кода
+- [Prettier](./md/npm-prettier.md) - форматирование кода
+- [Jest](./md/npm-jest.md) - тестирование
+- [Assert](./md/npm-assert.md) - тестирование
 
 ---
 
