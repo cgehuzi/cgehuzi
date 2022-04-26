@@ -24,7 +24,7 @@
 [Официальный сайт](https://webpack.js.org/)
 
 ```bash
-$ npm install --save-dev webpack webpack-cli
+npm install --save-dev webpack webpack-cli
 ```
 
 ## Webpack : Настройка
@@ -61,7 +61,7 @@ module.exports = {
 Для работы с HTML нужно установить [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#options).
 
 ```bash
-$ npm install --save-dev html-webpack-plugin
+npm install --save-dev html-webpack-plugin
 ```
 
 ---
@@ -99,7 +99,7 @@ module.exports = {
 Для запуска сервера нужно установить [webpack-dev-server](https://webpack.js.org/guides/development/#using-webpack-dev-server).
 
 ```bash
-$ npm install --save-dev webpack-dev-server
+npm install --save-dev webpack-dev-server
 ```
 
 ---
@@ -134,7 +134,7 @@ module.exports = {
 [Документация](https://babeljs.io/setup)
 
 ```bash
-$ npm install --save-dev babel-loader @babel/core @babel/preset-env
+npm install --save-dev babel-loader @babel/core @babel/preset-env
 ```
 
 Настройка Babel производится с помощью файла `babel.config.json`.<br>
@@ -196,25 +196,25 @@ module.exports = {
 Для работы с CSS нужно установить [css-loader](https://webpack.js.org/loaders/css-loader/).
 
 ```bash
-$ npm install --save-dev css-loader
+npm install --save-dev css-loader
 ```
 
 Для работы с SCSS нужно установить [sass-loader](https://webpack.js.org/loaders/sass-loader/).
 
 ```bash
-$ npm install --save-dev sass-loader sass
+npm install --save-dev sass-loader sass
 ```
 
 Для вставки CSS-кода в `<style>` нужно установить [style-loader](https://webpack.js.org/loaders/style-loader/).
 
 ```bash
-$ npm install --save-dev style-loader
+npm install --save-dev style-loader
 ```
 
 Для извлечения CSS-кода в `CSS-файлы` нужно установить [MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/).
 
 ```bash
-$ npm install --save-dev mini-css-extract-plugin
+npm install --save-dev mini-css-extract-plugin
 ```
 
 ---
@@ -283,7 +283,7 @@ module.exports = {
 Для работы нужно установить [postcss-loader](https://webpack.js.org/loaders/postcss-loader/).
 
 ```bash
-$ npm install --save-dev postcss-loader postcss
+npm install --save-dev postcss-loader postcss
 ```
 
 ### cssnano
@@ -293,7 +293,7 @@ $ npm install --save-dev postcss-loader postcss
 [Документация](https://cssnano.co/)
 
 ```bash
-$ npm install --save-dev cssnano
+npm install --save-dev cssnano
 ```
 
 ### autoprefixer
@@ -301,7 +301,7 @@ $ npm install --save-dev cssnano
 [Документация](https://github.com/postcss/autoprefixer)
 
 ```bash
-$ npm install --save-dev autoprefixer
+npm install --save-dev autoprefixer
 ```
 
 Настройка PostCSS производится с помощью файла `postcss.config.js`.<br>

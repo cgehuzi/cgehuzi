@@ -27,22 +27,22 @@
 <a id="branch"></a>
 
 ```bash
-$ git branch      # работа с ветками
+git branch      # работа с ветками
 ```
 
 <details>
 <summary>Примеры</summary>
 
 ```bash
-$ git branch                      # список отслеживаемых веток
-$ git branch -v                   # | с указанием последнего коммита
-$ git branch --merged             # | слитые с текущей (можно удалять)
-$ git branch --merged <branch>    # | слитые с <branch> (можно удалять)
-$ git branch --no-merged          # | не слитые с текущей
-$ git branch --no-merged <branch> # | не слитые с <branch>
+git branch                      # список отслеживаемых веток
+git branch -v                   # | с указанием последнего коммита
+git branch --merged             # | слитые с текущей (можно удалять)
+git branch --merged <branch>    # | слитые с <branch> (можно удалять)
+git branch --no-merged          # | не слитые с текущей
+git branch --no-merged <branch> # | не слитые с <branch>
 
-$ git branch <branch>             # создать новую ветку
-$ git branch -d <branch>          # удалить ветку
+git branch <branch>             # создать новую ветку
+git branch -d <branch>          # удалить ветку
 ```
 
 </details><br>
@@ -52,8 +52,8 @@ $ git branch -d <branch>          # удалить ветку
 <a id="checkout"></a>
 
 ```bash
-$ git checkout <branch>       # переключиться на ветку <branch>
-$ git checkout -b <branch>    # создать новую ветку и переключиться на неё
+git checkout <branch>       # переключиться на ветку <branch>
+git checkout -b <branch>    # создать новую ветку и переключиться на неё
 ```
 
 ## Git : Удалённые ветки
@@ -61,32 +61,32 @@ $ git checkout -b <branch>    # создать новую ветку и пере
 ### Отправка
 
 ```bash
-$ git push <remote> <branch>                      # отправить ветку в удалённый репозиторий
-$ git push <remote> <branch>:some_name            # отправить <branch>, но под именем some_name
-$ git merge <remote>/<branch>                     # слить текущую ветку с веткой слежения (<remote>/<branch>)
+git push <remote> <branch>                      # отправить ветку в удалённый репозиторий
+git push <remote> <branch>:some_name            # отправить <branch>, но под именем some_name
+git merge <remote>/<branch>                     # слить текущую ветку с веткой слежения (<remote>/<branch>)
 ```
 
 ### Отслеживание
 
 ```bash
-$ git branch -vv                                  # информация о настройках веток слежения (с кэшированным удалёнными данными)
-$ git fetch --all; git branch -vv                 # информация о настройках веток слежения (с запросом актуальных удалённых данных)
-$ git branch -u <remote>/<branch>                 # установить ветку слежения для текущей ветки
-$ git checkout -b new_branch <remote>/<branch>    # создать локальную ветку на основе ветки слежения
-$ git checkout --track <remote>/<branch>          # | краткая запись
+git branch -vv                                  # информация о настройках веток слежения (с кэшированным удалёнными данными)
+git fetch --all; git branch -vv                 # информация о настройках веток слежения (с запросом актуальных удалённых данных)
+git branch -u <remote>/<branch>                 # установить ветку слежения для текущей ветки
+git checkout -b new_branch <remote>/<branch>    # создать локальную ветку на основе ветки слежения
+git checkout --track <remote>/<branch>          # | краткая запись
 ```
 
 ### Получение изменений
 
 ```bash
-$ git fetch --all                                 # получить изменения со всех удалённых репозиториев
-$ git fetch <remote>                              # получить изменения с одного удалённого репозитория
+git fetch --all                                 # получить изменения со всех удалённых репозиториев
+git fetch <remote>                              # получить изменения с одного удалённого репозитория
 ```
 
 ### Удаление
 
 ```bash
-$ git push <remote> --delete <branch>             # удалить ветку из удалённого репозитория
+git push <remote> --delete <branch>             # удалить ветку из удалённого репозитория
 ```
 
 ## Git : Слияние веток
@@ -94,14 +94,14 @@ $ git push <remote> --delete <branch>             # удалить ветку и
 <a id="merge"></a>
 
 ```bash
-$ git merge       # слияние веток
+git merge       # слияние веток
 ```
 
 <details>
 <summary>Примеры</summary>
 
 ```bash
-$ git merge <branch>          # слияние текущей ветки с веткой <branch>
+git merge <branch>          # слияние текущей ветки с веткой <branch>
 ```
 
 </details>
@@ -124,7 +124,7 @@ $ git merge <branch>          # слияние текущей ветки с ве
 <a id="rebase"></a>
 
 ```bash
-$ git rebase      # перебазирование веток
+git rebase      # перебазирование веток
 ```
 
 <details>
@@ -133,10 +133,10 @@ $ git rebase      # перебазирование веток
 ```bash
 # Простое перебазирование
 # ----------------------------------------
-$ git checkout <branch>   # переключиться на ветку <branch>
-$ git rebase main         # перебазировать ветку в main
-$ git checkout main       # переключиться на ветку main
-$ git merge <branch>      # объединить изменения
+git checkout <branch>   # переключиться на ветку <branch>
+git rebase main         # перебазировать ветку в main
+git checkout main       # переключиться на ветку main
+git merge <branch>      # объединить изменения
 # ----------------------------------------
 ```
 

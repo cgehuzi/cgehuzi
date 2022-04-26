@@ -30,7 +30,7 @@
 [Официальный сайт](https://jestjs.io/)
 
 ```bash
-$ npm install jest --save-dev
+npm install jest --save-dev
 ```
 
 ## Jest : Настройка
@@ -39,7 +39,7 @@ $ npm install jest --save-dev
 Добавьте в корень проекта файл `.npmrc`
 
 ```bash
-$ node-options=--experimental-vm-modules
+node-options=--experimental-vm-modules
 ```
 
 ## Jest : Структура файлов
@@ -234,6 +234,6 @@ test.each([
 ## Jest : Запуск
 
 ```bash
-$ npx jest              # запуск тестов
-$ npx jest --coverage   # запуск тестов (с расчётом покрытия кода)
+npx jest              # запуск тестов
+npx jest --coverage   # запуск тестов (с расчётом покрытия кода)
 ```
