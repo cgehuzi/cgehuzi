@@ -18,6 +18,8 @@
     - [Props](#props)
     - [Collections – обработка коллекций](#collections--обработка-коллекций)
     - [React.Fragment – обёртка](#reactfragment--обёртка)
+    - [Работа с HTML-классами](#работа-с-html-классами)
+    - [React.Children](#reactchildren)
   - [JSX vs HTML – различия](#jsx-vs-html--различия)
     - [Атрибуты](#атрибуты)
     - [Обработчики событий](#обработчики-событий)
@@ -31,21 +33,21 @@
 ### Создание нового проекта
 
 ```bash
-$ npm install -g create-react-app   # глобальная установка (если ещё не)
-$ create-react-app <directory>      # создание проекта
-$ npm start                         # инициализация проекта
+npm install -g create-react-app   # глобальная установка (если ещё не)
+create-react-app <directory>      # создание проекта
+npm start                         # инициализация проекта
 ```
 
 ### Добавление в проект
 
 ```bash
-$ npm install react react-dom                 # установка библиотек
-$ npm install --save-dev @babel/preset-react  # для поддержки jsx-файлов
+npm install react react-dom                 # установка библиотек
+npm install --save-dev @babel/preset-react  # для поддержки jsx-файлов
 ```
 
 **babel.config.json**
 
-```json
+```jsonc
 {
   "presets": [
     // NEW ————————————————
@@ -59,12 +61,12 @@ $ npm install --save-dev @babel/preset-react  # для поддержки jsx-ф
 
 ### Создание
 
-Hello.jsx
+Example.jsx
 
 ```jsx
 import React from 'react';
 
-export default class Hello extends React.Component {
+export default class Example extends React.Component {
   render() {
     return <div>Hello</div>;
   }
@@ -78,17 +80,17 @@ index.jsx
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Hello from './Hello.jsx';
+import Example from './Example.jsx';
 
 const mountNode = document.querySelector('#react-root');
 const root = ReactDOM.createRoot(mountNode);
-root.render(<Hello />);
+root.render(<Example />);
 ```
 
 ### Props
 
 ```jsx
-class Hello extends React.Component {
+class Example extends React.Component {
   render() {
     const firstName = this.props.firstName;
     const lastName = this.props.lastName;
@@ -102,14 +104,14 @@ class Hello extends React.Component {
 
 // Значения по умолчанию
 // ———————————————————————
-Hello.defaultProps = {
+Example.defaultProps = {
   lastName: 'Nobody',
 };
 
-<Hello firstName="Ihar" lastName="Spurhiash" />; //   <div>Hello Ihar Spurhiash!</div>
-<Hello firstName="Ihar" />; //                        <div>Hello Ihar Nobody!</div>
-<Hello lastName="Spurhiash" />; //                    <div>Hello Spurhiash!</div>
-<Hello />; //                                         <div>Hello Nobody!</div>
+<Example firstName="Ihar" lastName="Spurhiash" />; //   <div>Hello Ihar Spurhiash!</div>
+<Example firstName="Ihar" />; //                        <div>Hello Ihar Nobody!</div>
+<Example lastName="Spurhiash" />; //                    <div>Hello Spurhiash!</div>
+<Example />; //                                         <div>Hello Nobody!</div>
 ```
 
 ### Collections – обработка коллекций
@@ -120,7 +122,7 @@ Hello.defaultProps = {
 > Не обязательно `id`. Подойдёт любой ключ с уникальным значением. Главное – передать его в `key`
 
 ```jsx
-class List extends React.Component {
+class Example extends React.Component {
   renderList() {
     const { data } = this.props;
     return data.map((item) => <li key={item.id}>{item.name}</li>);
@@ -138,7 +140,7 @@ const items = [
   { id: 2, name: 'second' },
 ];
 
-<List data={items} />;
+<Example data={items} />;
 // <ul>
 //   <li>first</li>
 //   <li>second</li>
@@ -148,7 +150,7 @@ const items = [
 ### React.Fragment – обёртка
 
 ```jsx
-class Glossary extends React.Component {
+class Example extends React.Component {
   renderList() {
     const { data } = this.props;
     return data.map((item) => (
@@ -179,7 +181,7 @@ const items = [
   { id: 2, title: 'Webpack', description: 'Static module bundler for modern JavaScript applications' },
 ];
 
-<Glossary data={items} />;
+<Example data={items} />;
 // <dl>
 //   <dt>React</dt>
 //   <dd>JavaScript library for building user interfaces</dd>
@@ -187,6 +189,110 @@ const items = [
 //   <dd>Static module bundler for modern JavaScript applications</dd>
 // </dl>
 ```
+
+### Работа с HTML-классами
+
+Для манипулирования классами рекомендуется использовать пакет [`classnames`](https://github.com/JedWatson/classnames)
+
+```bash
+npm install classnames
+```
+
+```jsx
+import classNames from 'classnames';
+
+class Example extends React.Component {
+  render() {
+    const { isPressed, isHovered, label, type } = this.props;
+    const classes = classNames(
+      'example', // обязательный класс (статический)
+      `example-${type}`, // обязательный класс (динамический)
+      {
+        'example-pressed': isPressed,
+        'example-hovered': !isPressed && isHovered,
+      }
+    );
+    return <button className={classes}>{label}</button>;
+  }
+}
+```
+
+### React.Children
+
+Всё, что находится между открывающим и закрывающим тегом, попадает внутрь пропса `children`.
+
+> Тип данных в `children` непредсказуем:  
+> text – String  
+> html – массив
+
+**React.Children.count**
+
+```jsx
+class Example extends React.Component {
+  render() {
+    const { children } = this.props;
+    return <p>Count: {React.Children.count(children)}</p>;
+  }
+}
+```
+
+**React.Children.map**
+
+```jsx
+class Example extends React.Component {
+  render() {
+    const { children } = this.props;
+    return (
+      <ul>
+        {React.Children.map(children, (child, index) => {
+          // filtering
+          if (index < 1) {
+            return;
+          }
+
+          // mapping
+          return <li>{child}</li>;
+        })}
+      </ul>
+    );
+  }
+}
+```
+
+<details>
+<summary>Примеры выводов</summary>
+
+```jsx
+<Example>
+  Ihar <em>Spurhiash</em>
+</Example>;
+// <p>Count: 2</p>
+// <ul>
+//   <li><em>Spurhiash</em></li>
+// </ul>
+
+<Example>Ihar Spurhiash</Example>;
+// <p>Count: 1</p>
+// <ul></ul>
+
+<Example>{'Ihar'} Spurhiash</Example>;
+// <p>Count: 2</p>
+// <ul>
+//   <li>Spurhiash</li>
+// </ul>
+
+<Example>{() => 'Ihar'} Spurhiash</Example>;
+// <p>Count: 1</p>
+// <ul></ul>
+
+<Example>{(() => 'Ihar')()} Spurhiash</Example>;
+// <p>Count: 2</p>
+// <ul>
+//   <li>Spurhiash</li>
+// </ul>
+```
+
+</details><br>
 
 ## JSX vs HTML – различия
 
