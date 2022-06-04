@@ -21,9 +21,6 @@
   - [BASH : Права доступа](#bash--права-доступа)
   - [BASH : Управление утилитами](#bash--управление-утилитами)
     - [macOS](#macos)
-  - [BASH : Makefile - шаблонизация команд](#bash--makefile---шаблонизация-команд)
-  - [BASH : PS1 - строка-приглашение в терминале](#bash--ps1---строка-приглашение-в-терминале)
-    - [zsh](#zsh)
 
 ---
 
@@ -812,8 +809,8 @@ which <command>     # путь к исполняющему файлу
 whereis <command>   # путь к файлам (исполняющему, исходному и мануалу)
 ```
 
-| Пакетный менеджер       | ОС      | Установка                                   | Вызов          |
-| :---------------------- | :------ | :------------------------------------------ | :------------- |
+| Пакетный менеджер       | ОС      | Установка                                   | Вызов        |
+| :---------------------- | :------ | :------------------------------------------ | :----------- |
 | Advanced Packaging Tool | Ubuntu  | не требуется                                | `apt ____`   |
 | Homebrew                | macOS   | [Официальный сайт](https://brew.sh/)        | `brew ____`  |
 | Chocolatey              | Windows | [Официальный сайт](https://chocolatey.org/) | `choco ____` |
@@ -829,68 +826,3 @@ brew update ____    # обновить пакетный менеджер
 ```
 
 [Полный список команд](https://docs.brew.sh/Manpage#commands)
-
-## BASH : Makefile - шаблонизация команд
-
-<a id="make"></a>
-
-```bash
-make <alias>    # запуск команд из Makefile
-```
-
-```bash
-test:                               # alias для вызова
-    npm run test                    # вызываемая команда
-
-logs:                               # alias для вызова
-    sudo tail -n $(N) <log_file>    # вызываемая команда с параметром N
-
-build: test                         # alias для вызова : зависимость
-    npm run build                   # вызываемая команда
-
-.PHONY: test logs build             # сброс стандартных инструкций для указанных alias
-                                    # | указывается последней строчкой в Makefile
-                                    # | если в директории будет файл test,
-                                    # | то без .PHONY сработает его обработка
-```
-
-Перед вызываемыми командами обязательно нужна табуляция.
-
-```bash
-make test       # === npm run test
-make logs N=13  # === sudo tail -n 13 <log_file>
-make build      # === npm run test; npm run build
-```
-
-## BASH : PS1 - строка-приглашение в терминале
-
-<a id="ps1"></a>
-
-### zsh
-
-```bash
-user /directory [git-branch] $
-```
-
-Открыть в текстовом редакторе файл `~/.zshrc`  
-Если файла нет — создать.
-
-```bash
-touch ~/.zshrc  # создаём, если нет
-vim ~/.zshrc    # редактируем
-```
-
-Добавить в файл конструкцию:
-
-```bash
-function parse_git_branch() {
-    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
-}
-
-COLOR_DEF=$'\e[0m'
-COLOR_USR=$'\e[38;5;243m'
-COLOR_DIR=$'\e[38;5;197m'
-COLOR_GIT=$'\e[38;5;39m'
-setopt PROMPT_SUBST
-export PROMPT='${COLOR_USR}%n ${COLOR_DEF}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
-```
