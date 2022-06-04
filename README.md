@@ -26,6 +26,7 @@
 - [BASH](./md/bash.md) - командная строка
 - [Makefile](./md/bash-makefile.md) - шаблонизация команд
 - [PS1](./md/bash-ps1.md) - строка-приглашение в терминале
+- [HIDUTIL](./md/bash-hidutil.md) - переназначение клавиш macOS
 
 ---
 
