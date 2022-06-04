@@ -12,16 +12,16 @@
 hidutil property --set '{"UserKeyMapping":[ ... ]}'
 ```
 
-```json
+```
 {
   "UserKeyMapping": [
     {
-      "HIDKeyboardModifierMappingSrc": 0x700000064, // [ § > ]
-      "HIDKeyboardModifierMappingDst": 0x700000029 // [ Esc ]
+      "HIDKeyboardModifierMappingSrc": 0x700000064,
+      "HIDKeyboardModifierMappingDst": 0x700000029
     },
     {
-      "HIDKeyboardModifierMappingSrc": 0x700000029, // [ Esc ]
-      "HIDKeyboardModifierMappingDst": 0x700000064 // [ § > ]
+      "HIDKeyboardModifierMappingSrc": 0x700000029,
+      "HIDKeyboardModifierMappingDst": 0x700000064
     }
   ]
 }
