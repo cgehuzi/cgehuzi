@@ -49,6 +49,7 @@
 
 ### Инструменты
 
+- [Redux](./md/npm-redux.md) - работа с состоянием
 - [Webpack](./md/npm-webpack.md) - сборка проектов
 - [Babel](./md/npm-babel.md) - транспайлер кода
 - [ESLint](./md/npm-eslint.md) - линтер кода
