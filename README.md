@@ -49,7 +49,6 @@
 
 ### Инструменты
 
-- [React](./md/npm-react.md) - разработка интерфейсов
 - [Webpack](./md/npm-webpack.md) - сборка проектов
 - [Babel](./md/npm-babel.md) - транспайлер кода
 - [ESLint](./md/npm-eslint.md) - линтер кода
@@ -58,6 +57,11 @@
 - [Assert](./md/npm-assert.md) - тестирование
 
 ---
+
+### React
+
+- [Основные моменты](./md/npm-react.md)
+- [React Hooks](./md/npm-react-hooks.md) - хуки
 
 ## Всякое разное
 
