@@ -226,7 +226,7 @@ batch(() => {
 
 Не нормализованные данные:
 
-```json
+```jsonc
 [
   {
     "id": "post1",
@@ -291,7 +291,7 @@ const result = {
 
 Нормализованные данные:
 
-```json
+```jsonc
 {
   "users": {
     "entities": {
