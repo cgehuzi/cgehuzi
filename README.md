@@ -61,8 +61,9 @@
 
 ### React
 
-- [Основные моменты](./md/npm-react.md)
-- [React Hooks](./md/npm-react-hooks.md) - хуки
+- [React](./md/npm-react.md) – Основные моменты
+- [React : Hooks](./md/npm-react-hooks.md) – Работа с функциональными компонентами
+- [React : Redux Toolkit](./md/npm-react-redux.md) – Интеграция Redux в React
 
 ## Всякое разное
 
