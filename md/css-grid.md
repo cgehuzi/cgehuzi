@@ -25,9 +25,9 @@
 
 ```css
 .grid {
-  --item-mun-width: 400px;
+  --item-min-width: 400px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(var(--item-mun-width), 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(var(--item-min-width), 100%), 1fr));
 }
 ```
 - `repeat(___)` [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat) – вызываем разбивку сетки с повторением заданной ширины
