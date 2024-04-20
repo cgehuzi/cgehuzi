@@ -32,11 +32,11 @@
 ```
 - `repeat(___)` [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat) – вызываем разбивку сетки с повторением заданной ширины
 
-- `auto-fill` ([MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat#auto-fill)) – отменяем растягивание элементов, если пустого места достаточно для ещё одного
+- `auto-fill` [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat#auto-fill) – отменяем растягивание элементов, если пустого места достаточно для ещё одного
 
-- `minmax(___, 1fr)` ([MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax)) – вызываем функцию расчёта ширины в диапазоне от ___ до 1fr
+- `minmax(___, 1fr)` [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax) – вызываем функцию расчёта ширины в диапазоне от ___ до 1fr
 
-- `min(___, 100%)` ([MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/min)) – вызываем функцию, которая вернёт меньшее из переданных значений
+- `min(___, 100%)` [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/min) – вызываем функцию, которая вернёт меньшее из переданных значений
   > 100% необходимы, чтобы избежать выпадания элемента за пределы сетки, при критически малой её ширине
 
 ## Grid : нюансы
