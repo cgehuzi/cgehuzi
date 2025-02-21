@@ -72,6 +72,13 @@
 - [React : Hooks](./md/npm-react-hooks.md) – Работа с функциональными компонентами
 - [React : Redux Toolkit](./md/npm-react-redux.md) – Интеграция Redux в React
 
+---
+
+### SQL
+
+- [Основные команды](./md/sql-commands.md)
+- [Типы данных](./md/sql-types.md)
+
 ## Всякое разное
 
 > В порядке бреда
