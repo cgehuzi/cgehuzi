@@ -23,7 +23,7 @@
 - `VARCHAR` : `'example'` - для строк с ограничением максимальной длины
 - `TEXT` : `'example'` - для строк без ограничения длины
 
-[Документация](https://www.postgresql.org/docs/current/datatype-character.html)
+> - [Документация](https://www.postgresql.org/docs/current/datatype-character.html)
 
 ---
 
@@ -33,7 +33,7 @@
 - `BIGINT` : `123456789` - большое целое число
 - `REAL` : `123.45` - число с плавающей точкой
 
-[Документация](https://www.postgresql.org/docs/current/datatype-numeric.html)
+> - [Документация](https://www.postgresql.org/docs/current/datatype-numeric.html)
 
 ---
 
@@ -43,7 +43,7 @@
 - `DATE` : `'2021-01-01'` - только дата
 - `TIME` : `'12:00:00'` - только время
 
-[Документация](https://www.postgresql.org/docs/current/datatype-datetime.html)
+> - [Документация](https://www.postgresql.org/docs/current/datatype-datetime.html)
 
 ---
 
@@ -56,7 +56,7 @@
 > `TRUE` `'t'` `'true'` `'y'` `'yes'` `'on'` `'1'`  
 > `FALSE` `'f'` `'false'` `'n'` `'no'` `'off'` `'0'`
 
-[Документация](https://www.postgresql.org/docs/current/datatype-boolean.html)
+> - [Документация](https://www.postgresql.org/docs/current/datatype-boolean.html)
 
 ---
 
